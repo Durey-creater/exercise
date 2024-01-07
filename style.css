@@ -1,29 +1,30 @@
 /* style.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Nunito', 'Arial', sans-serif; /* 追加：よりモダンなフォント */
+    background-color: #e9ecef; /* ソフトな背景色 */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #495057; /* テキストの色を少し暗めに */
 }
 
 #quiz-container {
-    width: 80%;
+    width: 90%;
     max-width: 600px;
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウをより立体的に */
+    border-radius: 15px; /* 角の丸みを増やす */
+    margin: 20px; /* 追加：余白の追加 */
 }
 
 #question-text {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+    font-size: 1.75em; /* より大きなフォントサイズ */
+    font-weight: 700; /* テキストを太字に */
+    margin-bottom: 30px; /* 追加：余白を増やす */
 }
 
 #choices-list {
@@ -32,65 +33,84 @@ body {
 }
 
 #choices-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* ボタン間の余白を増やす */
 }
 
 #choices-list button {
     width: 100%;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    color: #333;
-    background-color: #e7e7e7;
-    border: 2px solid transparent;
-    border-radius: 20px;
+    padding: 20px 30px; /* 追加：ボタンのパディングを増やす */
+    font-size: 1.2em; /* ボタンのフォントサイズを大きく */
+    font-weight: 500; /* フォントをやや太字に */
+    color: #fff; /* テキストの色を白に */
+    background: linear-gradient(45deg, #5f2c82, #49a09d); /* グラデーション背景 */
+    border: none; /* 境界線を削除 */
+    border-radius: 25px; /* ボタンの角をより丸く */
     cursor: pointer;
-    transition: all 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* ホバー時の変化を追加 */
+    position: relative; /* 追加：ホバー時の効果のために */
+    overflow: hidden; /* 追加：波紋エフェクトのために */
 }
 
 #choices-list button:hover {
-    background-color: #d1d1d1;
-    border-color: #bbb;
+    transform: translateY(-3px); /* ホバー時にボタンを持ち上げる */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); /* ホバー時にシャドウを強調 */
+}
+
+#choices-list button::before {
+    content: ''; /* 追加：波紋エフェクトのための要素 */
+    position: absolute;
+    width: 300%; 
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: transform 0.5s, opacity 0.3s;
+    z-index: 0;
+    opacity: 0;
+}
+
+#choices-list button:active::before {
+    transform: translate(-50%, -50%) scale(1); /* クリック時に拡大 */
+    opacity: 1; /* クリック時に可視化 */
+}
+
+#choices-list button span {
+    position: relative; /* 追加：テキストを前面に表示 */
+    z-index: 1;
 }
 
 #submit-button {
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    color: white;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-#submit-button:hover {
-    background-color: #0056b3;
+    display: none; /* このボタンは使用しないため非表示に */
 }
 
 #answer-explanation {
-    color: #888;
-    margin-top: 20px;
-    text-align: center;
+    color: #6c757d; /* 解説の色を少し明るく */
+    font-style: italic; /* イタリックでスタイリッシュに */
+    margin-top: 30px; /* 追加：余白を増やす */
 }
+
+#difficulty {
+    font-size: 1em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px; /* 適切な余白を追加 */
+}
+
 
 @media (max-width: 768px) {
     #quiz-container {
         width: 95%;
+        padding: 20px; /* モバイルではパディングを減らす */
     }
 
     #question-text {
-        font-size: 1.2em;
+        font-size: 1.5em; /* モバイルではフォントサイズを少し小さく */
     }
 
     #choices-list button {
-        padding: 10px 15px;
-        font-size: 1em;
-    }
-
-    #submit-button {
-        padding: 10px 15px;
-        font-size: 1em;
+        padding: 15px 20px; /* モバイルではボタンのパディングを減らす */
+        font-size: 1em; /* モバイルではフォントサイズを小さく */
     }
 }

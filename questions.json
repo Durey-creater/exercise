@@ -1,6 +1,6 @@
 [
     {
-        "difficulty": "初級",
+        "difficulty": "1",
         "text": "日本の首都はどこですか？",
         "choices": ["東京", "大阪", "札幌", "福岡"],
         "answer": "東京",
@@ -8,10 +8,50 @@
     },
 
     {
-        "difficulty": "初級",
+        "difficulty": "1",
         "text": "日本の総理はですか？",
         "choices": ["a東京", "a大阪", "a札幌", "a福岡"],
         "answer": "a東京",
         "explanation": "a日本の首都は東京です。"
+    }
+
+    {
+        "difficulty": "1",
+        "text": "日本の総理はですか？",
+        "choices": ["b東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "b東京",
+        "explanation": "b日本の首都は東京です。"
+    }
+
+    {
+        "difficulty": "1",
+        "text": "日本の総理はですか？",
+        "choices": ["c東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "c東京",
+        "explanation": "c日本の首都は東京です。"
+    }
+
+    {
+        "difficulty": "1",
+        "text": "日本の総理はですか？",
+        "choices": ["d東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "d東京",
+        "explanation": "d日本の首都は東京です。"
+    }
+
+    {
+        "difficulty": "1",
+        "text": "日本の総理はですか？",
+        "choices": ["e東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "e東京",
+        "explanation": "e日本の首都は東京です。"
+    }
+
+    {
+        "difficulty": "2",
+        "text": "日本の総理はですか？",
+        "choices": ["f東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "f東京",
+        "explanation": "f日本の首都は東京です。"
     }
 ]

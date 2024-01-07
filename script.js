@@ -1,9 +1,18 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
+    let correctAnswersCount = 0;
     let questions = [];
+    const recentResults = []; // 直近の結果を保存する配列
 
-    fetch(location.href+'questions.json')
+    function updateDifficulty() {
+        if (recentResults.length >= 5 && recentResults.filter(Boolean).length / 5 >= 0.8) {
+            // 難易度を上げる処理をここに実装
+            alert('難易度が上がりました！');
+            // 難易度を上げた後の処理をここに実装
+        }
+    }
+
+    fetch(location.href + 'questions.json')
         .then(response => response.json())
         .then(data => {
             questions = data;
@@ -14,10 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     function displayQuestion(question) {
+        const questionNumber = document.getElementById('question-number');
+        const difficulty = document.getElementById('difficulty');
         const questionText = document.getElementById('question-text');
         const choicesList = document.getElementById('choices-list');
         const explanation = document.getElementById('answer-explanation');
 
+        questionNumber.textContent = '問題 #' + (currentQuestionIndex + 1);
+        difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
         explanation.style.display = 'none';
@@ -34,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function chooseAnswer(choice, question) {
         if (choice === question.answer) {
+            correctAnswersCount++;
+            recentResults.push(true);
+            updateDifficulty();
             currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
                 displayQuestion(questions[currentQuestionIndex]);
@@ -41,9 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
             }
         } else {
+            recentResults.push(false);
+            updateDifficulty();
             const explanation = document.getElementById('answer-explanation');
             explanation.textContent = "不正解。 " + question.explanation;
             explanation.style.display = 'block';
+        }
+        if (recentResults.length > 5) {
+            recentResults.shift(); // 配列が5より大きくなったら、古い結果を削除
         }
     }
 });
