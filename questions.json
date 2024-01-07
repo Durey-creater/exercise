@@ -10,8 +10,8 @@
     {
         "difficulty": "初級",
         "text": "日本の総理はですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
+        "choices": ["a東京", "a大阪", "a札幌", "a福岡"],
+        "answer": "a東京",
+        "explanation": "a日本の首都は東京です。"
     }
 ]
