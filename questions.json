@@ -13,7 +13,7 @@
         "choices": ["a東京", "a大阪", "a札幌", "a福岡"],
         "answer": "a東京",
         "explanation": "a日本の首都は東京です。"
-    }
+    },
 
     {
         "difficulty": "1",
@@ -21,7 +21,7 @@
         "choices": ["b東京", "a大阪", "a札幌", "a福岡"],
         "answer": "b東京",
         "explanation": "b日本の首都は東京です。"
-    }
+    },
 
     {
         "difficulty": "1",
@@ -29,7 +29,7 @@
         "choices": ["c東京", "a大阪", "a札幌", "a福岡"],
         "answer": "c東京",
         "explanation": "c日本の首都は東京です。"
-    }
+    },
 
     {
         "difficulty": "1",
@@ -37,7 +37,7 @@
         "choices": ["d東京", "a大阪", "a札幌", "a福岡"],
         "answer": "d東京",
         "explanation": "d日本の首都は東京です。"
-    }
+    },
 
     {
         "difficulty": "1",
@@ -45,7 +45,7 @@
         "choices": ["e東京", "a大阪", "a札幌", "a福岡"],
         "answer": "e東京",
         "explanation": "e日本の首都は東京です。"
-    }
+    },
 
     {
         "difficulty": "2",
