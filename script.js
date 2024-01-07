@@ -1,22 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
+    let currentLevel = 1;
     let questions = [];
     const recentResults = []; // 直近の結果を保存する配列
 
+    function getRandomQuestionOfLevel(level) {
+        const questionsOfLevel = questions.filter(q => q.difficulty === level);
+        return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
+    }
+
     function updateDifficulty() {
-        const correctCount = recentResults.filter(Boolean).length;
         if (recentResults.length === 5) {
+            const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
                 alert('全問正解！難易度が上がります！');
-                // 難易度を上げる処理をここに実装
-            } else if (correctCount <= 1) {
+                currentLevel++;
+                recentResults.length = 0; // recentResultsをリセット
+                displayQuestion(getRandomQuestionOfLevel(currentLevel));
+            } else if (correctCount <= 1 && currentLevel > 1) {
                 alert('難易度が下がります！');
-                // 難易度を下げる処理をここに実装
+                currentLevel--;
+                recentResults.length = 0; // recentResultsをリセット
+                displayQuestion(getRandomQuestionOfLevel(currentLevel));
             } else {
                 alert('同じ難易度で続けます。');
-                // 難易度を維持する処理をここに実装
+                displayNextQuestion();
             }
-            recentResults.length = 0; // recentResultsをリセット
+        } else {
+            displayNextQuestion();
+        }
+    }
+
+    function displayNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion(questions[currentQuestionIndex]);
+        } else {
+            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
         }
     }
 
@@ -24,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             questions = data;
-            displayQuestion(questions[currentQuestionIndex]);
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
         })
         .catch(error => {
             console.error('通信に失敗しました', error);
@@ -38,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const explanation = document.getElementById('answer-explanation');
         
         questionNumber.textContent = '問題 #' + (currentQuestionIndex + 1);
-        difficulty.textContent = '難易度: ' + question.difficulty; // 数値型の難易度を表示
+        difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
         explanation.style.display = 'none';
@@ -66,17 +86,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         updateDifficulty();
-        
-        if (recentResults.length >= 5) {
-            recentResults.shift(); // 配列が5より大きくなったら、古い結果を削除
-        }
-
-        // 次の問題に進むかどうかの判定
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(questions[currentQuestionIndex]);
-        } else {
-            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
-        }
     }
 });
