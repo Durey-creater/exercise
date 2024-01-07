@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuestionIndex = 0;
     let questions = [];
 
-    fetch('./questions.json', { mode: 'no-cors'})
+    fetch(location.href+'questions.json')
         .then(response => response.json())
         .then(data => {
             questions = data;
             displayQuestion(questions[currentQuestionIndex]);
+        })
+        .catch(error => {
+            console.error('通信に失敗しました', error);
         });
 
     function displayQuestion(question) {
