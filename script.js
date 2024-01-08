@@ -1,10 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
     let questions = [];
+    let totalQuestionsAnswered = [];
     const recentResults = []; // 直近の結果を保存する配列
 
     function getRandomQuestionOfLevel(level) {
+        const questionNumber = document.getElementById('question-number');
         const questionsOfLevel = questions.filter(q => q.difficulty === level);
+        totalQuestionsAnswered++; // 全体の問題数をインクリメント
+        questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
+
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
 
