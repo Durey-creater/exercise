@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
     let questions = [];
-    let totalQuestionsAnswered = [];
+    let totalQuestionsAnswered = 0;
     const recentResults = []; // 直近の結果を保存する配列
 
     function getRandomQuestionOfLevel(level) {
@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function chooseAnswer(choice, question) {
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
+
+        totalQuestionsAnswered++; // 正解か不正解かを選んだ後にインクリメント
 
         if (choice === question.answer) {
             recentResults.push(true);
