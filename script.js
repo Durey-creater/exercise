@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let currentQuestionIndex = 0;
     let currentLevel = 1;
     let questions = [];
     const recentResults = []; // 直近の結果を保存する配列
@@ -14,29 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
                 alert('全問正解！難易度が上がります！');
-                currentLevel++;
-                recentResults.length = 0; // recentResultsをリセット
-                displayQuestion(getRandomQuestionOfLevel(currentLevel));
+                currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
             } else if (correctCount <= 1 && currentLevel > 1) {
                 alert('難易度が下がります！');
-                currentLevel--;
-                recentResults.length = 0; // recentResultsをリセット
-                displayQuestion(getRandomQuestionOfLevel(currentLevel));
+                currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
             } else {
                 alert('同じ難易度で続けます。');
-                displayNextQuestion();
             }
-        } else {
-            displayNextQuestion();
-        }
-    }
-
-    function displayNextQuestion() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(questions[currentQuestionIndex]);
-        } else {
-            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+            recentResults.length = 0; // recentResultsをリセット
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
         }
     }
 
@@ -57,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const choicesList = document.getElementById('choices-list');
         const explanation = document.getElementById('answer-explanation');
         
-        questionNumber.textContent = '問題 #' + (currentQuestionIndex + 1);
+        questionNumber.textContent = '問題';
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
