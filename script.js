@@ -13,17 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
-                alert('全問正解！難易度が上がります！'); 
+                alert('難易度が上がります！'); 
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
                 recentResults.length = 0;
-                currentQuestionIndex += 1
+                currentQuestionIndex += 1;
             } else if (correctCount <= 1 && currentLevel > 1) {
-                alert('難易度が下がります！');
-                currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
-                currentQuestionIndex += 1
-            } else {
-                alert('同じ難易度で続けます。');
-            }
+                const incorrectCount = 5 - correctCount;
+                if (incorrectCount >= 4) {
+                    alert('難易度が下がります！');
+                    currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
+                    recentResults.length = 0;
+                    currentQuestionIndex += 1;
+                }
+            } 
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
