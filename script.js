@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
 
+
     function updateDifficulty() {
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
