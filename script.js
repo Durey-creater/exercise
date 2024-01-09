@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     recentResults.length = 0;
                     currentQuestionIndex += 1;
                 }
-            } 
+            } else{
+                alert('同じ難易度で続けます。');
+                recentResults.length = 0;
+            }
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
