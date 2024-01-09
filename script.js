@@ -9,52 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateDifficulty() {
-        if (recentResults.length === 5) {
-            const correctCount = recentResults.filter(Boolean).length;
-            if (correctCount === 5) {
-                currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
-                alert('全問正解！難易度が上がります！');
-            } else if (correctCount <= 1 && currentLevel > 1) {
-                currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
-                alert('難易度が下がります！');
-            }
+        const correctCount = recentResults.filter(Boolean).length;
+        if (correctCount === 5) {
+            currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
             recentResults.length = 0; // recentResultsをリセット
-            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+            alert('全問正解！難易度が上がります！');
+        } else if (correctCount <= 1 && currentLevel > 1) {
+            currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
+            recentResults.length = 0; // recentResultsをリセット
+            alert('難易度が下がります！');
         }
+
+        displayNextQuestion();
     }
 
-    fetch('questions.json')
-        .then(response => response.json())
-        .then(data => {
-            questions = data;
-            displayQuestion(getRandomQuestionOfLevel(currentLevel));
-        })
-        .catch(error => {
-            console.error('通信に失敗しました', error);
-        });
-
-    function displayQuestion(question) {
-        const questionNumber = document.getElementById('question-number');
-        const difficulty = document.getElementById('difficulty');
-        const questionText = document.getElementById('question-text');
-        const choicesList = document.getElementById('choices-list');
-        const explanation = document.getElementById('answer-explanation');
-        
-        questionNumber.textContent = '問題 #' + (recentResults.length + 1);
-        difficulty.textContent = '難易度: ' + question.difficulty;
-        questionText.textContent = question.text;
-        choicesList.innerHTML = '';
-        explanation.style.display = 'none';
-        
-        question.choices.forEach(function(choice) {
-            const li = document.createElement('li');
-            const button = document.createElement('button');
-            button.textContent = choice;
-            button.onclick = function() { chooseAnswer(choice, question); };
-            li.appendChild(button);
-            choicesList.appendChild(li);
-        });
+    function displayNextQuestion() {
+        displayQuestion(getRandomQuestionOfLevel(currentLevel));
     }
+
+    // ... fetchとdisplayQuestion関数 ...
 
     function chooseAnswer(choice, question) {
         const explanation = document.getElementById('answer-explanation');
@@ -68,11 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
             explanation.textContent = "不正解。 " + question.explanation;
         }
         
-        if (recentResults.length === 5) {
-            updateDifficulty();
+        if (recentResults.length < 5) {
+            displayNextQuestion();
         } else {
-            // 次の問題を表示
-            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+            updateDifficulty();
         }
     }
 });
