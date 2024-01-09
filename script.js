@@ -85,28 +85,20 @@ document.addEventListener('DOMContentLoaded', function() {
         nextQuestionButton.style.display = 'block';
     }
     
-    let isIncorrectQuestionsVisible = false;
     const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
     const incorrectContainer = document.getElementById('incorrect-questions-container');
 
     showIncorrectButton.addEventListener('click', function() {
-        if (isIncorrectQuestionsVisible) {
-            // 不正解の問題一覧を隠す
-            incorrectContainer.style.display = 'none';
-            showIncorrectButton.textContent = '不正解の問題を表示';
-            isIncorrectQuestionsVisible = false;
+        // 不正解の問題一覧の表示状態をトグル
+        if (incorrectContainer.style.display === 'none' || incorrectContainer.style.display === '') {
+            displayIncorrectQuestions(); // 間違った問題を表示する関数
+            incorrectContainer.style.display = 'block'; // 一覧を表示
         } else {
-            // 不正解の問題一覧を表示する
-            displayIncorrectQuestions();
-            incorrectContainer.style.display = 'block';
-            showIncorrectButton.textContent = '不正解の問題を隠す';
-            isIncorrectQuestionsVisible = true;
+            incorrectContainer.style.display = 'none'; // 一覧を非表示
         }
     });
 
-
     function displayIncorrectQuestions() {
-        const incorrectContainer = document.getElementById('incorrect-questions-container');
         incorrectContainer.innerHTML = ''; // コンテナをクリア
 
         if (incorrectQuestions.length === 0) {
