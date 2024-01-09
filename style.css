@@ -54,7 +54,7 @@ body {
 }
 
 #choices-list button {
-    background-color: #FAD0C4; /* パステルピンク */
+    background-color: #217596; /* パステルピンク */
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -66,7 +66,7 @@ body {
 }
 
 #choices-list button:hover {
-    background-color: #FFD1DC; /* ホバー時は少し明るく */
+    background-color: #339EC9; /* ホバー時は少し明るく */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 #show-incorrect-questions-button {
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background-color: #4682b4; /* 修正：セミコロンが必要 */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -135,7 +135,7 @@ body {
 }
 
 #show-incorrect-questions-button:hover {
-    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    background-color: #5a9bcf; /* 修正：ホバー時の色を明るく変更 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
