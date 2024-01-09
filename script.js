@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('同じ難易度で続けます。');
             }
             recentResults.length = 0; // recentResultsをリセット
-            currentQuestionIndex++; // 問題番号をインクリメント
+            currentQuestionIndex = 0; // 問題番号をリセット
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
