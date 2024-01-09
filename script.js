@@ -68,6 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
             explanation.textContent = "不正解。 " + question.explanation;
         }
         
-        updateDifficulty();
+        if (recentResults.length === 5) {
+            updateDifficulty();
+        } else {
+            // 次の問題を表示
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+        }
     }
 });
