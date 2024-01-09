@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
     let questions = [];
-    let totalQuestionsAnswered = 0;
+    let totalQuestionsAnswered = 1;
     const recentResults = []; // 直近の結果を保存する配列
     const incorrectQuestions = [];
 
