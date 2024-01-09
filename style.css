@@ -1,9 +1,7 @@
-css */
-
 body {
     font-family: 'Nunito', 'Arial', sans-serif;
-    background-color: #EFF7FA; /* 明るいスカイブルーの背景色 */
-    color: #333;
+    background-color: #f4f4f4; /* Softer background color */
+    color: #333; /* Dark text for readability */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,41 +12,41 @@ body {
 
 #quiz-container {
     width: 80%;
-    max-width: 800px;
-    background-color: #FFFFFF; /* 白い背景色 */
-    padding: 40px;
-    border-radius: 8px; /* 角の丸みを控えめに */
+    max-width: 800px; /* Broader content area */
+    background-color: #fff; /* White background */
+    padding: 40px; /* Increased padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* More pronounced rounded corners */
     margin: 20px;
 }
 
 .button, #next-question-button, #show-incorrect-questions-button, #choices-list button {
-    background-color: #007BFF; /* 明るいブルー */
-    color: #FFFFFF;
+    background-color: #78C0E0; /* Soft blue */
+    color: #333; /* Dark text for contrast */
     border: none;
-    padding: 15px 30px;
-    border-radius: 30px; /* 丸みを帯びたボタン */
+    padding: 12px 24px; /* Balanced padding */
+    border-radius: 25px; /* Rounded buttons */
     cursor: pointer;
     font-size: 1em;
-    margin: 10px 0;
+    margin: 10px 0; /* Margin top and bottom only */
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .button:hover, #next-question-button:hover, #show-incorrect-questions-button:hover, #choices-list button:hover {
-    background-color: #0056B3; /* ホバー時は少し濃いブルー */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: #56AED0; /* Slightly darker blue on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #choices-list button {
-    width: 100%;
+    width: 100%; /* Full-width buttons */
 }
 
 #choices-list li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adjust spacing between buttons */
 }
 
 #answer-explanation {
-    color: #6C757D;
+    color: #6c757d;
     font-style: italic;
     margin-top: 20px;
 }
@@ -56,17 +54,17 @@ body {
 #difficulty {
     font-size: 1em;
     font-weight: bold;
-    color: #007BFF; /* アクセントカラー */
+    color: #007bff; /* Accent color */
     margin-bottom: 20px;
 }
 
-/* 追加：不正解の問題リストのスタイル */
+/* Incorrect questions list styles */
 #incorrect-questions-container {
-    display: none;
-    background-color: #FFFFFF;
-    border: 1px solid #DDD;
+    display: none; /* Hidden by default */
+    background-color: #fff;
+    border: 1px solid #ddd;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px; /* More rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
@@ -77,26 +75,25 @@ body {
 }
 
 #incorrect-questions-list li {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px; /* More rounded corners */
     margin-bottom: 10px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* メディアクエリ */
 @media (max-width: 768px) {
     #quiz-container {
         width: 95%;
-        padding: 20px;
+        padding: 20px; /* Reduce padding on mobile */
     }
 
     #question-text {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Slightly smaller font size on mobile */
     }
 
     #choices-list button {
-        padding: 15px 20px;
-        font-size: 1em;
+        padding: 12px 18px; /* Reduce button padding on mobile */
+        font-size: 0.9em; /* Smaller font size on mobile */
     }
 }
