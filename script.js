@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (correctCount === 5) {
                 alert('全問正解！難易度が上がります！'); 
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
-                recentResults.length = 0
+                recentResults.length = 0;
                 // currentQuestionIndex += 1
             } else if (correctCount <= 1 && currentLevel > 1) {
                 alert('難易度が下がります！');
@@ -71,8 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 li.appendChild(button);
                 choicesList.appendChild(li);
             });
-        }
-        
+        }        
 
     function chooseAnswer(choice, question) {
         const explanation = document.getElementById('answer-explanation');
