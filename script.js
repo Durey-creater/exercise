@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const explanation = document.getElementById('answer-explanation');
         const nextQuestionButton = document.getElementById('next-question-button');
         
-        questionNumber.textContent = '問題 #' + (recentResults.length + 1);
+
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
