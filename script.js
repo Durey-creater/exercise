@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (correctCount === 5) {
                 alert('全問正解！難易度が上がります！'); 
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
+                recentResults.length = 0
             } else if (correctCount <= 1 && currentLevel > 1) {
                 alert('難易度が下がります！');
                 currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
