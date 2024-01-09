@@ -1,44 +1,44 @@
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #E0E4CC; /* A soft, muted background color */
-    color: #2C3E50; /* A dark color for text */
+    background-color: #f0f2f5; /* ソフトな背景色 */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
 #quiz-container {
-    width: 80%;
+    width: 100%;
     max-width: 800px;
-    background: #FFFFFF;
-    border-radius: 20px;
+    margin: 0 auto;
     padding: 40px;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensures that all inner elements are contained within the border-radius */
-}
-
-.button, #next-question-button, #show-incorrect-questions-button, #choices-list button {
-    background: linear-gradient(145deg, #FECBB2, #FFD7A9);
-    color: #2C3E50;
-    border: none;
     border-radius: 20px;
-    padding: 15px 30px;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 10px 0;
-    transition: all 0.3s ease;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.button:hover, #next-question-button:hover, #show-incorrect-questions-button:hover, #choices-list button:hover {
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+h1 {
+    color: #5a5a5a;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#question-text {
+    background-color: #e4ebf5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 #choices-list {
     list-style: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 #choices-list li {
@@ -47,58 +47,68 @@ body {
 
 #choices-list button {
     width: 100%;
-    display: block;
-    text-align: left;
+    padding: 15px;
+    border: none;
+    background-color: #e4ebf5;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-size: 1rem;
 }
 
-#answer-explanation {
-    background: #F0EAD6;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05);
+#choices-list button:hover {
+    transform: scale(1.05);
+    background-color: #d3dce6;
 }
 
-#difficulty {
-    display: inline-block;
-    background: #B1D0E0;
-    color: #2C3E50;
-    padding: 5px 15px;
-    border-radius: 15px;
+.button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #8a9af4;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #7989d8;
+}
+
+.button:not(:last-child) {
+    margin-right: 10px;
+}
+
+#buttons-container {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Custom scroll bar */
-::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+#answer-explanation {
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
+/* メディアクエリは、スクリーンサイズに応じてレスポンシブデザインを適用します */
 @media (max-width: 768px) {
     #quiz-container {
-        width: 95%;
+        width: 90%;
         padding: 20px;
     }
 
-    #question-text {
-        font-size: 1.5em;
+    .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
-    #choices-list button {
-        padding: 10px 20px;
+    #buttons-container {
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
