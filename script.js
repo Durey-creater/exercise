@@ -29,19 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Display a random question of the new difficulty level
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         }
-        else {
-            displayNextQuestion();
-        }
+        
     }
 
-    function displayNextQuestion() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(questions[currentQuestionIndex]);
-        } else {
-            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
-        }
-    }
+    // function displayNextQuestion() {
+    //     currentQuestionIndex++;
+    //     if (currentQuestionIndex < questions.length) {
+    //         displayQuestion(questions[currentQuestionIndex]);
+    //     } else {
+    //         document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+    //     }
+    // }
 
     fetch(location.href + 'questions.json')
         .then(response => response.json())
@@ -92,10 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update difficulty if 5 questions have been answered
         updateDifficulty();
     } else {
-        // Display a new random question of the same difficulty level
-        setTimeout(function() { // Set timeout to allow the answer explanation to be read
-            displayQuestion(getRandomQuestionOfLevel(currentLevel));
-        }, 2000); // 2000 ms delay before showing the next question
+        document.addEventListener('click', handleClickToNextQuestion);
     }
+    }
+
+    function handleClickToNextQuestion() {
+        // クリックイベントを削除します。
+        document.removeEventListener('click', handleClickToNextQuestion);
+        // 次の問題を表示します。
+        displayQuestion(getRandomQuestionOfLevel(currentLevel));
     }
 });
