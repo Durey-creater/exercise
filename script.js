@@ -13,23 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
-                alert('全問正解！難易度が上がります！'); 
+                alert('全問正解！難易度が上がります！');
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
-                recentResults.length = 0
-                // currentQuestionIndex += 1
+                recentResults.length = 0; // recentResultsをリセット
             } else if (correctCount <= 1 && currentLevel > 1) {
-                alert('難易度が下がります！');
-                currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
+                // 直近5問のうち、4問以上間違えた場合にのみレベルダウン
+                const incorrectCount = 5 - correctCount;
+                if (incorrectCount >= 4) {
+                    alert('難易度が下がります！');
+                    currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
+                    recentResults.length = 0; // recentResultsをリセット
+                }
             } else {
                 alert('同じ難易度で続けます。');
             }
-            // recentResults.length = 0; // recentResultsをリセット
-            // currentQuestionIndex = 0; // 問題番号をリセット
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
         }
     }
+    
 
     function displayNextQuestion() {
         currentQuestionIndex++;
