@@ -40,11 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
             recentResults.push(false);
             explanation.textContent = "不正解。 " + question.explanation;
         }
-        
-        if (recentResults.length < 5) {
-            displayNextQuestion();
-        } else {
-            updateDifficulty();
-        }
+    
+        explanation.addEventListener('click', function() {
+            if (recentResults.length < 5) {
+                displayNextQuestion();
+            } else {
+                updateDifficulty();
+            }
+        }, { once: true }); // 一度だけ実行されるように設定
     }
 });
