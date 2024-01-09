@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function displayNextQuestion() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(questions[currentQuestionIndex]);
-        } else {
-            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
-        }
-    }
+    // function displayNextQuestion() {
+    //     currentQuestionIndex++;
+    //     if (currentQuestionIndex < questions.length) {
+    //         displayQuestion(questions[currentQuestionIndex]);
+    //     } else {
+    //         document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+    //     }
+    // }
 
     fetch(location.href + 'questions.json')
         .then(response => response.json())
@@ -74,17 +74,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }        
 
     function chooseAnswer(choice, question) {
-        const explanation = document.getElementById('answer-explanation');
-        explanation.style.display = 'block';
-        
-        if (choice === question.answer) {
-            recentResults.push(true);
-            explanation.textContent = "正解！ " + question.explanation;
-        } else {
-            recentResults.push(false);
-            explanation.textContent = "不正解。 " + question.explanation;
-        }
-        
+    const explanation = document.getElementById('answer-explanation');
+    explanation.style.display = 'block';
+
+    if (choice === question.answer) {
+        recentResults.push(true);
+        explanation.textContent = "正解！ " + question.explanation;
+    } else {
+        recentResults.push(false);
+        explanation.textContent = "不正解。 " + question.explanation;
+    }
+
+    if (recentResults.length === 5) {
+        // Update difficulty if 5 questions have been answered
         updateDifficulty();
+    } else {
+        // Display a new random question of the same difficulty level
+        setTimeout(function() { // Set timeout to allow the answer explanation to be read
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+        }, 2000); // 2000 ms delay before showing the next question
+    }
     }
 });
