@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
     let questions = [];
-    let totalQuestionsAnswered = 1;
+    let totalQuestionsAnswered = 0;
     const recentResults = []; // 直近の結果を保存する配列
     const incorrectQuestions = [];
 
     function getRandomQuestionOfLevel(level) {
         const questionNumber = document.getElementById('question-number');
         const questionsOfLevel = questions.filter(q => q.difficulty === level);
-        totalQuestionsAnswered++; // 全体の問題数をインクリメント
-        questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
-
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
 
@@ -42,7 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     function displayQuestion(question) {
-        const questionNumber = document.getElementById('question-number');
+        totalQuestionsAnswered++; // 全体の問題数をインクリメント
+        questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
         const difficulty = document.getElementById('difficulty');
         const questionText = document.getElementById('question-text');
         const choicesList = document.getElementById('choices-list');
