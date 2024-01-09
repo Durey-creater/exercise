@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
-    let questions = [];
+    let questions = []; // ここでquestions変数を初期化
     const recentResults = []; // 直近の結果を保存する配列
 
     function getRandomQuestionOfLevel(level) {
+        // ここでquestions変数を使用
         const questionsOfLevel = questions.filter(q => parseInt(q.difficulty) === level);
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
-
 
     function updateDifficulty() {
         if (recentResults.length === 5) {
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('questions.json')
         .then(response => response.json())
         .then(data => {
-            questions = data;
+            questions = data; // ここでquestions変数にデータを設定
+            console.log(questions); // デバッグのためにquestions変数をコンソールに出力
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         })
         .catch(error => {
