@@ -13,25 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
-                alert('難易度が上がります！'); 
-                currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
-                recentResults.length = 0;
-                currentQuestionIndex += 1;
-            } else if (correctCount <= 1 && currentLevel > 1) {
-                const incorrectCount = 5 - correctCount;
-                if (incorrectCount >= 4) {
-                    alert('難易度が下がります！');
-                    currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
-                    recentResults.length = 0;
-                    currentQuestionIndex += 1;
-                }
-            } else{
+                // All recent 5 answers are correct, increase difficulty level
+                alert('難易度が上がります！');
+                currentLevel = Math.min(currentLevel + 1, 10); // Maximum level 10
+            } else if ((correctCount === 0 || correctCount === 1) && currentLevel > 1) {
+                // Less than or equal to 1 out of last 5 answers are correct, decrease difficulty level
+                alert('難易度が下がります！');
+                currentLevel = Math.max(currentLevel - 1, 1); // Minimum level 1
+            } else {
+                // Otherwise, keep the same difficulty level
                 alert('同じ難易度で続けます。');
-                recentResults.length = 0;
             }
+            // Reset the recent results for the new difficulty level
+            recentResults.length = 0;
+            // Display a random question of the new difficulty level
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
-        } else {
-            displayNextQuestion();
         }
     }
 
