@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const recentResults = []; // 直近の結果を保存する配列
 
     function getRandomQuestionOfLevel(level) {
-        const questionsOfLevel = questions.filter(q => q.difficulty === level);
+        const questionsOfLevel = questions.filter(q => parseInt(q.difficulty) === level);
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
+    
 
     function updateDifficulty() {
+        // ...
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
@@ -24,10 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
             recentResults.length = 0; // recentResultsをリセット
             currentQuestionIndex = 0; // 問題番号をリセット
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
-        } else {
-            displayNextQuestion();
         }
+        // ...
     }
+    
+    //     } else {
+    //         displayNextQuestion();
+    //     }
+    // }
 
     function displayNextQuestion() {
         currentQuestionIndex++;
