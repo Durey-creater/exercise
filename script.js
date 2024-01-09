@@ -29,16 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Display a random question of the new difficulty level
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         }
+        else {
+            displayNextQuestion();
+        }
     }
 
-    // function displayNextQuestion() {
-    //     currentQuestionIndex++;
-    //     if (currentQuestionIndex < questions.length) {
-    //         displayQuestion(questions[currentQuestionIndex]);
-    //     } else {
-    //         document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
-    //     }
-    // }
+    function displayNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion(questions[currentQuestionIndex]);
+        } else {
+            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+        }
+    }
 
     fetch(location.href + 'questions.json')
         .then(response => response.json())
