@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
         }
     }
-    
+
+    // function displayNextQuestion() {
+    //     currentQuestionIndex++;
+    //     if (currentQuestionIndex < questions.length) {
+    //         displayQuestion(questions[currentQuestionIndex]);
+    //     } else {
+    //         document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+    //     }
+    // }
 
     function updateDifficulty() {
         if (recentResults.length === 5) {
@@ -30,15 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
-        }
-    }
-
-    function displayNextQuestion() {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion(questions[currentQuestionIndex]);
-        } else {
-            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
         }
     }
 
