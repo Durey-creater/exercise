@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextQuestionButton = document.getElementById('next-question-button');
         
         
-        totalQuestionsAnswered++; // ここで問題数をインクリメント
-        questionNumber.textContent = '問題 #' + totalQuestionsAnswered;
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
 
-        totalQuestionsAnswered++; // 正解か不正解かを選んだ後にインクリメント
 
         if (choice === question.answer) {
             recentResults.push(true);
