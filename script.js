@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentLevel = 1;
-    let questions = []; // ここでquestions変数を初期化
+    let questions = [];
     const recentResults = []; // 直近の結果を保存する配列
 
     function getRandomQuestionOfLevel(level) {
-        // ここでquestions変数を使用
         const questionsOfLevel = questions.filter(q => parseInt(q.difficulty) === level);
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
@@ -14,13 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
-                recentResults.length = 0; // recentResultsをリセット
                 alert('全問正解！難易度が上がります！');
             } else if (correctCount <= 1 && currentLevel > 1) {
                 currentLevel = Math.max(currentLevel - 1, 1); // 最低レベル1
-                recentResults.length = 0; // recentResultsをリセット
                 alert('難易度が下がります！');
             }
+            recentResults.length = 0; // recentResultsをリセット
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         }
     }
@@ -28,8 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('questions.json')
         .then(response => response.json())
         .then(data => {
-            questions = data; // ここでquestions変数にデータを設定
-            console.log(questions); // デバッグのためにquestions変数をコンソールに出力
+            questions = data;
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         })
         .catch(error => {
@@ -43,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const choicesList = document.getElementById('choices-list');
         const explanation = document.getElementById('answer-explanation');
         
-        questionNumber.textContent = '問題';
+        questionNumber.textContent = '問題 #' + (recentResults.length + 1);
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.textContent = question.text;
         choicesList.innerHTML = '';
@@ -71,8 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
             explanation.textContent = "不正解。 " + question.explanation;
         }
         
-        if (recentResults.length === 5) {
-            updateDifficulty();
-        }
+        updateDifficulty();
     }
 });
