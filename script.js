@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 alert('同じ難易度で続けます。');
             }
-            recentResults.length = 0; // recentResultsをリセット
+            // recentResults.length = 0; // recentResultsをリセット
             // currentQuestionIndex = 0; // 問題番号をリセット
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
