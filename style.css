@@ -19,12 +19,12 @@ body {
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
-    margin: 10px; /* 余白の追加 */
-    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 10px;
+    transition: box-shadow 0.3s;
 }
 
 .button:hover {
-    background-color: #B8E4F0; /* ホバー時の色変更 */
+    background-color: #B8E4F0; /* ホバー時は少し明るく */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -54,23 +54,20 @@ body {
 }
 
 #choices-list button {
-    width: 100%;
-    padding: 20px 30px; /* 追加：ボタンのパディングを増やす */
-    font-size: 1.2em; /* ボタンのフォントサイズを大きく */
-    font-weight: 500; /* フォントをやや太字に */
-    color: #fff; /* テキストの色を白に */
-    background: linear-gradient(45deg, #5f2c82, #49a09d); /* グラデーション背景 */
-    border: none; /* 境界線を削除 */
-    border-radius: 25px; /* ボタンの角をより丸く */
+    background-color: #FAD0C4; /* パステルピンク */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s; /* ホバー時の変化を追加 */
-    position: relative; /* 追加：ホバー時の効果のために */
-    overflow: hidden; /* 追加：波紋エフェクトのために */
+    font-size: 1em;
+    margin: 5px;
+    transition: box-shadow 0.3s;
 }
 
 #choices-list button:hover {
-    transform: translateY(-3px); /* ホバー時にボタンを持ち上げる */
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); /* ホバー時にシャドウを強調 */
+    background-color: #FFD1DC; /* ホバー時は少し明るく */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 #choices-list button::before {
