@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let questions = [];
     let totalQuestionsAnswered = 0;
     const recentResults = []; // 直近の結果を保存する配列
+    const incorrectQuestions = [];
 
     function getRandomQuestionOfLevel(level) {
         const questionNumber = document.getElementById('question-number');
@@ -77,10 +78,32 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             recentResults.push(false);
             explanation.textContent = "不正解。 " + question.explanation;
+            incorrectQuestions.push(question)
         }
 
         const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.style.display = 'block';
+    }
+    
+    const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
+    showIncorrectButton.addEventListener('click', displayIncorrectQuestions);
+
+    function displayIncorrectQuestions() {
+        const incorrectContainer = document.getElementById('incorrect-questions-container');
+        incorrectContainer.innerHTML = ''; // コンテナをクリア
+
+        if (incorrectQuestions.length === 0) {
+            incorrectContainer.textContent = '間違った問題はありません。';
+            return;
+        }
+
+        incorrectQuestions.forEach(question => {
+            const div = document.createElement('div');
+            div.innerHTML = `<strong>問題:</strong> ${question.text} <br>
+                             <strong>解答:</strong> ${question.answer} <br>
+                             <strong>解説:</strong> ${question.explanation} <br><br>`;
+            incorrectContainer.appendChild(div);
+        });
     }
 
     const nextQuestionButton = document.getElementById('next-question-button');
