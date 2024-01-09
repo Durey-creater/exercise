@@ -1,7 +1,7 @@
 body {
-    font-family: 'Nunito', 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Softer background color */
-    color: #333; /* Dark text for readability */
+    font-family: 'Nunito', sans-serif;
+    background-color: #E0E4CC; /* A soft, muted background color */
+    color: #2C3E50; /* A dark color for text */
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,88 +12,93 @@ body {
 
 #quiz-container {
     width: 80%;
-    max-width: 800px; /* Broader content area */
-    background-color: #fff; /* White background */
-    padding: 40px; /* Increased padding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; /* More pronounced rounded corners */
-    margin: 20px;
+    max-width: 800px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures that all inner elements are contained within the border-radius */
 }
 
 .button, #next-question-button, #show-incorrect-questions-button, #choices-list button {
-    background-color: #78C0E0; /* Soft blue */
-    color: #333; /* Dark text for contrast */
+    background: linear-gradient(145deg, #FECBB2, #FFD7A9);
+    color: #2C3E50;
     border: none;
-    padding: 12px 24px; /* Balanced padding */
-    border-radius: 25px; /* Rounded buttons */
+    border-radius: 20px;
+    padding: 15px 30px;
     cursor: pointer;
     font-size: 1em;
-    margin: 10px 0; /* Margin top and bottom only */
-    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 10px 0;
+    transition: all 0.3s ease;
 }
 
 .button:hover, #next-question-button:hover, #show-incorrect-questions-button:hover, #choices-list button:hover {
-    background-color: #56AED0; /* Slightly darker blue on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-#choices-list button {
-    width: 100%; /* Full-width buttons */
-}
-
-#choices-list li {
-    margin-bottom: 10px; /* Adjust spacing between buttons */
-}
-
-#answer-explanation {
-    color: #6c757d;
-    font-style: italic;
-    margin-top: 20px;
-}
-
-#difficulty {
-    font-size: 1em;
-    font-weight: bold;
-    color: #007bff; /* Accent color */
-    margin-bottom: 20px;
-}
-
-/* Incorrect questions list styles */
-#incorrect-questions-container {
-    display: none; /* Hidden by default */
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 15px; /* More rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-#incorrect-questions-list {
-    list-style-type: none;
+#choices-list {
+    list-style: none;
     padding: 0;
 }
 
-#incorrect-questions-list li {
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 15px; /* More rounded corners */
+#choices-list li {
     margin-bottom: 10px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#choices-list button {
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+#answer-explanation {
+    background: #F0EAD6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#difficulty {
+    display: inline-block;
+    background: #B1D0E0;
+    color: #2C3E50;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 @media (max-width: 768px) {
     #quiz-container {
         width: 95%;
-        padding: 20px; /* Reduce padding on mobile */
+        padding: 20px;
     }
 
     #question-text {
-        font-size: 1.5em; /* Slightly smaller font size on mobile */
+        font-size: 1.5em;
     }
 
     #choices-list button {
-        padding: 12px 18px; /* Reduce button padding on mobile */
-        font-size: 0.9em; /* Smaller font size on mobile */
+        padding: 10px 20px;
     }
 }
