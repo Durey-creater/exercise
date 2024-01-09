@@ -1,162 +1,90 @@
 /* style.css */
+
 body {
-    font-family: 'Nunito', 'Arial', sans-serif; /* 追加：よりモダンなフォント */
-    background-color: #e9ecef; /* ソフトな背景色 */
+    font-family: 'Nunito', 'Arial', sans-serif;
+    background-color: #f4f4f4; /* 明るいグレーの背景色 */
+    color: #333; /* 濃いテキスト色 */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #495057; /* テキストの色を少し暗めに */
-}
-
-.button {
-    background-color: #AED9E0; /* パステルブルー */
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 10px;
-    transition: box-shadow 0.3s;
-}
-
-.button:hover {
-    background-color: #B8E4F0; /* ホバー時は少し明るく */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #quiz-container {
-    width: 90%;
-    max-width: 600px;
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* シャドウをより立体的に */
-    border-radius: 15px; /* 角の丸みを増やす */
-    margin: 20px; /* 追加：余白の追加 */
+    width: 80%;
+    max-width: 800px; /* より広いコンテンツ領域 */
+    background-color: #fff; /* 白い背景色 */
+    padding: 40px; /* より広いパディング */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* 角の丸みを控えめに */
+    margin: 20px;
 }
 
-#question-text {
-    font-size: 1.75em; /* より大きなフォントサイズ */
-    font-weight: 700; /* テキストを太字に */
-    margin-bottom: 30px; /* 追加：余白を増やす */
+.button, #next-question-button, #show-incorrect-questions-button, #choices-list button {
+    background-color: #333; /* 濃いグレー/ほぼ黒 */
+    color: #fff; /* テキスト色を白に */
+    border: none;
+    padding: 15px 30px; /* より大きなパディング */
+    border-radius: 5px; /* 角の丸みをさらに控えめに */
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px 0; /* 上下のみにマージン */
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-#choices-list {
-    list-style: none;
-    padding: 0;
-}
-
-#choices-list li {
-    margin-bottom: 15px; /* ボタン間の余白を増やす */
+.button:hover, #next-question-button:hover, #show-incorrect-questions-button:hover, #choices-list button:hover {
+    background-color: #555; /* ホバー時は中間のグレー */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 #choices-list button {
-    background-color: #334195; 
-    color: #fff;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 5px;
-    transition: all 0.3s;
-    width: 100%; 
-}
-    
-
-#choices-list button:hover {
-    background-color: #4E62D4; /* ホバー時は少し明るく */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    width: 100%; /* ボタンを全幅に */
 }
 
-#choices-list button::before {
-    content: ''; /* 追加：波紋エフェクトのための要素 */
-    position: absolute;
-    width: 300%; 
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    transition: transform 0.5s, opacity 0.3s;
-    z-index: 0;
-    opacity: 0;
-}
-
-#choices-list button:active::before {
-    transform: translate(-50%, -50%) scale(1); /* クリック時に拡大 */
-    opacity: 1; /* クリック時に可視化 */
-}
-
-#choices-list button span {
-    position: relative; /* 追加：テキストを前面に表示 */
-    z-index: 1;
-}
-
-#submit-button {
-    display: none; /* このボタンは使用しないため非表示に */
+#choices-list li {
+    margin-bottom: 10px; /* ボタン間の余白を調整 */
 }
 
 #answer-explanation {
-    color: #6c757d; /* 解説の色を少し明るく */
-    font-style: italic; /* イタリックでスタイリッシュに */
-    margin-top: 30px; /* 追加：余白を増やす */
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 20px;
 }
 
 #difficulty {
     font-size: 1em;
     font-weight: bold;
-    color: #007bff;
-    margin-bottom: 10px; /* 適切な余白を追加 */
+    color: #007bff; /* アクセントカラー */
+    margin-bottom: 20px;
 }
 
-#next-question-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-#show-incorrect-questions-button {
-    background-color: #7F95D1; /* 修正：セミコロンが必要 */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-#show-incorrect-questions-button:hover {
-    background-color: #485BCA; /* 修正：ホバー時の色を明るく変更 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* 追加：不正解の問題リストのスタイル */
 #incorrect-questions-container {
-    margin-top: 20px;
+    display: none; /* 初期状態では非表示 */
+    background-color: #fff;
     border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#incorrect-questions-container div {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
+
+#incorrect-questions-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#incorrect-questions-list li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* メディアクエリはそのまま保持 */
 
 
 
