@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let questions = [];
     const recentResults = []; // 直近の結果を保存する配列
 
-    function getRandomQuestionOfLevel(level) {
-        const questionsOfLevel = questions.filter(q => q.difficulty === level);
-        return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
+    function displayNextQuestion() {
+        if (recentResults.length < 5) {
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+        } else {
+            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
+        }
     }
+    
 
     function updateDifficulty() {
         if (recentResults.length === 5) {
