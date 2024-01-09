@@ -90,7 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update difficulty if 5 questions have been answered
         updateDifficulty();
     } else {
-        document.addEventListener('click', handleClickToNextQuestion);
+        // Display a new random question of the same difficulty level
+        setTimeout(function() { // Set timeout to allow the answer explanation to be read
+            displayQuestion(getRandomQuestionOfLevel(currentLevel));
+        }, 2000); // 2000 ms delay before showing the next question
     }
     }
 
