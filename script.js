@@ -50,28 +50,29 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('通信に失敗しました', error);
         });
 
-    function displayQuestion(question) {
-        const questionNumber = document.getElementById('question-number');
-        const difficulty = document.getElementById('difficulty');
-        const questionText = document.getElementById('question-text');
-        const choicesList = document.getElementById('choices-list');
-        const explanation = document.getElementById('answer-explanation');
+        function displayQuestion(question) {
+            const questionNumber = document.getElementById('question-number');
+            const difficulty = document.getElementById('difficulty');
+            const questionText = document.getElementById('question-text');
+            const choicesList = document.getElementById('choices-list');
+            const explanation = document.getElementById('answer-explanation');
+            
+            questionNumber.textContent = '問題 #' + (currentQuestionIndex + 1);  // ここを修正
+            difficulty.textContent = '難易度: ' + question.difficulty;
+            questionText.textContent = question.text;
+            choicesList.innerHTML = '';
+            explanation.style.display = 'none';
+            
+            question.choices.forEach(function(choice) {
+                const li = document.createElement('li');
+                const button = document.createElement('button');
+                button.textContent = choice;
+                button.onclick = function() { chooseAnswer(choice, question); };
+                li.appendChild(button);
+                choicesList.appendChild(li);
+            });
+        }
         
-        questionNumber.textContent = '問題 #' + (c);
-        difficulty.textContent = '難易度: ' + question.difficulty;
-        questionText.textContent = question.text;
-        choicesList.innerHTML = '';
-        explanation.style.display = 'none';
-        
-        question.choices.forEach(function(choice) {
-            const li = document.createElement('li');
-            const button = document.createElement('button');
-            button.textContent = choice;
-            button.onclick = function() { chooseAnswer(choice, question); };
-            li.appendChild(button);
-            choicesList.appendChild(li);
-        });
-    }
 
     function chooseAnswer(choice, question) {
         const explanation = document.getElementById('answer-explanation');
