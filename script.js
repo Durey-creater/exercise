@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (recentResults.length === 5) {
             const correctCount = recentResults.filter(Boolean).length;
             if (correctCount === 5) {
-                alert('難易度が上がります！'); 
+                alert('全問正解！難易度が上がります！'); 
                 currentLevel = Math.min(currentLevel + 1, 10); // 最大レベル10
                 recentResults.length = 0;
                 // currentQuestionIndex += 1
@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
             displayQuestion(getRandomQuestionOfLevel(currentLevel));
         } else {
             displayNextQuestion();
+        }
+    }
+
+    function displayNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion(questions[currentQuestionIndex]);
+        } else {
+            document.getElementById('quiz-container').innerHTML = '<p>すべての問題が終了しました！</p>';
         }
     }
 
