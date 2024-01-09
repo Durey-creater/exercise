@@ -55,20 +55,21 @@ h1 {
 }
 
 #choices-list button {
+    background-color: #e4ebf5;
     border-radius: 30px;
     padding: 15px;
-    border: 1px solid #000; /* 線を追加 */
+    border: none;
     width: 100%;
     cursor: pointer;
     transition: transform 0.2s;
     font-size: 1rem;
-    color: #000; /* 文字色を黒に変更 */
-    background-color: #fff; /* 背景色を白に変更 */
 }
 
 #choices-list button:hover {
     transform: scale(1.05);
+    background-color: #d3dce6;
 }
+
 
 .button {
     background-color: #8a9af4;
