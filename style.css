@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
@@ -15,7 +14,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 #quiz-container {
     background: #ffffff;
     padding: 40px;
@@ -26,7 +24,6 @@ body {
     margin: 20px;
     position: relative;
 }
-
 h1 {
     color: #5a5a5a;
     font-size: 2rem;
@@ -34,7 +31,6 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
-
 #question-text {
     border-radius: 20px;
     padding: 20px;
@@ -43,26 +39,27 @@ h1 {
     background-color: initial; /* 背景色を削除 */
     color: #000; /* 文字色を黒に変更 */
 }
-
-#choices-list-jp, #choices-list-en{
+#choices-list {
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
-
-#choices-list-jp li, #choices-list-en li {
+#choices-list li {
     margin-bottom: 10px;
 }
 
-#choices-list-jp button, #choices-list-en button  {
+#choices-list button {
     background-color: #e4ebf5;
     border-radius: 30px;
     padding: 15px;
+    border: 1px solid #000; /* 線を追加 */
     border: none;
     width: 100%;
     cursor: pointer;
     transition: transform 0.2s;
     font-size: 1rem;
+    color: #000; /* 文字色を黒に変更 */
+    background-color: #fff; /* 背景色を白に変更 */
 }
 
 #choices-list button:hover {
@@ -83,11 +80,9 @@ h1 {
     display: block;
     transition: background-color 0.3s;
 }
-
 .button:hover {
     background-color: #7989d8;
 }
-
 #difficulty {
     font-size: 1.2em;
     font-weight: 700;
@@ -95,7 +90,6 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
 }
-
 #answer-explanation {
     background-color: #f8f9fa;
     padding: 10px;
@@ -104,17 +98,14 @@ h1 {
     font-style: italic;
     color: #6c757d;
 }
-
 @media (max-width: 768px) {
     #quiz-container {
         padding: 20px;
         width: 95%;
     }
-
     #question-text {
         font-size: 1.5em;
     }
-
     #choices-list button {
         padding: 15px 20px;
         font-size: 1em;
