@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let totalQuestionsAnswered = 0;
     const recentResults = []; // 直近の結果を保存する配列
     const incorrectQuestions = [];
+
     function getRandomQuestionOfLevel(level) {
         const questionNumber = document.getElementById('question-number');
         const questionsOfLevel = questions.filter(q => q.difficulty === level);
@@ -36,48 +37,50 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('通信に失敗しました', error);
         });
 
-    function displayQuestion(question) {
-        totalQuestionsAnswered++; // 全体の問題数をインクリメント
-        questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
-        const difficulty = document.getElementById('difficulty');
-        questionText.innerHTML = question.text.replace(/\n/g, '<br>');
-        choicesList.innerHTML = '';
-        const questionText = document.getElementById('question-text');
-        const choicesList = document.getElementById('choices-list');
-        const explanation = document.getElementById('answer-explanation');
-        const nextQuestionButton = document.getElementById('next-question-button');
+        function displayQuestion(question) {
+            const questionNumber = document.getElementById('question-number'); // この行を追加
+            const difficulty = document.getElementById('difficulty');
+            const questionText = document.getElementById('question-text');
+            const choicesList = document.getElementById('choices-list');
+            const explanation = document.getElementById('answer-explanation');
+            const nextQuestionButton = document.getElementById('next-question-button');
         
+            totalQuestionsAnswered++; // 全体の問題数をインクリメント
+            questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
         
-        difficulty.textContent = '難易度: ' + question.difficulty;
-        questionText.textContent = question.text;
-        choicesList.innerHTML = '';
-        explanation.style.display = 'none';
-        nextQuestionButton.style.display = 'none';
+            difficulty.textContent = '難易度: ' + question.difficulty;
+            questionText.innerHTML = question.text.replace(/\n/g, '<br>'); // 改行を <br> に置換
+            choicesList.innerHTML = '';
+            explanation.style.display = 'none';
+            nextQuestionButton.style.display = 'none';
         
-        question.choices.forEach(function(choice) {
-            const li = document.createElement('li');
-            const button = document.createElement('button');
-            button.textContent = choice;
-            button.onclick = function() { chooseAnswer(choice, question); };
-            li.appendChild(button);
-            choicesList.appendChild(li);
-        });
-    }
-    function chooseAnswer(choice, question) {
-        explanation.innerHTML = question.explanation.replace(/\n/g, '<br>');
-        const explanation = document.getElementById('answer-explanation');
-        explanation.style.display = 'block';
-        if (choice === question.answer) {
-            recentResults.push(true);
-            explanation.textContent = "正解！ " + question.explanation;
-        } else {
-            recentResults.push(false);
-            explanation.textContent = "不正解。 " + question.explanation;
-            incorrectQuestions.push(question)
+            question.choices.forEach(function(choice) {
+                const li = document.createElement('li');
+                const button = document.createElement('button');
+                button.textContent = choice;
+                button.onclick = function() { chooseAnswer(choice, question); };
+                li.appendChild(button);
+                choicesList.appendChild(li);
+            });
         }
-        const nextQuestionButton = document.getElementById('next-question-button');
-        nextQuestionButton.style.display = 'block';
-    }
+        
+        function chooseAnswer(choice, question) {
+            const explanation = document.getElementById('answer-explanation'); // この行は1回だけ宣言
+            explanation.style.display = 'block';
+        
+            if (choice === question.answer) {
+                recentResults.push(true);
+                explanation.innerHTML = "正解！ " + question.explanation.replace(/\n/g, '<br>'); // 正解の解説も改行を <br> に置換
+            } else {
+                recentResults.push(false);
+                explanation.innerHTML = "不正解。 " + question.explanation.replace(/\n/g, '<br>'); // 不正解の解説も改行を <br> に置換
+                incorrectQuestions.push(question);
+            }
+        
+            const nextQuestionButton = document.getElementById('next-question-button');
+            nextQuestionButton.style.display = 'block';
+        }
+        
     
     const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
     const incorrectContainer = document.getElementById('incorrect-questions-container');
