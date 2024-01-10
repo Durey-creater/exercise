@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function getRandomQuestionOfLevel(level) {
         const questionNumber = document.getElementById('question-number');
         const questionsOfLevel = questions.filter(q => q.difficulty === level);
-        totalQuestionsAnswered++; // 全体の問題数をインクリメント
-        questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
 
@@ -42,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         totalQuestionsAnswered++; // 全体の問題数をインクリメント
         questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
         const difficulty = document.getElementById('difficulty');
+        questionText.innerHTML = question.text.replace(/\n/g, '<br>');
+        choicesList.innerHTML = '';
         const questionText = document.getElementById('question-text');
         const choicesList = document.getElementById('choices-list');
         const explanation = document.getElementById('answer-explanation');
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     function chooseAnswer(choice, question) {
+        explanation.innerHTML = question.explanation.replace(/\n/g, '<br>');
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
         if (choice === question.answer) {
