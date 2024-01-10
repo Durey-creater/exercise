@@ -1,25 +1,5 @@
 [
     {
-        "Number": 3,
-        "difficulty": 1,
-        "text": {
-            "jp": "CNOTゲートを適用したとき、|10⟩状態はどう変わりますか？",
-            "en": "How does the |10⟩ state change when the CNOT gate is applied?"
-        },
-        "choices": {
-            "jp": ["|11⟩", "|01⟩", "|10⟩", "|00⟩"],
-            "en": ["|11⟩", "|01⟩", "|10⟩", "|00⟩"]
-        },
-        "answer": {
-            "jp": "|11⟩",
-            "en": "|11⟩"
-        },
-        "explanation": {
-            "jp": "CNOTゲートは、最初の量子ビットが|1⟩の状態の時にのみ、第二の量子ビットの状態を反転させます。したがって、|10⟩は|11⟩に変化します。",
-            "en": "The CNOT gate flips the state of the second qubit only when the first qubit is in the |1⟩ state. Thus, the |10⟩ changes to |11⟩."
-        }
-    },
-    {
         "Number": 5,
         "difficulty": 1,
         "text": {
