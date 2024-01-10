@@ -8,7 +8,7 @@
         },
         "choices": {
             "jp": ["(1).|11⟩", "(2).|01⟩", "(3).|10⟩", "(4).|00⟩"],
-            "en": ["(1). |11⟩", "(2). |01⟩", "(3). |10⟩", "(4). |00⟩"]
+            "en": ["(1).|11⟩", "(2).|01⟩", "(3).|10⟩", "(4).|00⟩"]
         },
         "answer": {
             "jp": "(1)",
@@ -28,7 +28,7 @@
         },
         "choices": {
             "jp": ["(1).-|0⟩", "(2).|0⟩", "(3).-|1⟩", "(4).|1⟩"],
-            "en": ["(1). -|0⟩", "(2). |0⟩", "(3). -|1⟩", "(4). |1⟩"]
+            "en": ["(1).-|0⟩", "(2).|0⟩", "(3).-|1⟩", "(4).|1⟩"]
         },
         "answer": {
             "jp": "(2)",
@@ -68,7 +68,7 @@
         },
         "choices": {
             "jp": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). |-⟩"]
+            "en": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).|−⟩"]
         },
         "answer": {
             "jp": "(1)",
@@ -88,7 +88,7 @@
         },
         "choices": {
             "jp": ["(1).|ψ⟩=|0⟩", "(2).|ψ⟩=|1⟩", "(3).|ψ⟩=(|0⟩+|1⟩)/2", "(4).|ψ⟩=(|0⟩+|1⟩)/√2"],
-            "en": ["(1). |ψ⟩=|0⟩", "(2). |ψ⟩=|1⟩", "(3). |ψ⟩=(|0⟩+|1⟩)/2", "(4). |ψ⟩=(|0⟩+|1⟩)/√2"]
+            "en": ["(1).|ψ⟩=|0⟩", "(2).|ψ⟩=|1⟩", "(3).|ψ⟩=(|0⟩+|1⟩)/2", "(4).|ψ⟩=(|0⟩+|1⟩)/√2"]
         },
         "answer": {
             "jp": "(4)",
@@ -108,7 +108,7 @@
         },
         "choices": {
             "jp": ["(1). 反転させない", "(2). 180度反転させる", "(3). 90度回転させる", "(4). 45度回転させる"],
-            "en": ["(1). Not inverted", "(2). Flip 180 degrees", "(3). Rotate 90 degrees", "(4). Rotate 45 degrees"]
+            "en": ["Not inverted", "Flip 180 degrees", "Rotate 90 degrees", "Rotate 45 degrees"]
         },
         "answer": {
             "jp": "(2)",
@@ -128,7 +128,7 @@
         },
         "choices": {
             "jp": ["(1). 素因数分解", "(2). データベース検索", "(3). 暗号解読", "(4). 気象予報"],
-            "en": ["(1). Prime factorization", "(2). Database Search", "(3). Cryptanalysis", "(4). Weather Forecast"]
+            "en": ["Prime factorization", "Database Search", "Cryptanalysis", "Weather Forecast"]
         },
         "answer": {
             "jp": "(2)",
@@ -148,7 +148,7 @@
         },
         "choices": {
             "jp": ["(1). (|00⟩+|11⟩)/√2", "(2). |01⟩", "(3). (|01⟩+|10⟩)/√2", "(4). (|00⟩−|11⟩)/√2"],
-            "en": ["(1). (|00⟩+|11⟩)/√2", "(2). |01⟩", "(3). (|01⟩+|10⟩)/√2", "(4). (|00⟩-|11⟩)/√2"]
+            "en": ["(1). (|00⟩+|11⟩)/√2", "(2). |01⟩", "(3). (|01⟩+|10⟩)/√2", "(4). (|00⟩−|11⟩)/√2"]
         },
         "answer": {
             "jp": "(2)",
@@ -167,7 +167,7 @@
             "en": "What does the Z-gate do when applied to |1⟩?"
         },
         "choices": {
-            "jp": ["(1). |1⟩", "(2). −|1⟩", "(3). |0⟩", "(4). −|0⟩"],
+            "jp": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"],
             "en": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"]
         },
         "answer": {
@@ -187,7 +187,7 @@
             "en": "What does the Y-gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["(1). |1⟩", "(2). −|1⟩", "(3). |0⟩", "(4). −|0⟩"],
+            "jp": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"],
             "en": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"]
         },
         "answer": {
@@ -208,7 +208,7 @@
         },
         "choices": {
             "jp": ["(1). 一方の状態が確定すると、もう一方の状態も即座に確定する。", "(2). 一方の状態が確定すると、もう一方の状態はランダムに決まる。", "(3). 一方の状態が確定すると、もう一方の状態には影響しない。", "(4). 両方の状態は完全に独立している。"],
-            "en": ["(1). When one state is determined, the other state is also immediately determined.", "(2). Once one state is determined, the other state is determined at random.", "(3). Once one state is determined, the other state is not affected.", "(4). Both states are completely independent."]
+            "en": ["When one state is determined, the other state is also immediately determined.", "Once one state is determined, the other state is determined at random.", "Once one state is determined, the other state is not affected.", "Both states are completely independent."]
         },
         "answer": {
             "jp": "(1)",
@@ -228,7 +228,7 @@
         },
         "choices": {
             "jp": ["(1). 量子情報の消失", "(2). 量子状態の持続時間", "(3). 量子ビットの超伝導", "(4). 量子ビットが古典ビットに変換"],
-            "en": ["(1). Loss of quantum information", "(2). Duration of quantum state", "(3). Superconductivity in qubits", "(4). Quantum bits converted to classical bits"]
+            "en": ["Loss of quantum information", "Duration of quantum state", "Superconductivity in qubits", "Quantum bits converted to classical bits"]
         },
         "answer": {
             "jp": "(1)",
@@ -268,7 +268,7 @@
             "en": "If |-⟩=α|0⟩-β|1⟩, what must be the relationship between the probability amplitudes α and β?"
         },
         "choices": {
-            "jp": ["(1).α=β", "(2).α > β", "(3).α < β", "(4).α=−β"],
+            "jp": ["(1).α=β", "(2).α > β", "(3).α < β", "(4).α=-β"],
             "en": ["(1).α=β", "(2).α > β", "(3).α < β", "(4).α=-β"]
         },
         "answer": {
@@ -288,7 +288,7 @@
             "en": "What states are obtained when the Z-gate acts on |+⟩?"
         },
         "choices": {
-            "jp": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).|−⟩"],
+            "jp": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). |-⟩"],
             "en": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). |-⟩"]
         },
         "answer": {
@@ -308,7 +308,7 @@
             "en": "What does the Z-gate change |+⟩ to?"
         },
         "choices": {
-            "jp": ["(1).|+⟩", "(2).|−⟩", "(3).|0⟩", "(4).|1⟩"],
+            "jp": ["(1). |+⟩", "(2). |-⟩", "(3). |0⟩", "(4). |1⟩"],
             "en": ["(1). |+⟩", "(2). |-⟩", "(3). |0⟩", "(4). |1⟩"]
         },
         "answer": {
@@ -329,7 +329,7 @@
         },
         "choices": {
             "jp": ["(1).はい", "(2).いいえ", "(3).情報が不足しているため確認できない", "(4).別の情報が必要"],
-            "en": ["(1). Yes", "(2). No", "(3). Cannot be confirmed due to lack of information", "(4). Need different information"]
+            "en": ["Yes", "No", "Cannot be confirmed due to lack of information", "Need different information"]
         },
         "answer": {
             "jp": "(1)",
@@ -350,7 +350,7 @@
         },
         "choices": {
             "jp": ["(1).X ゲート", "(2).Y ゲート", "(3).Z ゲート", "(4).W ゲート"],
-            "en": ["(1).X Gate", "(2).Y Gate", "(3).Z Gate", "(4).W Gate"]
+            "en": ["X Gate", "Y Gate", "Z Gate", "W Gate"]
         },
         "answer": {
             "jp": "(4)",
@@ -369,12 +369,12 @@
             "en": "|ψ⟩ = 1/√3 |0⟩ + √2/√3 |1⟩, what is the probability that this qubit measures |0⟩?"
         },
         "choices": {
-            "jp": ["A) 1/3", "B) 2/3", "C) 1/2", "D) 1/4"],
-            "en": ["A) 1/3", "B) 2/3", "C) 1/2", "D) 1/4"]
+            "jp": ["(1).1/3", "(2).2/3", "(3).1/2", "(4).1/4"],
+            "en": ["(1).1/3", "(2).2/3", "(3).1/2", "(4).1/4"]
         },
         "answer": {
-            "jp": "1/3",
-            "en": "1/3"
+            "jp": "(1)",
+            "en": "(1)"
         },
         "explanation": {
             "jp": "確率は量子状態の振幅の絶対値の二乗で決まります。この場合、|0⟩の確率振幅は1/√3なので、その二乗は(1/√3)² = 1/3になります。",
@@ -390,7 +390,7 @@
         },
         "choices": {
             "jp": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).すべての状態に当てはまる"],
-            "en": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). Applicable to all states"]
+            "en": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "Applicable to all states"]
         },
         "answer": {
             "jp": "(4)",
@@ -410,7 +410,7 @@
         },
         "choices": {
             "jp": ["(1).X ゲート", "(2).H ゲート", "(3).S ゲート", "(4).T ゲート"],
-            "en": ["(1).X Gate", "(2).H Gate", "(3).S Gate", "(4).T Gate"]
+            "en": ["X Gate", "H Gate", "S Gate", "T Gate"]
         },
         "answer": {
             "jp": "(2)",
@@ -430,7 +430,7 @@
         },
         "choices": {
             "jp": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1). |0⟩", "(2). -|1⟩", "(3). |+⟩", "(4). |-⟩"]
+            "en": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"]
         },
         "answer": {
             "jp": "(3)",
@@ -450,7 +450,7 @@
         },
         "choices": {
             "jp": ["(1).はい", "(2).いいえ"],
-            "en": ["(1). Yes", "(2). No"]
+            "en": ["Yes", "No"]
         },
         "answer": {
             "jp": "(2)",
@@ -470,7 +470,7 @@
         },
         "choices": {
             "jp": ["(1).はい", "(2).いいえ"],
-            "en": ["(1). Yes", "(2). No"]
+            "en": ["Yes", "No"]
         },
         "answer": {
             "jp": "(1)",
@@ -490,7 +490,7 @@
         },
         "choices": {
             "jp": ["(1).-|0⟩", "(2).-|1⟩", "(3).|0⟩", "(4).|1⟩"],
-            "en": ["(1). -|0⟩", "(2). -|1⟩", "(3). |0⟩", "(4). |1⟩"]
+            "en": ["(1).-|0⟩", "(2).-|1⟩", "(3).|0⟩", "(4).|1⟩"]
         },
         "answer": {
             "jp": "(3)",
@@ -530,7 +530,7 @@
         },
         "choices": {
             "jp": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1). |0⟩", "(2). -|1⟩", "(3). |+⟩", "(4). |-⟩"]
+            "en": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"]
         },
         "answer": {
             "jp": "(3)",
@@ -550,7 +550,7 @@
         },
         "choices": {
             "jp": ["(1).|ψ⟩=1/2|0⟩+√3/2|1⟩", "(2).|ψ⟩=1/√3|0⟩+1/√3|1⟩", "(3).|ψ⟩=1/√2|0⟩+1/√2|1⟩", "(4).|ψ⟩=1/3|0⟩+2/3|1⟩"],
-            "en": ["(1). |ψ⟩=1/2|0⟩+√3/2|1⟩", "(2). |ψ⟩=1/√3|0⟩+1/√3|1⟩", "(3). |ψ⟩=1/√2|0⟩+1/√2|1⟩", "(4). |ψ⟩=1/3|0⟩+2/3|1⟩"]
+            "en": ["(1).|ψ⟩=1/2|0⟩+√3/2|1⟩", "(2).|ψ⟩=1/√3|0⟩+1/√3|1⟩", "(3).|ψ⟩=1/√2|0⟩+1/√2|1⟩", "(4).|ψ⟩=1/3|0⟩+2/3|1⟩"]
         },
         "answer": {
             "jp": "(1)",
@@ -570,7 +570,7 @@
         },
         "choices": {
             "jp": ["(1).確率", "(2).確率振幅", "(3).エネルギー", "(4).速度"],
-            "en": ["(1). Probability", "(2). Probability Amplitude", "(3). Energy", "(4). Velocity"]
+            "en": ["Probability", "Probability Amplitude", "Energy", "Velocity"]
         },
         "answer": {
             "jp": "(2)",
@@ -630,7 +630,7 @@
         },
         "choices": {
             "jp": ["(1).ビットの反転", "(2).エラー訂正", "(3).位相変換", "(4).周期性の分析"],
-            "en": ["(1). Inverted bits", "(2). Error Correction", "(3). Phase transformation", "(4). Periodicity Analysis"]
+            "en": ["Inverted bits", "Error Correction", "Phase transformation", "Periodicity Analysis"]
         },
         "answer": {
             "jp": "(4)",
@@ -730,7 +730,7 @@
         },
         "choices": {
             "jp": ["(1). 逆の状態", "(2). 同じ状態", "(3). ランダムな状態", "(4). 測定されていない状態"],
-            "en": ["(1). Reverse state", "(2). Same state", "(3). Random state", "(4). State not measured"]
+            "en": ["Reverse state", "Same state", "Random state", "State not measured"]
         },
         "answer": {
             "jp": "(1)",
@@ -870,7 +870,7 @@
         },
         "choices": {
             "jp": ["(1).|0⟩", "(2).|1⟩", "(3).両方同じ", "(4).不明"],
-            "en": ["(1).|0⟩", "(2).|1⟩", "(3).Same for both", "(4).Unknown"]
+            "en": ["(1).|0⟩", "(2).|1⟩", "Same for both", "Unknown"]
         },
         "answer": {
             "jp": "(3)",
