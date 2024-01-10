@@ -860,5 +860,105 @@
             "jp": "正規化するためには、まず長さの2乗を求めます。これは(2i)^2 + (-3)^2 = -4 + 9 = 5、従って長さは√13です。したがって、状態ベクトルは(2i|0⟩ - 3|1⟩)/√13です。",
             "en": "To normalize, we first find the square of the length. This is (2i)^2 + (-3)^2 = -4 + 9 = 5, thus the length is √13. Thus, the state vector is (2i|0⟩ - 3|1⟩)/√13."
         }
+    },
+    {
+        "Number": 38,
+        "difficulty": 2,
+        "text": {
+            "jp": "量子ビット|ψ⟩が|0⟩状態と|1⟩状態の50%の確率で重ね合わされた場合、測定後にどの状態になる確率が最も高いですか？",
+            "en": "A qubit |ψ⟩ superimposed with a 50% probability of state |0⟩ and state |1⟩ has the highest probability of being in which state after measurement?"
+        },
+        "choices": {
+            "jp": ["(1).|0⟩", "(2).|1⟩", "(3).両方同じ", "(4).不明"],
+            "en": ["(1).|0⟩", "(2).|1⟩", "(3).Same for both", "(4).Unknown"]
+        },
+        "answer": {
+            "jp": "(3)",
+            "en": "(3)"
+        },
+        "explanation": {
+            "jp": "測定前の量子ビットが|0⟩と|1⟩の状態が50%の確率で重ね合わされているので、測定後に|0⟩または|1⟩の状態になる確率は同じく50%です。",
+            "en": "Since the qubits before the measurement are superposed in the |0⟩ and |1⟩ states with a probability of 50%, the probability of being in the |0⟩ or |1⟩ state after measurement is also 50%."
+        }
+    },
+    {
+        "Number": 39,
+        "difficulty": 2,
+        "text": {
+            "jp": "固有状態|ψ⟩=1/√3(|0⟩+√2|1⟩)の固有値を測定した際、|1⟩状態を見つける確率はいくつですか？",
+            "en": "What is the probability of finding a |1⟩ state when measuring the eigenvalues of the eigenstate |ψ⟩=1/√3(|0⟩+√2|1⟩)?"
+        },
+        "choices": {
+            "jp": ["(1).1/3", "(2).2/3", "(3).√2/3", "(4).1/√3"],
+            "en": ["(1).1/3", "(2).2/3", "(3).√2/3", "(4).1/√3"]
+        },
+        "answer": {
+            "jp": "(2)",
+            "en": "(2)"
+        },
+        "explanation": {
+            "jp": "|1⟩の状態の確率は確率振幅の絶対値の2乗で求められます。(|√2|1⟩)^2 = 2/3です。",
+            "en": "The probability of a state of |1⟩ is found by squaring the absolute value of the probability amplitude. (|√2|1⟩)^2 = 2/3."
+        }
+    },
+    {
+        "Number": 40,
+        "difficulty": 2,
+        "text": {
+            "jp": "2つの量子状態|φ⟩=(1/√3, √2/√3)と|χ⟩=(√2/√3, -1/√3)の間の内積⟨φ|χ⟩はいくつですか？",
+            "en": "How many is the inner product ⟨φ|χ⟩ between the two quantum states |φ⟩=(1/√3, √2/√3) and |χ⟩=(√2/√3, -1/√3)?"
+        },
+        "choices": {
+            "jp": ["(1).0", "(2).1", "(3).-1/√3", "(4).1/√3"],
+            "en": ["(1).0", "(2).1", "(3).-1/√3", "(4).1/√3"]
+        },
+        "answer": {
+            "jp": "(1)",
+            "en": "(1)"
+        },
+        "explanation": {
+            "jp": "内積⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0。",
+            "en": "The inner product ⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0."
+        }
+    },
+    {
+        "Number": 41,
+        "difficulty": 2,
+        "text": {
+            "jp": "2つの量子状態|0⟩と|+⟩を持つ量子ビットペアのテンソル積はどう表されますか？",
+            "en": "How is the tensor product of a qubit pair with two quantum states |0⟩ and |+⟩ expressed?"
+        },
+        "choices": {
+            "jp": ["(1).|0+⟩", "(2).|0⟩⊗|+⟩", "(3).|00⟩+|01⟩", "(4).(|0⟩+|1⟩)⊗|0⟩"],
+            "en": ["(1).|0+⟩", "(2).|0⟩⊗|+⟩", "(3).|00⟩+|01⟩", "(4).(|0⟩+|1⟩)⊗|0⟩"]
+        },
+        "answer": {
+            "jp": "(2)",
+            "en": "(2)"
+        },
+        "explanation": {
+            "jp": "量子ビットの状態のテンソル積は、各状態の個別のテンソル積として表されます。よって、|0⟩と|+⟩のテンソル積は|0⟩⊗|+⟩です。",
+            "en": "The tensor product of the states of a qubit is expressed as the individual tensor product of each state. Thus, the tensor product of |0⟩ and |+⟩ is |0⟩⊗|+⟩."
+        }
+    },
+    {
+        "Number": 42,
+        "difficulty": 2,
+        "text": {
+            "jp": "量子ビットが初期状態|0⟩でSゲート（位相ゲート）を通過した場合、終了状態は何ですか？",
+            "en": "If a qubit passes through the S-gate (phase gate) with an initial state |0⟩, what is the end state?"
+        },
+        "choices": {
+            "jp": ["(1).i|0⟩", "(2).|1⟩", "(3).|0⟩", "(4).-i|0⟩"],
+            "en": ["(1).i|0⟩", "(2).|1⟩", "(3).|0⟩", "(4).-i|0⟩"]
+        },
+        "answer": {
+            "jp": "(3)",
+            "en": "(3)"
+        },
+        "explanation": {
+            "jp": "Sゲートは|0⟩の状態に何もしませんが、|1⟩の状態にiの相を加えます。初期状態が|0⟩の場合、状態は変化せず、Sゲートを通過後も|0⟩です。",
+            "en": "The S-gate does nothing to the |0⟩ state but adds a phase of i to the |1⟩ state. If the initial state is |0⟩, the state does not change and is still |0⟩ after passing through the S-gate."
+        }
     }
 ]

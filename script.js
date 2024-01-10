@@ -50,18 +50,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.innerHTML = `${question.text.jp}<br>${question.text.en}`;
-        choicesList.innerHTML = '';
         explanation.style.display = 'none';
         nextQuestionButton.style.display = 'none';
         
-        question.choices.jp.forEach((choice, index) => {
-            const li = document.createElement('li');
-            const button = document.createElement('button');
-            button.textContent = `${choice} / ${question.choices.en[index]}`;
-            button.onclick = function() { chooseAnswer(question, choice); };
-            li.appendChild(button);
-            choicesList.appendChild(li);
-        });
+        choicesList.innerHTML = '';
+        question.choices.jp.forEach((choiceJp, index) => {
+        const choiceEn = question.choices.en[index];
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        
+        // 日本語と英語の選択肢が異なる場合のみ、両方を表示
+        button.textContent = choiceJp === choiceEn ? choiceJp : `${choiceJp} / ${choiceEn}`;
+        button.onclick = function() { chooseAnswer(question, choiceJp); };
+        li.appendChild(button);
+        choicesList.appendChild(li);
+    });
 
         explanation.innerHTML = `${question.explanation.jp}<br>${question.explanation.en}`;
     }
