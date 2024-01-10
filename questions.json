@@ -168,12 +168,12 @@
             "en": "What does the Y-gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"],
-            "en": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"]
+            "jp": ["i|1⟩", "-i|1⟩", "|0⟩", "-|0⟩"],
+            "en": ["i|1⟩", "-i|1⟩", "|0⟩", "-|0⟩"]
         },
         "answer": {
-            "jp": "-|1⟩",
-            "en": "-|1⟩"
+            "jp": "-i|1⟩",
+            "en": "-i|1⟩"
         },
         "explanation": {
             "jp": "Yゲート（パウリYゲート）を適用すると、|0⟩ は−i|1⟩ に変換されますが、解答の選択肢には虚数単位が含まれていませんので、位相を無視して −|1⟩ が正しい選択肢です。",
@@ -1584,7 +1584,7 @@
         },
         {
             "Number": 35,
-            "difficulty": 3,
+            "difficulty": 1,
             "text": {
                 "jp": "Hadamard (H) ゲートは |1⟩ を何に変えますか？",
                 "en": "What does the Hadamard (H) gate change |1⟩ to?"
@@ -2064,26 +2064,6 @@
             "en": "In the GHZ state, if any of the qubits are measured, the remaining qubits will also fall into a correlated state. If the first qubit is measured as |1⟩, the remaining two qubits will be in the |11⟩ state."
         }
     },
-    {
-        "Number": 15,
-        "difficulty": 4,
-        "text": {
-            "jp": "CNOTゲートは、制御ビットが|1⟩の場合にのみ、ターゲットビットを反転させます。|10⟩がCNOTゲートを通過した後の状態は何ですか？",
-            "en": "The CNOT gate flips the target bit only when the control bit is |1⟩. What is the state after |10⟩ passes through the CNOT gate?"
-        },
-        "choices": {
-            "jp": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"],
-            "en": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"]
-        },
-        "answer": {
-            "jp": "|01⟩",
-            "en": "|01⟩"
-        },
-        "explanation": {
-            "jp": "最初の量子ビット（制御ビット）が |1⟩なので、CNOTゲートは2番目の量子ビット（ターゲットビット）を反転させます。よって、|10⟩がCNOTゲートを通過すると|01⟩になります。",
-            "en": "Since the first qubit (control bit) is |1⟩, the CNOT gate flips the second qubit (target bit). Thus, when |10⟩ passes through the CNOT gate, it becomes |01⟩."
-        }
-    },    
     {
         "Number": 11,
         "difficulty": 4,
