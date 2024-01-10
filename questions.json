@@ -7,12 +7,12 @@
             "en": "How does the |10⟩ state change when the CNOT gate is applied?"
         },
         "choices": {
-            "jp": ["(1).|11⟩", "(2).|01⟩", "(3).|10⟩", "(4).|00⟩"],
-            "en": ["(1).|11⟩", "(2).|01⟩", "(3).|10⟩", "(4).|00⟩"]
+            "jp": ["|11⟩", "|01⟩", "|10⟩", "|00⟩"],
+            "en": ["|11⟩", "|01⟩", "|10⟩", "|00⟩"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "|11⟩",
+            "en": "|11⟩"
         },
         "explanation": {
             "jp": "CNOTゲートは、最初の量子ビットが|1⟩の状態の時にのみ、第二の量子ビットの状態を反転させます。したがって、|10⟩は|11⟩に変化します。",
@@ -27,12 +27,12 @@
             "en": "What happens when you apply a Z-gate to a state of |0⟩?"
         },
         "choices": {
-            "jp": ["(1).-|0⟩", "(2).|0⟩", "(3).-|1⟩", "(4).|1⟩"],
-            "en": ["(1).-|0⟩", "(2).|0⟩", "(3).-|1⟩", "(4).|1⟩"]
+            "jp": ["-|0⟩", "|0⟩", "-|1⟩", "|1⟩"],
+            "en": ["-|0⟩", "|0⟩", "-|1⟩", "|1⟩"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "|0⟩",
+            "en": "|0⟩"
         },
         "explanation": {
             "jp": "Zゲートは位相反転ゲートで、|0⟩に適用しても状態は変わらず|0⟩のままです。",
@@ -47,12 +47,12 @@
             "en": "Which vector represents the ground state |1⟩ of a qubit?"
         },
         "choices": {
-            "jp": ["(1). (1, 0)", "(2). (0, 1)", "(3). (1/√2, 1/√2)", "(4). (1/√2, -1/√2)"],
-            "en": ["(1). (1, 0)", "(2). (0, 1)", "(3). (1/√2, 1/√2)", "(4). (1/√2, -1/√2)"]
+            "jp": ["(1, 0)", "(0, 1)", "(1/sqrt(2), 1/sqrt(2))", "(1/sqrt(2), -1/sqrt(2))"],
+            "en": ["(1, 0)", "(0, 1)", "(1/sqrt(2), 1/sqrt(2))", "(1/sqrt(2), -1/sqrt(2))"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "(0, 1)",
+            "en": "(0, 1)"
         },
         "explanation": {
             "jp": "量子ビットの状態|1⟩は、計算基底でのベクトル表示が(0, 1)です。ここでは各成分は確率振幅を表しており、第一成分が|0⟩の振幅、第二成分が|1⟩の振幅を表します。",
@@ -67,12 +67,12 @@
             "en": "In the Bloch sphere, what is the state of the qubit located at the north pole?"
         },
         "choices": {
-            "jp": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).|−⟩"]
+            "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+            "en": ["|0⟩", "|1⟩", "|+⟩", "|-⟩"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "|0⟩",
+            "en": "|0⟩"
         },
         "explanation": {
             "jp": "ブロッホ球は量子ビットの状態を視覚的に表すためのモデルです。北極に位置するのは|0⟩、南極に位置するのは|1⟩の状態です。",
@@ -87,16 +87,16 @@
             "en": "If a qubit |ψ⟩ is in an equal superposition of |0⟩ and |1⟩, which notation is used for |ψ⟩?"
         },
         "choices": {
-            "jp": ["(1).|ψ⟩=|0⟩", "(2).|ψ⟩=|1⟩", "(3).|ψ⟩=(|0⟩+|1⟩)/2", "(4).|ψ⟩=(|0⟩+|1⟩)/√2"],
-            "en": ["(1).|ψ⟩=|0⟩", "(2).|ψ⟩=|1⟩", "(3).|ψ⟩=(|0⟩+|1⟩)/2", "(4).|ψ⟩=(|0⟩+|1⟩)/√2"]
+            "jp": ["|ψ⟩=|0⟩", "|ψ⟩=|1⟩", "|ψ⟩=1/sqrt(2)(|0⟩+|1⟩)", "|ψ⟩=1/sqrt(2)(|0⟩-|1⟩)"],
+            "en": ["|ψ⟩=|0⟩", "|ψ⟩=|1⟩", "|ψ⟩=1/sqrt(2)(|0⟩+|1⟩)", "|ψ⟩=1/sqrt(2)(|0⟩-|1⟩)"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "|ψ⟩=1/sqrt(2)(|0⟩+|1⟩)",
+            "en": "|ψ⟩=1/sqrt(2)(|0⟩+|1⟩)"
         },
         "explanation": {
-            "jp": "量子ビットが|0⟩と|1⟩の均等な重ね合わせ状態にある場合、それは|ψ⟩=(|0⟩+|1⟩)/√2で表されます。分母に√2があるのは、確率の和が1になるように正規化するためです。",
-            "en": "If a quantum bit is in an equal superposition of |0⟩ and |1⟩, it is represented by |ψ⟩=(|0⟩+|1⟩)/√2. The reason for the √2 in the denominator is to normalize the probabilities so that they sum to 1."
+            "jp": "量子ビットが|0⟩と|1⟩の均等な重ね合わせ状態にあるとき、その状態は|ψ⟩=1/sqrt(2)(|0⟩+|1⟩)と表すことができます。ここで、1/sqrt(2)は正規化定数であり、|ψ⟩の確率振幅の絶対値の平方和が1となることを保証します。",
+            "en": "When a qubit is in an equal superposition of |0⟩ and |1⟩, the state can be represented as |ψ⟩=1/sqrt(2)(|0⟩+|1⟩). Here, 1/sqrt(2) is a normalization constant that ensures that the square sum of the absolute values of the probability amplitude of |ψ⟩ is 1."
         }
     },
     {
@@ -107,18 +107,19 @@
             "en": "How does the Z-gate change the phase of a qubit with |1⟩?"
         },
         "choices": {
-            "jp": ["(1). 反転させない", "(2). 180度反転させる", "(3). 90度回転させる", "(4). 45度回転させる"],
+            "jp": ["反転させない", "180度反転させる", "90度回転させる", "45度回転させる"],
             "en": ["Not inverted", "Flip 180 degrees", "Rotate 90 degrees", "Rotate 45 degrees"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "180度反転させる",
+            "en": "Flip 180 degrees"
         },
         "explanation": {
             "jp": "Zゲートは位相反転ゲートとも呼ばれ、|1⟩状態の量子ビットの位相を180度反転させます。|0⟩状態には影響を与えません。",
             "en": "The Z-gate, also called a phase-reversal gate, inverts the phase of a qubit in the |1⟩ state by 180 degrees. It does not affect the |0⟩ state."
         }
     },
+    
     {
         "Number": 16,
         "difficulty": 1,
@@ -127,12 +128,12 @@
             "en": "What type of problem is Grover's algorithm, a quantum algorithm, used to solve?"
         },
         "choices": {
-            "jp": ["(1). 素因数分解", "(2). データベース検索", "(3). 暗号解読", "(4). 気象予報"],
+            "jp": ["素因数分解", "データベース検索", "暗号解読", "気象予報"],
             "en": ["Prime factorization", "Database Search", "Cryptanalysis", "Weather Forecast"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "データベース検索",
+            "en": "Database Search"
         },
         "explanation": {
             "jp": "Groverのアルゴリズムは、未整理のデータベースから特定の要素を探し出すために設計されています。古典的なアルゴリズムに比べてその速度は格段に速いです。",
@@ -147,12 +148,12 @@
             "en": "Which of the following is NOT an entangled quantum state?"
         },
         "choices": {
-            "jp": ["(1). (|00⟩+|11⟩)/√2", "(2). |01⟩", "(3). (|01⟩+|10⟩)/√2", "(4). (|00⟩−|11⟩)/√2"],
-            "en": ["(1). (|00⟩+|11⟩)/√2", "(2). |01⟩", "(3). (|01⟩+|10⟩)/√2", "(4). (|00⟩−|11⟩)/√2"]
+            "jp": ["(|00⟩+|11⟩)/sqrt(2)", "|01⟩", "(|01⟩+|10⟩)/sqrt(2)", "(|00⟩−|11⟩)/sqrt(2)"],
+            "en": ["(|00⟩+|11⟩)/sqrt(2)", "|01⟩", "(|01⟩+|10⟩)/sqrt(2)", "(|00⟩-|11⟩)/sqrt(2)"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "|01⟩",
+            "en": "|01⟩"
         },
         "explanation": {
             "jp": "もつれた量子状態とは、2つの量子ビットが互いに依存している状態のことです。ケット |01⟩ はそれぞれの量子ビットが個別に確定しているためもつれていません。",
@@ -167,12 +168,12 @@
             "en": "What does the Z-gate do when applied to |1⟩?"
         },
         "choices": {
-            "jp": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"],
-            "en": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"]
+            "jp": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"],
+            "en": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "-|1⟩",
+            "en": "-|1⟩"
         },
         "explanation": {
             "jp": "Zゲートは位相を反転させるゲートで、|1⟩に適用されると時間的位相が反転して−|1⟩になります。",
@@ -187,12 +188,12 @@
             "en": "What does the Y-gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"],
-            "en": ["(1). |1⟩", "(2). -|1⟩", "(3). |0⟩", "(4). -|0⟩"]
+            "jp": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"],
+            "en": ["|1⟩", "-|1⟩", "|0⟩", "-|0⟩"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "-|1⟩",
+            "en": "-|1⟩"
         },
         "explanation": {
             "jp": "Yゲート（パウリYゲート）を適用すると、|0⟩ は−i|1⟩ に変換されますが、解答の選択肢には虚数単位が含まれていませんので、位相を無視して −|1⟩ が正しい選択肢です。",
@@ -207,12 +208,12 @@
             "en": "How are two qubits related in quantum entanglement?"
         },
         "choices": {
-            "jp": ["(1). 一方の状態が確定すると、もう一方の状態も即座に確定する。", "(2). 一方の状態が確定すると、もう一方の状態はランダムに決まる。", "(3). 一方の状態が確定すると、もう一方の状態には影響しない。", "(4). 両方の状態は完全に独立している。"],
+            "jp": ["一方の状態が確定すると、もう一方の状態も即座に確定する。", "一方の状態が確定すると、もう一方の状態はランダムに決まる。", "一方の状態が確定すると、もう一方の状態には影響しない。", "両方の状態は完全に独立している。"],
             "en": ["When one state is determined, the other state is also immediately determined.", "Once one state is determined, the other state is determined at random.", "Once one state is determined, the other state is not affected.", "Both states are completely independent."]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "一方の状態が確定すると、もう一方の状態も即座に確定する。",
+            "en": "When one state is determined, the other state is also immediately determined."
         },
         "explanation": {
             "jp": "量子もつれとは、2つの量子ビットがそれぞれの状態を確定していなくても密接に関連しており、一方の状態が測定されて確定すると、即座にもう一方の状態も関連して確定される現象です。",
@@ -227,16 +228,16 @@
             "en": "What is meant by decoherence of a qubit?"
         },
         "choices": {
-            "jp": ["(1). 量子情報の消失", "(2). 量子状態の持続時間", "(3). 量子ビットの超伝導", "(4). 量子ビットが古典ビットに変換"],
+            "jp": ["量子情報の消失", "量子状態の持続時間", "量子ビットの超伝導", "量子ビットが古典ビットに変換"],
             "en": ["Loss of quantum information", "Duration of quantum state", "Superconductivity in qubits", "Quantum bits converted to classical bits"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "量子情報の消失",
+            "en": "Loss of quantum information"
         },
         "explanation": {
-            "jp": "量子ビットのデコヒーレンスは、量子状態が外部の環境の影響を受けて崩れ、量子情報が失われることを指します。",
-            "en": "Decoherence in quantum bits refers to the loss of quantum information when a quantum state collapses under the influence of the external environment."
+            "jp": "量子ビットのデコヒーレンスは、量子状態が外部の環境の影響を受けて崩れ、量子情報が消失することを指します。このようなデコヒーレンスは、量子コンピューターの計算能力を大幅に低下させるため、量子エラー訂正のようなメカニズムが必要となります。",
+            "en": "Decoherence of a qubit refers to the collapse of a quantum state due to the influence of the external environment, resulting in the loss of quantum information. Such decoherence significantly reduces the computational ability of quantum computers, requiring mechanisms such as quantum error correction."
         }
     },
     {
@@ -247,19 +248,18 @@
             "en": "If |1⟩=γ|+⟩+δ|-⟩, how many γ^2+δ^2 must be for |1⟩ to be a qubit state?"
         },
         "choices": {
-            "jp": ["(1). 0", "(2). 1/2", "(3). 1", "(4). 2"],
-            "en": ["(1). 0", "(2). 1/2", "(3). 1", "(4). 2"]
+            "jp": ["0", "1/2", "1", "2"],
+            "en": ["0", "1/2", "1", "2"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "1",
+            "en": "1"
         },
         "explanation": {
             "jp": "量子ビットの状態は確率振幅の2乗の合計が1になる必要があります。これは量子ビットが取りうるすべての状態の確率が合計で100%になることを意味します。",
             "en": "The states of a qubit must sum to the square of the probability amplitude of 1. This means that the probabilities of all possible states of the qubit must sum to 100%."
         }
     },
-
     {
         "Number": 1,
         "difficulty": 2,
@@ -268,12 +268,12 @@
             "en": "If |-⟩=α|0⟩-β|1⟩, what must be the relationship between the probability amplitudes α and β?"
         },
         "choices": {
-            "jp": ["(1).α=β", "(2).α > β", "(3).α < β", "(4).α=-β"],
-            "en": ["(1).α=β", "(2).α > β", "(3).α < β", "(4).α=-β"]
+            "jp": ["α=β", "α > β", "α < β", "α=−β"],
+            "en": ["α=β", "α > β", "α < β", "α=-β"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "α=β",
+            "en": "α=β"
         },
         "explanation": {
             "jp": "|−⟩状態は(|0⟩-|1⟩)/√2で表されるので、αとβは絶対値が等しくなければなりません。",
@@ -288,12 +288,12 @@
             "en": "What states are obtained when the Z-gate acts on |+⟩?"
         },
         "choices": {
-            "jp": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). |-⟩"],
-            "en": ["(1). |0⟩", "(2). |1⟩", "(3). |+⟩", "(4). |-⟩"]
+            "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+            "en": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "|−⟩",
+            "en": "|−⟩"
         },
         "explanation": {
             "jp": "Zゲートは位相を変えるため、|+⟩の状態に作用させると|−⟩の状態を得ます。Zゲートはブロッホ球上で|+⟩状態を|−⟩状態に反転させることができます。",
@@ -308,12 +308,12 @@
             "en": "What does the Z-gate change |+⟩ to?"
         },
         "choices": {
-            "jp": ["(1). |+⟩", "(2). |-⟩", "(3). |0⟩", "(4). |1⟩"],
-            "en": ["(1). |+⟩", "(2). |-⟩", "(3). |0⟩", "(4). |1⟩"]
+            "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+            "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "|−⟩",
+            "en": "|−⟩"
         },
         "explanation": {
             "jp": "Zゲートは量子ビットに位相を反転させる作用をします。|+⟩状態（つまり(|0⟩+|1⟩)/√2）にZゲートを適用すると、|−⟩状態（つまり(|0⟩-|1⟩)/√2）になります。",
@@ -328,19 +328,18 @@
             "en": "Check to see if the state of |Ψ⟩=1/√3|0⟩+√2/3|1⟩ is normalized."
         },
         "choices": {
-            "jp": ["(1).はい", "(2).いいえ", "(3).情報が不足しているため確認できない", "(4).別の情報が必要"],
+            "jp": ["1", "0", "情報が不足しているため確認できない", "別の情報が必要"],
             "en": ["Yes", "No", "Cannot be confirmed due to lack of information", "Need different information"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "1",
+            "en": "Yes"
         },
         "explanation": {
             "jp": "量子状態の正規化条件は、確率振幅の2乗の和が1になることです。|Ψ⟩=1/√3|0⟩+√2/3|1⟩の場合、(1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1となり、この状態は正規化されています。",
             "en": "The normalization condition for a quantum state is that the sum of the squares of the probability amplitudes must sum to 1. For |Ψ⟩=1/√3|0⟩+√2/3|1⟩, (1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1, this state is normalized."
         }
     },
-
     {
         "Number": 12,
         "difficulty": 2,
@@ -349,12 +348,12 @@
             "en": "Which of the following is NOT a quantum gate?"
         },
         "choices": {
-            "jp": ["(1).X ゲート", "(2).Y ゲート", "(3).Z ゲート", "(4).W ゲート"],
+            "jp": ["X ゲート", "Y ゲート", "Z ゲート", "W ゲート"],
             "en": ["X Gate", "Y Gate", "Z Gate", "W Gate"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "W ゲート",
+            "en": "W Gate"
         },
         "explanation": {
             "jp": "X, Y, Zは量子コンピューティングにおける基本的なパウリゲートですが、Wゲートは標準的な量子ゲートのセットには含まれません。",
@@ -369,16 +368,16 @@
             "en": "|ψ⟩ = 1/√3 |0⟩ + √2/√3 |1⟩, what is the probability that this qubit measures |0⟩?"
         },
         "choices": {
-            "jp": ["(1).1/3", "(2).2/3", "(3).1/2", "(4).1/4"],
-            "en": ["(1).1/3", "(2).2/3", "(3).1/2", "(4).1/4"]
+            "jp": ["1/3", "2/3", "1/2", "1/4"],
+            "en": ["1/3", "2/3", "1/2", "1/4"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "1/3",
+            "en": "1/3"
         },
         "explanation": {
-            "jp": "確率は量子状態の振幅の絶対値の二乗で決まります。この場合、|0⟩の確率振幅は1/√3なので、その二乗は(1/√3)² = 1/3になります。",
-            "en": "The probability is determined by the square of the absolute value of the amplitude of the quantum state. In this case, the probability amplitude of |0⟩ is 1/√3, so its square is (1/√3)² = 1/3."
+            "jp": "確率は量子状態の振幅の絶対値の二乗で決まります。この場合、|0⟩の確率振幅は1/√3なので、その二乗は(1/√3)^2 = 1/3になります。",
+            "en": "The probability is determined by the square of the absolute value of the amplitude of the quantum state. In this case, the probability amplitude of |0⟩ is 1/√3, so its square is (1/√3)^2 = 1/3."
         }
     },
     {
@@ -389,12 +388,12 @@
             "en": "When the H-gate is applied twice, the final state is the same as the initial state. Is this true for any of the following qubit states?"
         },
         "choices": {
-            "jp": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "(4).すべての状態に当てはまる"],
-            "en": ["(1).|0⟩", "(2).|1⟩", "(3).|+⟩", "Applicable to all states"]
+            "jp": ["|0⟩", "|1⟩", "|+⟩", "すべての状態に当てはまる"],
+            "en": ["|0⟩", "|1⟩", "|+⟩", "Applicable to all states"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "すべての状態に当てはまる",
+            "en": "Applicable to all states"
         },
         "explanation": {
             "jp": "ハダマードゲートはその自身の逆ゲートです。つまり、任意の量子ビット状態に対してHゲートを2回適用すると、元の状態に戻ります。",
@@ -409,12 +408,12 @@
             "en": "Which of the following quantum gates has a reverse gate that is itself?"
         },
         "choices": {
-            "jp": ["(1).X ゲート", "(2).H ゲート", "(3).S ゲート", "(4).T ゲート"],
+            "jp": ["X ゲート", "H ゲート", "S ゲート", "T ゲート"],
             "en": ["X Gate", "H Gate", "S Gate", "T Gate"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "H ゲート",
+            "en": "H Gate"
         },
         "explanation": {
             "jp": "Hゲート（ハダマードゲート）とXゲート（パウリ-Xゲート）は、それぞれ自分自身が逆ゲートになります。SゲートとTゲートは自分自身が逆ゲートではありません。",
@@ -429,12 +428,12 @@
             "en": "What does the H-gate (Hadamard gate) change the |1⟩ to?"
         },
         "choices": {
-            "jp": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"]
+            "jp": ["|0⟩", "-|1⟩", "|+⟩", "|−⟩"],
+            "en": ["|0⟩", "-|1⟩", "|+⟩", "|−⟩"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "|−⟩",
+            "en": "|−⟩"
         },
         "explanation": {
             "jp": "Hゲートは、|1⟩を(|0⟩ - |1⟩)/√2に変換しますが、これは通常|−⟩と表されます。しかし、問題文の選択肢に誤りがあるため、もっとも近い状態として|+⟩が正解となります。",
@@ -449,16 +448,16 @@
             "en": "Is the |Ψ⟩=√3/2|0⟩ - 1/2|1⟩ state normalized?"
         },
         "choices": {
-            "jp": ["(1).はい", "(2).いいえ"],
+            "jp": ["はい", "いいえ"],
             "en": ["Yes", "No"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "いいえ",
+            "en": "No"
         },
         "explanation": {
-            "jp": "量子ビットの状態は規格化されている必要があり、確率振幅の二乗和が1になる必要があります。(√3/2)^2 + (-1/2)^2 = 3/4 + 1/4 = 1ではないため、この状態は規格化されていません。",
-            "en": "The state of a quantum bit must be normalized, which means that the sum of squares of the probability amplitudes must equal 1. This state is not normalized because (√3/2)^2 + (-1/2)^2 = 3/4 + 1/4 = 1."
+            "jp": "量子ビットの状態は規格化されている必要があり、確率振幅の二乗和が1になる必要があります。(√3/2)^2 + (-1/2)^2 = 3/4 + 1/4 = 1でなければなりません。この状態は規格化されていません。",
+            "en": "The state of a quantum bit must be normalized, meaning that the sum of the squares of the probability amplitudes must equal 1. This state is not normalized because (√3/2)^2 + (-1/2)^2 = 3/4 + 1/4 does not equal 1."
         }
     },
     {
@@ -469,16 +468,16 @@
             "en": "Determine if |ψ⟩ = 1/√3 |0⟩ + √2/3 |1⟩ is a normalized quantum state."
         },
         "choices": {
-            "jp": ["(1).はい", "(2).いいえ"],
+            "jp": ["はい", "いいえ"],
             "en": ["Yes", "No"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "はい",
+            "en": "Yes"
         },
         "explanation": {
-            "jp": "正規化された量子状態は、確率振幅の2乗の合計が1になります。このケースでは、(1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1 なので、状態は正規化されています。",
-            "en": "Normalized quantum states sum to the square of the probability amplitude of 1. In this case, the state is normalized since (1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1."
+            "jp": "正規化された量子状態は、確率振幅の2乗の合計が1になります。このケースでは、(1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1であり、状態は正規化されています。",
+            "en": "Normalized quantum states have a total probability amplitude squared sum of 1. In this case, (1/√3)^2 + (√2/3)^2 = 1/3 + 2/3 = 1, so the state is normalized."
         }
     },
     {
@@ -489,12 +488,12 @@
             "en": "What does the Z-gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["(1).-|0⟩", "(2).-|1⟩", "(3).|0⟩", "(4).|1⟩"],
-            "en": ["(1).-|0⟩", "(2).-|1⟩", "(3).|0⟩", "(4).|1⟩"]
+            "jp": ["-|0⟩", "-|1⟩", "|0⟩", "|1⟩"],
+            "en": ["-|0⟩", "-|1⟩", "|0⟩", "|1⟩"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "|0⟩",
+            "en": "|0⟩"
         },
         "explanation": {
             "jp": "Zゲートは位相反転ゲートとも呼ばれ、|0⟩に対しては何も変化せず、|0⟩のままになります。一方、|1⟩を入力すると-|1⟩になります。",
@@ -509,12 +508,12 @@
             "en": "If there is a 25% probability that |ψ⟩ is measured with |0⟩, what is α in |ψ⟩ = α|0⟩ + β|1⟩?"
         },
         "choices": {
-            "jp": ["(1).0.25", "(2).0.5", "(3).1/√2", "(4).√3/2"],
-            "en": ["(1).0.25", "(2).0.5", "(3).1/√2", "(4).√3/2"]
+            "jp": ["0.25", "0.5", "1/√2", "√3/2"],
+            "en": ["0.25", "0.5", "1/√2", "√3/2"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "0.5",
+            "en": "0.5"
         },
         "explanation": {
             "jp": "測定される確率は確率振幅の2乗に等しいので、α^2 = 0.25、したがって、α = √0.25 = 0.5です。",
@@ -529,12 +528,12 @@
             "en": "What does the H-gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"],
-            "en": ["(1).|0⟩", "(2).-|1⟩", "(3).|+⟩", "(4).|−⟩"]
+            "jp": ["|0⟩", "-|1⟩", "|+⟩", "|−⟩"],
+            "en": ["|0⟩", "-|1⟩", "|+⟩", "|−⟩"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "|+⟩",
+            "en": "|+⟩"
         },
         "explanation": {
             "jp": "Hゲート（Hadamardゲート）は量子ビットの基底状態 |0⟩ を重ね合わせ状態 |+⟩=(|0⟩+|1⟩)/√2 に変換します。",
@@ -549,12 +548,12 @@
             "en": "Pick a normalized state of |ψ⟩ when the probability amplitude of the qubit |ψ⟩ is α=1/2 and β=√3/2."
         },
         "choices": {
-            "jp": ["(1).|ψ⟩=1/2|0⟩+√3/2|1⟩", "(2).|ψ⟩=1/√3|0⟩+1/√3|1⟩", "(3).|ψ⟩=1/√2|0⟩+1/√2|1⟩", "(4).|ψ⟩=1/3|0⟩+2/3|1⟩"],
-            "en": ["(1).|ψ⟩=1/2|0⟩+√3/2|1⟩", "(2).|ψ⟩=1/√3|0⟩+1/√3|1⟩", "(3).|ψ⟩=1/√2|0⟩+1/√2|1⟩", "(4).|ψ⟩=1/3|0⟩+2/3|1⟩"]
+            "jp": ["|ψ⟩=1/2|0⟩+√3/2|1⟩", "|ψ⟩=1/√3|0⟩+1/√3|1⟩", "|ψ⟩=1/√2|0⟩+1/√2|1⟩", "|ψ⟩=1/3|0⟩+2/3|1⟩"],
+            "en": ["|ψ⟩=1/2|0⟩+√3/2|1⟩", "|ψ⟩=1/√3|0⟩+1/√3|1⟩", "|ψ⟩=1/√2|0⟩+1/√2|1⟩", "|ψ⟩=1/3|0⟩+2/3|1⟩"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "|ψ⟩=1/2|0⟩+√3/2|1⟩",
+            "en": "|ψ⟩=1/2|0⟩+√3/2|1⟩"
         },
         "explanation": {
             "jp": "確率振幅の2乗和が1となるため、|ψ⟩=1/2|0⟩+√3/2|1⟩ は正規化された状態です。",
@@ -569,12 +568,12 @@
             "en": "When the state of a qubit is represented by |ψ⟩=(α, β), what do α and β represent?"
         },
         "choices": {
-            "jp": ["(1).確率", "(2).確率振幅", "(3).エネルギー", "(4).速度"],
+            "jp": ["確率", "確率振幅", "エネルギー", "速度"],
             "en": ["Probability", "Probability Amplitude", "Energy", "Velocity"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "確率振幅",
+            "en": "Probability Amplitude"
         },
         "explanation": {
             "jp": "量子ビットの状態ベクトルの各成分αとβは、基底状態の存在確率の振幅を表しています。その絶対値の二乗がその状態の確率に相当します。",
@@ -589,18 +588,19 @@
             "en": "If the state of a qubit is |ψ⟩=(1/√3, √2/√3), what is the probability of measuring the state |0⟩?"
         },
         "choices": {
-            "jp": ["(1).1/3", "(2).1/2", "(3).2/3", "(4).3/4"],
-            "en": ["(1).1/3", "(2).1/2", "(3).2/3", "(4).3/4"]
+            "jp": ["1/3", "1/2", "2/3", "3/4"],
+            "en": ["1/3", "1/2", "2/3", "3/4"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "1/3",
+            "en": "1/3"
         },
         "explanation": {
-            "jp": "確率振幅の絶対値の二乗が状態の確率になります。したがって、|ψ⟩=(1/√3, √2/√3)の場合、状態|0⟩は確率振幅1/√3を持つので、この絶対値の二乗は(1/√3)^2=1/3になります。",
+            "jp": "確率振幅の絶対値を2乗することで、それぞれの状態における確率を求めることができます。したがって、|ψ⟩=(1/√3, √2/√3)の場合、状態|0⟩は確率振幅1/√3を持つので、この絶対値の二乗は(1/√3)^2=1/3になります。",
             "en": "The square of the absolute value of the probability amplitude is the probability of the state. Thus, if |ψ⟩=(1/√3, √2/√3), the state |0⟩ has probability amplitude 1/√3, so the square of this absolute value is (1/√3)^2=1/3."
         }
     },
+    
     {
         "Number": 25,
         "difficulty": 2,
@@ -609,16 +609,16 @@
             "en": "What does the Hadamard gate change |1⟩ to?"
         },
         "choices": {
-            "jp": ["(1).|1⟩", "(2).-|1⟩", "(3).(|0⟩-|1⟩)/√2", "(4).(|0⟩+|1⟩)/√2"],
-            "en": ["(1).|1⟩", "(2).-|1⟩", "(3).(|0⟩-|1⟩)/√2", "(4).(|0⟩+|1⟩)/√2"]
+            "jp": ["|1⟩", "-|1⟩", "(|0⟩-|1⟩)/√2", "(|0⟩+|1⟩)/√2"],
+            "en": ["|1⟩", "-|1⟩", "(|0⟩-|1⟩)/√2", "(|0⟩+|1⟩)/√2"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "(|0⟩-|1⟩)/√2",
+            "en": "(|0⟩-|1⟩)/√2"
         },
         "explanation": {
-            "jp": "アダマールゲートは重ね合わせを作り出しますが、|1⟩に適用されたときには、(|0⟩と−|1⟩)の重ね合わせを生成します。よって、答えは（3）(|0⟩-|1⟩)/√2です。",
-            "en": "The Hadamard gate creates superpositions, but when applied to |1⟩, it generates a superposition of (|0⟩ and -|1⟩). Therefore, the answer is (3) (|0⟩-|1⟩)/√2."
+            "jp": "アダマールゲートは重ね合わせを作り出しますが、|1⟩に適用されたときには、(|0⟩と−|1⟩)の重ね合わせを生成します。よって、答えは(|0⟩-|1⟩)/√2です。",
+            "en": "The Hadamard gate creates superpositions, but when applied to |1⟩, it generates a superposition of (|0⟩ and -|1⟩). Therefore, the answer is (|0⟩-|1⟩)/√2."
         }
     },
     {
@@ -629,12 +629,12 @@
             "en": "What role does the quantum Fourier transform play?"
         },
         "choices": {
-            "jp": ["(1).ビットの反転", "(2).エラー訂正", "(3).位相変換", "(4).周期性の分析"],
+            "jp": ["ビットの反転", "エラー訂正", "位相変換", "周期性の分析"],
             "en": ["Inverted bits", "Error Correction", "Phase transformation", "Periodicity Analysis"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "周期性の分析",
+            "en": "Periodicity Analysis"
         },
         "explanation": {
             "jp": "量子フーリエ変換は、量子状態の周期性を分析するために使用されます。特に、整数の素因数分解において有用です（例：ショアのアルゴリズム）。",
@@ -649,16 +649,16 @@
             "en": "|ψ⟩ = 1/√3|0⟩+ √2/√3|1⟩, what is the square of the absolute value of the probability amplitude of the qubit represented by each?"
         },
         "choices": {
-            "jp": ["(1). 1/3, 2/3", "(2). 1/√3, √2/√3", "(3). 1/2, 1/2", "(4). 3/2, 2/3"],
-            "en": ["(1). 1/3, 2/3", "(2). 1/√3, √2/√3", "(3). 1/2, 1/2", "(4). 3/2, 2/3"]
+            "jp": ["1/3, 2/3", "1/√3, √2/√3", "1/2, 1/2", "3/2, 2/3"],
+            "en": ["1/3, 2/3", "1/√3, √2/√3", "1/2, 1/2", "3/2, 2/3"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "1/3, 2/3",
+            "en": "1/3, 2/3"
         },
         "explanation": {
-            "jp": "確率振幅の絶対値を2乗することで、それぞれの状態における確率を求めることができます。したがって、|ψ⟩ = 1/√3|0⟩ + √2/√3|1⟩ の確率は (1/√3)^2 = 1/3 および (√2/√3)^2 = 2/3 になります。",
-            "en": "By squaring the absolute value of the probability amplitude, we can find the probability in each state. Thus, the probabilities of |ψ⟩ = 1/√3|0⟩ + √2/√3|1⟩ are (1/√3)^2 = 1/3 and (√2/√3)^2 = 2/3."
+            "jp": "確率振幅の絶対値を2乗することで、それぞれの状態における確率を求めることができます。したがって、|ψ⟩ = 1/√3|0⟩ + √2/√3|1⟩ の確率は (1/√3)² = 1/3 および (√2/√3)² = 2/3 になります。",
+            "en": "By squaring the absolute value of the probability amplitude, we can find the probability in each state. Thus, for |ψ⟩ = 1/√3|0⟩ + √2/√3|1⟩, the probabilities are (1/√3)² = 1/3 and (√2/√3)² = 2/3."
         }
     },
     {
@@ -669,12 +669,12 @@
             "en": "If a qubit |ψ⟩ is represented as a superposition of |0⟩ and |1⟩ states, and |ψ⟩ = γ|0⟩ + δ|1⟩, which relation between γ and δ is correct?"
         },
         "choices": {
-            "jp": ["(1). γ = δ", "(2). |γ|^2 + |δ|^2 = 1", "(3). γ + δ = 1", "(4). γ - δ = 0"],
-            "en": ["(1). γ = δ", "(2). |γ|^2 + |δ|^2 = 1", "(3). γ + δ = 1", "(4). γ - δ = 0"]
+            "jp": ["γ = δ", "|γ|^2 + |δ|^2 = 1", "γ + δ = 1", "γ - δ = 0"],
+            "en": ["γ = δ", "|γ|^2 + |δ|^2 = 1", "γ + δ = 1", "γ - δ = 0"]
         },
         "answer": {
-            "jp": "(2)",
-            "en": "(2)"
+            "jp": "|γ|^2 + |δ|^2 = 1",
+            "en": "|γ|^2 + |δ|^2 = 1"
         },
         "explanation": {
             "jp": "量子ビットの状態は単位ベクトルでなければならず、それぞれの成分の絶対値の2乗の合計が1になる必要があります。そのため、|γ|^2 + |δ|^2 = 1の関係が正しいです。",
@@ -685,280 +685,284 @@
         "Number": 29,
         "difficulty": 2,
         "text": {
-            "jp": "|Φ⟩=α|0⟩+β|1⟩のとき、重ね合わせの状態を最大にするα, βの組み合わせはどれですか?",
-            "en": "If |Φ⟩=α|0⟩+β|1⟩, which combination of α and β maximizes the superposition state?"
+            "jp": "α=βのとき、量子ビットの状態|ψ⟩=α|0⟩+β|1⟩のαとβはどうなりますか？",
+            "en": "When α=β, what are α and β for the quantum state |ψ⟩=α|0⟩+β|1⟩?"
         },
         "choices": {
-            "jp": ["(1).α=1, β=0", "(2).α=0, β=1", "(3).α=1/√2, β=-1/√2", "(4).α=1/√2, β=1/√2"],
-            "en": ["(1).α=1, β=0", "(2).α=0, β=1", "(3).α=1/√2, β=-1/√2", "(4).α=1/√2, β=1/√2"]
+            "jp": ["1/√2", "1/2", "0", "1"],
+            "en": ["1/√2", "1/2", "0", "1"]
         },
         "answer": {
-            "jp": "(4)",
-            "en": "(4)"
+            "jp": "1/√2",
+            "en": "1/√2"
         },
         "explanation": {
-            "jp": "重ね合わせの状態を最大にするには、2つの成分が等しい振幅である必要があります。そのため、αとβがそれぞれ1/√2となる組み合わせが正解です。",
-            "en": "To maximize the superposition, the two components must have equal amplitudes. Therefore, the combination where α and β are 1/√2 each is the correct answer."
+            "jp": "量子状態は正規化されている必要があるため、αとβの絶対値の2乗の和は1になります。α=βであるため、2α^2=1となり、α=1/√2が得られます。",
+            "en": "The quantum state must be normalized, so the sum of the squares of the absolute values of α and β must equal 1. Since α=β, we have 2α^2=1, giving us α=1/√2."
         }
     },
     {
         "Number": 30,
         "difficulty": 2,
         "text": {
-            "jp": "|0⟩=α|+⟩＋β|−⟩のとき、|0⟩が量子ビットの状態であるためには、α^2+β^2はいくつになればよいですか？",
-            "en": "If |0⟩=α|+⟩+β|-⟩, how many α^2+β^2 must be for |0⟩ to be a qubit state?"
+            "jp": "エンタングルされた2量子ビットの状態が|ψ⟩=(|00⟩+|11⟩)/√2で与えられた場合、測定によって|00⟩状態が検出される確率はいくつですか？",
+            "en": "Given an entangled state of two qubits |ψ⟩=(|00⟩+|11⟩)/√2, what is the probability of detecting the |00⟩ state through measurement?"
         },
         "choices": {
-            "jp": ["(1).0", "(2).1/2", "(3).1", "(4).2"],
-            "en": ["(1).0", "(2).1/2", "(3).1", "(4).2"]
+            "jp": ["1/√2", "1/2", "1/4", "1"],
+            "en": ["1/√2", "1/2", "1/4", "1"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "1/2",
+            "en": "1/2"
         },
         "explanation": {
-            "jp": "量子ビットの状態は確率振幅の2乗の合計が1になる必要があります。これは量子ビットが取りうるすべての状態の確率が合計で100%になることを意味します。",
-            "en": "The states of a qubit must sum to the square of the probability amplitude of 1. This means that the probabilities of all possible states of the qubit must sum to 100%."
+            "jp": "エンタングル状態の各成分の確率振幅の絶対値の2乗が測定される確率です。したがって、(|00⟩の確率振幅)^2=1/2です。",
+            "en": "The square of the absolute value of the probability amplitude of each component of the entangled state is the probability of it being measured. Therefore, the square of the probability amplitude for |00⟩ is 1/2."
         }
     },
     {
         "Number": 31,
         "difficulty": 2,
         "text": {
-            "jp": "量子もつれ状態にある2量子ビットが、空間的に離れていても、一方の状態を測定すると、もう一方の量子ビットの状態は即座に何に決定されますか？",
-            "en": "If two qubits in a quantum entangled state are spatially separated, what is the state of the other qubit immediately determined to be when one state is measured?"
+            "jp": "量子コンピュータで使用されるユニタリ変換は、どのような性質を持つ必要がありますか？",
+            "en": "What property must unitary transformations used in quantum computers have?"
         },
         "choices": {
-            "jp": ["(1). 逆の状態", "(2). 同じ状態", "(3). ランダムな状態", "(4). 測定されていない状態"],
-            "en": ["Reverse state", "Same state", "Random state", "State not measured"]
+            "jp": ["エルミート性", "ユニタリー性", "正規性", "逆可逆性"],
+            "en": ["Hermitian", "Unitary", "Normal", "Reversible"]
         },
         "answer": {
-            "jp": "(1)",
-            "en": "(1)"
+            "jp": "ユニタリー性",
+            "en": "Unitary"
         },
         "explanation": {
-            "jp": "量子もつれの性質により、一方の量子ビットが測定された瞬間にもう一方の量子ビットの状態も即座に決まり、それはたいていの場合逆の状態となります。",
-            "en": "Due to the nature of quantum entanglement, the moment one qubit is measured, the state of the other qubit is also immediately determined, which is usually the opposite state."
+            "jp": "ユニタリ変換は、その転置の複素共役である自身の逆を持ち、量子状態の正規化を維持します。これは量子計算における基本的な要件です。",
+            "en": "Unitary transformations have the inverse that is the complex conjugate of their transpose, and they preserve the normalization of quantum states. This is a fundamental requirement in quantum computing."
         }
     },
     {
         "Number": 32,
         "difficulty": 2,
         "text": {
-            "jp": "|ψ⟩ = (|0⟩ + i|1⟩) / √2のとき、⟨ψ|ψ⟩はいくつになりますか？",
-            "en": "If |ψ⟩ = (|0⟩ + i|1⟩) / √2, how many ⟨ψ|ψ⟩ are there?"
+            "jp": "次のうち、Xゲートによって|0⟩はどの状態に変わりますか？",
+            "en": "Which of the following states does the X gate change |0⟩ to?"
         },
         "choices": {
-            "jp": ["(1).0", "(2).1/2", "(3).1", "(4).2"],
-            "en": ["(1).0", "(2).1/2", "(3).1", "(4).2"]
+            "jp": ["|1⟩", "|0⟩", "-|0⟩", "-|1⟩"],
+            "en": ["|1⟩", "|0⟩", "-|0⟩", "-|1⟩"]
         },
         "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+            "jp": "|1⟩",
+            "en": "|1⟩"
         },
         "explanation": {
-            "jp": "状態|ψ⟩の内積⟨ψ|ψ⟩を計算すると、(1/√2)×(1/√2) + i×(-i)/2 = 1/2 + 1/2 = 1になります。量子状態の規範は常に1である必要があります。",
-            "en": "Calculating the inner product ⟨ψ|ψ⟩ of the state |ψ⟩ yields (1/√2)×(1/√2) + i×(-i)/2 = 1/2 + 1/2 = 1. The norm of the quantum state must always be 1."
+            "jp": "Xゲート（またはNOTゲート）は量子ビットを反転させます。つまり、|0⟩は|1⟩に変わります。",
+            "en": "The X gate (also known as the NOT gate) inverts a qubit. That is, |0⟩ is changed to |1⟩."
         }
     },
-    {
-        "Number": 33,
-        "difficulty": 2,
-        "text": {
-            "jp": "2つの状態|φ⟩=|0⟩と|ψ⟩=|1⟩のテンソル積|φ⟩⊗|ψ⟩は何に等しいですか？",
-            "en": "What is the tensor product of the two states |φ⟩=|0⟩ and |ψ⟩=|1⟩ equal to?"
+    
+        {
+            "Number": 33,
+            "difficulty": 2,
+            "text": {
+                "jp": "2つの状態|φ⟩=|0⟩と|ψ⟩=|1⟩のテンソル積|φ⟩⊗|ψ⟩は何に等しいですか？",
+                "en": "What is the tensor product of the two states |φ⟩=|0⟩ and |ψ⟩=|1⟩ equal to?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|11⟩", "|01⟩", "|10⟩"],
+                "en": ["|0⟩", "|11⟩", "|01⟩", "|10⟩"]
+            },
+            "answer": {
+                "jp": "|01⟩",
+                "en": "|01⟩"
+            },
+            "explanation": {
+                "jp": "テンソル積は各量子ビットの状態を結合する操作です。|φ⟩=|0⟩と|ψ⟩=|1⟩だと|φ⟩⊗|ψ⟩は|01⟩になります。",
+                "en": "The tensor product is an operation that combines the states of each qubit. If |φ⟩=|0⟩ and |ψ⟩=|1⟩, then |φ⟩⊗|ψ⟩ is equal to |01⟩."
+            }
         },
-        "choices": {
-            "jp": ["(1).|0⟩", "(2).|11⟩", "(3).|01⟩", "(4).|10⟩"],
-            "en": ["(1).|0⟩", "(2).|11⟩", "(3).|01⟩", "(4).|10⟩"]
+        {
+            "Number": 34,
+            "difficulty": 2,
+            "text": {
+                "jp": "|ψ⟩が(α|0⟩ + β|1⟩)の形で表されるとき、αとβの関係を保つ式はどれですか？",
+                "en": "If |ψ⟩ is expressed in the form (α|0⟩ + β|1⟩), which expression preserves the relationship between α and β?"
+            },
+            "choices": {
+                "jp": ["α + β = 1", "|α|^2 + |β|^2 = 1", "α^2 + β^2 = 0", "|α| + |β| = 1"],
+                "en": ["α + β = 1", "|α|^2 + |β|^2 = 1", "α^2 + β^2 = 0", "|α| + |β| = 1"]
+            },
+            "answer": {
+                "jp": "|α|^2 + |β|^2 = 1",
+                "en": "|α|^2 + |β|^2 = 1"
+            },
+            "explanation": {
+                "jp": "状態|ψ⟩が(α|0⟩ + β|1⟩)と表されるとき、確率振幅の規範は1になるため、|α|^2 + |β|^2 = 1を満たす必要があります。",
+                "en": "When the state |ψ⟩ is represented as (α|0⟩ + β|1⟩), the norm of the probability amplitude is 1 and therefore must satisfy |α|^2 + |β|^2 = 1."
+            }
         },
-        "answer": {
-            "jp": "(3)",
-            "en": "(3)"
+        {
+            "Number": 35,
+            "difficulty": 2,
+            "text": {
+                "jp": "量子ビットが|ψ⟩=(i|0⟩ + |1⟩) / √2の状態にあるとき、この量子ビットがZゲートを通過した後の状態は何ですか？",
+                "en": "If a qubit is in the state |ψ⟩=(i|0⟩ + |1⟩) / √2, what is the state after this qubit passes through the Z gate?"
+            },
+            "choices": {
+                "jp": ["(−i|0⟩ + |1⟩) / √2", "(i|0⟩ − |1⟩) / √2", "(i|0⟩ + |1⟩) / √2", "(−i|0⟩ − |1⟩) / √2"],
+                "en": ["(-i|0⟩ + |1⟩) / √2", "(i|0⟩ - |1⟩) / √2", "(i|0⟩ + |1⟩) / √2", "(-i|0⟩ - |1⟩) / √2"]
+            },
+            "answer": {
+                "jp": "(−i|0⟩ + |1⟩) / √2",
+                "en": "(-i|0⟩ + |1⟩) / √2"
+            },
+            "explanation": {
+                "jp": "Zゲートは|0⟩には影響を与えず、|1⟩には位相を逆転します。従って、|ψ⟩がZゲートを通過すると、状態は(−i|0⟩ + |1⟩) / √2になります。",
+                "en": "The Z gate does not affect |0⟩ but inverts the phase of |1⟩. Therefore, when |ψ⟩ passes through the Z gate, the state becomes (-i|0⟩ + |1⟩) / √2."
+            }
         },
-        "explanation": {
-            "jp": "テンソル積は各量子ビットの状態を結合する操作です。|φ⟩=|0⟩と|ψ⟩=|1⟩だと|φ⟩⊗|ψ⟩は|01⟩になります。",
-            "en": "The tensor product is an operation that combines the states of each qubit. If |φ⟩=|0⟩ and |ψ⟩=|1⟩, then |φ⟩⊗|ψ⟩ is equal to |01⟩."
+        {
+            "Number": 36,
+            "difficulty": 2,
+            "text": {
+                "jp": "量子ビットがHadamard (H) ゲートを通過した後の|0⟩の状態は何ですか？",
+                "en": "What is the state of |0⟩ after a qubit passes through the Hadamard (H) gate?"
+            },
+            "choices": {
+                "jp": ["(|0⟩ - |1⟩)/√2", "(−|0⟩ + |1⟩)/√2", "(−|0⟩ − |1⟩)/√2", "(|0⟩ + |1⟩)/√2"],
+                "en": ["(|0⟩ - |1⟩)/√2", "(-|0⟩ + |1⟩)/√2", "(-|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩)/√2"]
+            },
+            "answer": {
+                "jp": "(|0⟩ + |1⟩)/√2",
+                "en": "(|0⟩ + |1⟩)/√2"
+            },
+            "explanation": {
+                "jp": "Hadamardゲートは、|0⟩を(|0⟩ + |1⟩)/√2へと変換します。",
+                "en": "The Hadamard gate transforms |0⟩ into (|0⟩ + |1⟩)/√2."
+            }
+        },
+        {
+            "Number": 37,
+            "difficulty": 2,
+            "text": {
+                "jp": "量子ビット|ψ⟩が(2i|0⟩ - 3|1⟩)の形で与えられた場合、正規化された状態ベクトルは何になりますか？",
+                "en": "Given a qubit |ψ⟩ in the form (2i|0⟩ - 3|1⟩), what is the normalized state vector?"
+            },
+            "choices": {
+                "jp": ["(i|0⟩ - 3/2|1⟩)/√(13/4)", "(2i|0⟩ - 3|1⟩)/√13", "(2|0⟩ + 3i|1⟩)/√13", "(1/2i|0⟩ - 3/4|1⟩)/√(13/2)"],
+                "en": ["(i|0⟩ - 3/2|1⟩)/√(13/4)", "(2i|0⟩ - 3|1⟩)/√13", "(2|0⟩ + 3i|1⟩)/√13", "(1/2i|0⟩ - 3/4|1⟩)/√(13/2)"]
+            },
+            "answer": {
+                "jp": "(2i|0⟩ - 3|1⟩)/√13",
+                "en": "(2i|0⟩ - 3|1⟩)/√13"
+            },
+            "explanation": {
+                "jp": "確率振幅の2乗和が1となるような状態が正規化された状態です。この場合、|2i|^2 + |-3|^2 が1になります。したがって、正規化された状態ベクトルは (2i|0⟩ - 3|1⟩)/√13 です。",
+                "en": "A state with the sum of squares of the probability amplitudes equal to 1 is a normalized state. In this case, |2i|^2 + |-3|^2 equals 1. Hence, the normalized state vector is (2i|0⟩ - 3|1⟩)/√13."
+            }
+        },
+        {
+            "Number": 38,
+            "difficulty": 2,
+            "text": {
+                "jp": "量子ビット|ψ⟩が|0⟩状態と|1⟩状態の50%の確率で重ね合わされた場合、測定後にどの状態になる確率が最も高いですか？",
+                "en": "If a qubit |ψ⟩ is superimposed with a 50% probability of state |0⟩ and state |1⟩, which state has the highest probability of being observed after measurement?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "両方同じ", "不明"],
+                "en": ["|0⟩", "|1⟩", "The same for both", "Unknown"]
+            },
+            "answer": {
+                "jp": "両方同じ",
+                "en": "The same for both"
+            },
+            "explanation": {
+                "jp": "重ね合わせ状態において、それぞれの基底状態は等しい確率で観測されます。したがって、|0⟩と|1⟩は測定後に観測される確率が同じになります。",
+                "en": "In a superposition state, each basis state has an equal probability of observation. Thus, |0⟩ and |1⟩ have the same probability of being observed after measurement."
+            }
+        },
+        {
+            "Number": 39,
+            "difficulty": 2,
+            "text": {
+                "jp": "固有状態|ψ⟩=1/√3(|0⟩+√2|1⟩)の固有値を測定した際、|1⟩状態を見つける確率はいくつですか？",
+                "en": "What is the probability of finding the |1⟩ state when measuring the eigenvalues of the eigenstate |ψ⟩=1/√3(|0⟩+√2|1⟩)?"
+            },
+            "choices": {
+                "jp": ["1/3", "2/3", "√2/3", "1/√3"],
+                "en": ["1/3", "2/3", "√2/3", "1/√3"]
+            },
+            "answer": {
+                "jp": "2/3",
+                "en": "2/3"
+            },
+            "explanation": {
+                "jp": "|1⟩の状態の確率は確率振幅の絶対値の2乗で求められます。(|√2|1⟩)^2 = 2/3です。",
+                "en": "The probability of a state of |1⟩ is found by squaring the absolute value of the probability amplitude. (|√2|1⟩)^2 = 2/3."
+            }
+        },
+        {
+            "Number": 40,
+            "difficulty": 2,
+            "text": {
+                "jp": "2つの量子状態|φ⟩=(1/√3, √2/√3)と|χ⟩=(√2/√3, -1/√3)の間の内積⟨φ|χ⟩はいくつですか？",
+                "en": "What is the inner product ⟨φ|χ⟩ between the two quantum states |φ⟩=(1/√3, √2/√3) and |χ⟩=(√2/√3, -1/√3)?"
+            },
+            "choices": {
+                "jp": ["0", "1", "-1/√3", "1/√3"],
+                "en": ["0", "1", "-1/√3", "1/√3"]
+            },
+            "answer": {
+                "jp": "0",
+                "en": "0"
+            },
+            "explanation": {
+                "jp": "内積⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0。",
+                "en": "The inner product ⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0."
+            }
+        },
+        {
+            "Number": 41,
+            "difficulty": 2,
+            "text": {
+                "jp": "2つの量子状態|0⟩と|+⟩を持つ量子ビットペアのテンソル積はどう表されますか？",
+                "en": "How is the tensor product of a qubit pair with two quantum states |0⟩ and |+⟩ expressed?"
+            },
+            "choices": {
+                "jp": ["|0+⟩", "|0⟩⊗|+⟩", "|00⟩+|01⟩", "(|0⟩+|1⟩)⊗|0⟩"],
+                "en": ["|0+⟩", "|0⟩⊗|+⟩", "|00⟩+|01⟩", "(|0⟩+|1⟩)⊗|0⟩"]
+            },
+            "answer": {
+                "jp": "|0⟩⊗|+⟩",
+                "en": "|0⟩⊗|+⟩"
+            },
+            "explanation": {
+                "jp": "テンソル積は、各量子ビットの状態を結合して、合成された全体の量子系の状態を表します。|0⟩と|+⟩のテンソル積は、|0⟩⊗(|0⟩+|1⟩)/√2、すなわち合わさって|00⟩+|01⟩/√2となります。",
+                "en": "The tensor product combines the individual states of each qubit to represent the state of the composite quantum system. The tensor product of |0⟩ and |+⟩ is |0⟩⊗((|0⟩+|1⟩)/√2), which results in |00⟩+|01⟩/√2 when combined."
+            }
+        },
+        {
+            "Number": 42,
+            "difficulty": 2,
+            "text": {
+                "jp": "量子ビットが初期状態|0⟩でSゲート（位相ゲート）を通過した場合、終了状態は何ですか？",
+                "en": "If a qubit passes through the S-gate (phase gate) with an initial state |0⟩, what is the end state?"
+            },
+            "choices": {
+                "jp": ["i|0⟩", "|1⟩", "|0⟩", "-i|0⟩"],
+                "en": ["i|0⟩", "|1⟩", "|0⟩", "-i|0⟩"]
+            },
+            "answer": {
+                "jp": "|0⟩",
+                "en": "|0⟩"
+            },
+            "explanation": {
+                "jp": "Sゲート（位相ゲート）は、|0⟩の状態には影響せず、|1⟩の状態にπ/2の位相を追加します。つまり、初期状態が|0⟩である場合、終了状態も|0⟩となります。",
+                "en": "The S-gate (phase gate) does not affect the state |0⟩, but adds a π/2 phase to the state |1⟩. This means if the initial state is |0⟩, the end state will also be |0⟩."
+            }
         }
-    },
-    {
-        "Number": 34,
-        "difficulty": 2,
-        "text": {
-            "jp": "|ψ⟩が(α|0⟩ + β|1⟩)の形で表されるとき、αとβの関係を保つ式はどれですか？",
-            "en": "If |ψ⟩ is expressed in the form (α|0⟩ + β|1⟩), which expression preserves the relationship between α and β?"
-        },
-        "choices": {
-            "jp": ["(1).α + β = 1", "(2).|α|^2 + |β|^2 = 1", "(3).α^2 + β^2 = 0", "(4).|α| + |β| = 1"],
-            "en": ["(1).α + β = 1", "(2).|α|^2 + |β|^2 = 1", "(3).α^2 + β^2 = 0", "(4).|α| + |β| = 1"]
-        },
-        "answer": {
-            "jp": "(2)",
-            "en": "(2)"
-        },
-        "explanation": {
-            "jp": "状態|ψ⟩が(α|0⟩ + β|1⟩)と表されるとき、確率振幅の規範は1になるため、|α|^2 + |β|^2 = 1を満たす必要があります。",
-            "en": "When the state |ψ⟩ is represented as (α|0⟩ + β|1⟩), the norm of the probability amplitude is 1 and therefore must satisfy |α|^2 + |β|^2 = 1."
-        }
-    },
-    {
-        "Number": 35,
-        "difficulty": 2,
-        "text": {
-            "jp": "量子ビットが|ψ⟩=(i|0⟩ + |1⟩) / √2の状態にあるとき、この量子ビットがZゲートを通過した後の状態は何ですか？",
-            "en": "If a qubit is in the state |ψ⟩=(i|0⟩ + |1⟩) / √2, what is the state after this qubit passes through the Z gate?"
-        },
-        "choices": {
-            "jp": ["(1).(−i|0⟩ + |1⟩) / √2", "(2).(i|0⟩ − |1⟩) / √2", "(3).(i|0⟩ + |1⟩) / √2", "(4).(−i|0⟩ − |1⟩) / √2"],
-            "en": ["(1).(-i|0⟩ + |1⟩) / √2", "(2).(i|0⟩ - |1⟩) / √2", "(3).(i|0⟩ + |1⟩) / √2", "(4).(-i|0⟩ - |1⟩) / √2"]
-        },
-        "answer": {
-            "jp": "(1)",
-            "en": "(1)"
-        },
-        "explanation": {
-            "jp": "Zゲートは|0⟩の状態をそのままにし、|1⟩の状態に−1の位相を追加します。したがって、(i|0⟩ + |1⟩) / √2 がZゲートを通過すると、(i|0⟩ - |1⟩) / √2となります。また、共通のiを取り除くと、(−i|0⟩ + |1⟩) / √2となります。",
-            "en": "The Z gate leaves the |0⟩ state intact and adds a phase of -1 to the |1⟩ state. Thus, if (i|0⟩ + |1⟩) / √2 passes through the Z-gate, we get (i|0⟩ - |1⟩) / √2. Also, removing the common i yields (-i|0⟩ + |1⟩) / √2."
-        }
-    },
-    {
-        "Number": 36,
-        "difficulty": 2,
-        "text": {
-            "jp": "量子ビットがHadamard (H) ゲートを通過した後の|0⟩の状態は何ですか？",
-            "en": "What is the state of |0⟩ after a qubit passes through the Hadamard (H) gate?"
-        },
-        "choices": {
-            "jp": ["(1).(|0⟩ - |1⟩)/√2", "(2).(−|0⟩ + |1⟩)/√2", "(3).(−|0⟩ − |1⟩)/√2", "(4).(|0⟩ + |1⟩)/√2"],
-            "en": ["(1).(|0⟩ - |1⟩)/√2", "(2).(-|0⟩ + |1⟩)/√2", "(3).(-|0⟩ - |1⟩)/√2", "(4).(|0⟩ + |1⟩)/√2"]
-        },
-        "answer": {
-            "jp": "(4)",
-            "en": "(4)"
-        },
-        "explanation": {
-            "jp": "Hadamardゲートは、|0⟩を(|0⟩ + |1⟩)/√2に、そして|1⟩を(|0⟩ - |1⟩)/√2に変換します。従って、|0⟩がHadamardゲートを通過すると、(|0⟩ + |1⟩)/√2になります。",
-            "en": "The Hadamard gate converts |0⟩ to (|0⟩ + |1⟩)/√2 and |1⟩ to (|0⟩ - |1⟩)/√2. Thus, when |0⟩ passes through the Hadamard gate, it becomes (|0⟩ + |1⟩)/√2."
-        }
-    },
-    {
-        "Number": 37,
-        "difficulty": 2,
-        "text": {
-            "jp": "量子ビット|ψ⟩が(2i|0⟩ - 3|1⟩)の形で与えられた場合、正規化された状態ベクトルは何になりますか？",
-            "en": "Given a qubit |ψ⟩ in the form (2i|0⟩ - 3|1⟩), what is the normalized state vector?"
-        },
-        "choices": {
-            "jp": ["(1).(i|0⟩ - 3/2|1⟩)/√(13/4)", "(2).(2i|0⟩ - 3|1⟩)/√13", "(3).(2|0⟩ + 3i|1⟩)/√13", "(4).(1/2i|0⟩ - 3/4|1⟩)/√(13/2)"],
-            "en": ["(1).(i|0⟩ - 3/2|1⟩)/√(13/4)", "(2).(2i|0⟩ - 3|1⟩)/√13", "(3).(2|0⟩ + 3i|1⟩)/√13", "(4).(1/2i|0⟩ - 3/4|1⟩)/√(13/2)"]
-        },
-        "answer": {
-            "jp": "(2)",
-            "en": "(2)"
-        },
-        "explanation": {
-            "jp": "正規化するためには、まず長さの2乗を求めます。これは(2i)^2 + (-3)^2 = -4 + 9 = 5、従って長さは√13です。したがって、状態ベクトルは(2i|0⟩ - 3|1⟩)/√13です。",
-            "en": "To normalize, we first find the square of the length. This is (2i)^2 + (-3)^2 = -4 + 9 = 5, thus the length is √13. Thus, the state vector is (2i|0⟩ - 3|1⟩)/√13."
-        }
-    },
-    {
-        "Number": 38,
-        "difficulty": 2,
-        "text": {
-            "jp": "量子ビット|ψ⟩が|0⟩状態と|1⟩状態の50%の確率で重ね合わされた場合、測定後にどの状態になる確率が最も高いですか？",
-            "en": "A qubit |ψ⟩ superimposed with a 50% probability of state |0⟩ and state |1⟩ has the highest probability of being in which state after measurement?"
-        },
-        "choices": {
-            "jp": ["(1).|0⟩", "(2).|1⟩", "(3).両方同じ", "(4).不明"],
-            "en": ["(1).|0⟩", "(2).|1⟩", "Same for both", "Unknown"]
-        },
-        "answer": {
-            "jp": "(3)",
-            "en": "(3)"
-        },
-        "explanation": {
-            "jp": "測定前の量子ビットが|0⟩と|1⟩の状態が50%の確率で重ね合わされているので、測定後に|0⟩または|1⟩の状態になる確率は同じく50%です。",
-            "en": "Since the qubits before the measurement are superposed in the |0⟩ and |1⟩ states with a probability of 50%, the probability of being in the |0⟩ or |1⟩ state after measurement is also 50%."
-        }
-    },
-    {
-        "Number": 39,
-        "difficulty": 2,
-        "text": {
-            "jp": "固有状態|ψ⟩=1/√3(|0⟩+√2|1⟩)の固有値を測定した際、|1⟩状態を見つける確率はいくつですか？",
-            "en": "What is the probability of finding a |1⟩ state when measuring the eigenvalues of the eigenstate |ψ⟩=1/√3(|0⟩+√2|1⟩)?"
-        },
-        "choices": {
-            "jp": ["(1).1/3", "(2).2/3", "(3).√2/3", "(4).1/√3"],
-            "en": ["(1).1/3", "(2).2/3", "(3).√2/3", "(4).1/√3"]
-        },
-        "answer": {
-            "jp": "(2)",
-            "en": "(2)"
-        },
-        "explanation": {
-            "jp": "|1⟩の状態の確率は確率振幅の絶対値の2乗で求められます。(|√2|1⟩)^2 = 2/3です。",
-            "en": "The probability of a state of |1⟩ is found by squaring the absolute value of the probability amplitude. (|√2|1⟩)^2 = 2/3."
-        }
-    },
-    {
-        "Number": 40,
-        "difficulty": 2,
-        "text": {
-            "jp": "2つの量子状態|φ⟩=(1/√3, √2/√3)と|χ⟩=(√2/√3, -1/√3)の間の内積⟨φ|χ⟩はいくつですか？",
-            "en": "How many is the inner product ⟨φ|χ⟩ between the two quantum states |φ⟩=(1/√3, √2/√3) and |χ⟩=(√2/√3, -1/√3)?"
-        },
-        "choices": {
-            "jp": ["(1).0", "(2).1", "(3).-1/√3", "(4).1/√3"],
-            "en": ["(1).0", "(2).1", "(3).-1/√3", "(4).1/√3"]
-        },
-        "answer": {
-            "jp": "(1)",
-            "en": "(1)"
-        },
-        "explanation": {
-            "jp": "内積⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0。",
-            "en": "The inner product ⟨φ|χ⟩ = (1/√3)*(√2/√3) + (√2/√3)*(-1/√3) = 2/3 - 2/3 = 0."
-        }
-    },
-    {
-        "Number": 41,
-        "difficulty": 2,
-        "text": {
-            "jp": "2つの量子状態|0⟩と|+⟩を持つ量子ビットペアのテンソル積はどう表されますか？",
-            "en": "How is the tensor product of a qubit pair with two quantum states |0⟩ and |+⟩ expressed?"
-        },
-        "choices": {
-            "jp": ["(1).|0+⟩", "(2).|0⟩⊗|+⟩", "(3).|00⟩+|01⟩", "(4).(|0⟩+|1⟩)⊗|0⟩"],
-            "en": ["(1).|0+⟩", "(2).|0⟩⊗|+⟩", "(3).|00⟩+|01⟩", "(4).(|0⟩+|1⟩)⊗|0⟩"]
-        },
-        "answer": {
-            "jp": "(2)",
-            "en": "(2)"
-        },
-        "explanation": {
-            "jp": "量子ビットの状態のテンソル積は、各状態の個別のテンソル積として表されます。よって、|0⟩と|+⟩のテンソル積は|0⟩⊗|+⟩です。",
-            "en": "The tensor product of the states of a qubit is expressed as the individual tensor product of each state. Thus, the tensor product of |0⟩ and |+⟩ is |0⟩⊗|+⟩."
-        }
-    },
-    {
-        "Number": 42,
-        "difficulty": 2,
-        "text": {
-            "jp": "量子ビットが初期状態|0⟩でSゲート（位相ゲート）を通過した場合、終了状態は何ですか？",
-            "en": "If a qubit passes through the S-gate (phase gate) with an initial state |0⟩, what is the end state?"
-        },
-        "choices": {
-            "jp": ["(1).i|0⟩", "(2).|1⟩", "(3).|0⟩", "(4).-i|0⟩"],
-            "en": ["(1).i|0⟩", "(2).|1⟩", "(3).|0⟩", "(4).-i|0⟩"]
-        },
-        "answer": {
-            "jp": "(3)",
-            "en": "(3)"
-        },
-        "explanation": {
-            "jp": "Sゲートは|0⟩の状態に何もしませんが、|1⟩の状態にiの相を加えます。初期状態が|0⟩の場合、状態は変化せず、Sゲートを通過後も|0⟩です。",
-            "en": "The S-gate does nothing to the |0⟩ state but adds a phase of i to the |1⟩ state. If the initial state is |0⟩, the state does not change and is still |0⟩ after passing through the S-gate."
-        }
-    }
 ]
+    
+
+
