@@ -1,122 +1,21 @@
 [
     {
         "difficulty": 1,
-        "text": "日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 1,
-        "text": "a日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 1,
-        "text": "b日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 1,
-        "text": "c日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 1,
-        "text": "d日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 2,
-        "text": "e日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 2,
-        "text": "f日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 2,
-        "text": "g日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-    
-    {
-        "difficulty": 2,
-        "text": "h日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 2,
-        "text": "i日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 3,
-        "text": "j日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 3,
-        "text": "k日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 3,
-        "text": "l日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 3,
-        "text": "m日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
-    },
-
-    {
-        "difficulty": 3,
-        "text": "n日本の首都はどこですか？",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。"
+        "text": {
+            "jp": "日本の首都はどこですか？",
+            "en": "What is the capital of Japan?"
+        },
+        "choices": {
+            "jp": ["東京", "大阪", "札幌", "福岡"],
+            "en": ["Tokyo", "Osaka", "Sapporo", "Fukuoka"]
+        },
+        "answer": {
+            "jp": "東京",
+            "en": "Tokyo"
+        },
+        "explanation": {
+            "jp": "日本の首都は東京です。",
+            "en": "The capital of Japan is Tokyo."
+        }
     }
-
 ]

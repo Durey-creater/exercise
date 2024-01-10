@@ -44,17 +44,17 @@ h1 {
     color: #000; /* 文字色を黒に変更 */
 }
 
-#choices-list {
+#choices-list-jp, #choices-list-en{
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
 }
 
-#choices-list li {
+#choices-list-jp li, #choices-list-en li {
     margin-bottom: 10px;
 }
 
-#choices-list button {
+#choices-list-jp button, #choices-list-en button  {
     background-color: #e4ebf5;
     border-radius: 30px;
     padding: 15px;

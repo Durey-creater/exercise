@@ -43,45 +43,58 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayQuestion(question) {
         const difficulty = document.getElementById('difficulty');
         const questionText = document.getElementById('question-text');
-        const choicesList = document.getElementById('choices-list');
+        const choicesListJp = document.getElementById('choices-list-jp');
+        const choicesListEn = document.getElementById('choices-list-en');
         const explanation = document.getElementById('answer-explanation');
         const nextQuestionButton = document.getElementById('next-question-button');
         
         
         difficulty.textContent = '難易度: ' + question.difficulty;
-        questionText.textContent = question.text;
-        choicesList.innerHTML = '';
+        // questionText.textContent = question.text;
+        questionText.innerHTML = `${question.text.jp}<br>${question.text.en}`;
+        choicesListJp.innerHTML = '';
+        choicesListEn.innerHTML = '';
         explanation.style.display = 'none';
         nextQuestionButton.style.display = 'none';
         
-        question.choices.forEach(function(choice) {
+        question.choices.jp.forEach(function(choice, index) {
             const li = document.createElement('li');
             const button = document.createElement('button');
             button.textContent = choice;
-            button.onclick = function() { chooseAnswer(choice, question); };
+            button.onclick = function() { chooseAnswer(choice, question, 'jp'); };
             li.appendChild(button);
-            choicesList.appendChild(li);
+            choicesListJp.appendChild(li);
         });
+
+        question.choices.en.forEach(function(choice, index) {
+            const li = document.createElement('li');
+            const button = document.createElement('button');
+            button.textContent = choice;
+            button.onclick = function() { chooseAnswer(choice, question, 'en'); };
+            li.appendChild(button);
+            choicesListEn.appendChild(li);
+        });
+
+        explanation.innerHTML = `${question.explanation.jp}<br>${question.explanation.en}`;
     }
 
-    function chooseAnswer(choice, question) {
+    function chooseAnswer(choice, question, lang) {
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
-
-
-        if (choice === question.answer) {
+    
+        if (choice === question.answer[lang]) {
             recentResults.push(true);
-            explanation.textContent = "正解！ " + question.explanation;
+            explanation.innerHTML = "正解！ " + question.explanation[lang];
         } else {
             recentResults.push(false);
-            explanation.textContent = "不正解。 " + question.explanation;
+            explanation.innerHTML = "不正解。 " + question.explanation[lang];
             incorrectQuestions.push(question)
         }
-
+    
         const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.style.display = 'block';
     }
-    
+
     const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
     const incorrectContainer = document.getElementById('incorrect-questions-container');
 
@@ -97,17 +110,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayIncorrectQuestions() {
         incorrectContainer.innerHTML = ''; // コンテナをクリア
-
+    
         if (incorrectQuestions.length === 0) {
             incorrectContainer.textContent = '間違った問題はありません。';
             return;
         }
-
+    
         incorrectQuestions.forEach(question => {
             const div = document.createElement('div');
-            div.innerHTML = `<strong>問題:</strong> ${question.text} <br>
-                             <strong>解答:</strong> ${question.answer} <br>
-                             <strong>解説:</strong> ${question.explanation} <br><br>`;
+            div.innerHTML = `<strong>問題:</strong> ${question.text.jp} / ${question.text.en}<br>
+                             <strong>解答:</strong> ${question.answer.jp} / ${question.answer.en}<br>
+                             <strong>解説:</strong> ${question.explanation.jp} / ${question.explanation.en}<br><br>`;
             incorrectContainer.appendChild(div);
         });
     }
