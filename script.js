@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const incorrectQuestions = [];
 
     function getRandomQuestionOfLevel(level) {
-        const questionNumber = document.getElementById('question-number');
         const questionsOfLevel = questions.filter(q => q.difficulty === level);
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         function displayQuestion(question) {
-            const questionNumber = document.getElementById('question-number'); // この行を追加
+            const questionNumber = document.getElementById('question-number'); // ここで定義
             const difficulty = document.getElementById('difficulty');
             const questionText = document.getElementById('question-text');
             const choicesList = document.getElementById('choices-list');
@@ -47,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
             totalQuestionsAnswered++; // 全体の問題数をインクリメント
             questionNumber.textContent = '問題 #' + totalQuestionsAnswered; // 修正：全体の問題数を表示
+        
+            // 以下のコードは変更なし...        
         
             difficulty.textContent = '難易度: ' + question.difficulty;
             questionText.innerHTML = question.text.replace(/\n/g, '<br>'); // 改行を <br> に置換

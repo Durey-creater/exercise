@@ -9,8 +9,6 @@ body {
     align-items: center;
     height: 100vh;
     color: #333;
-    background-image: url('path_to_your_stylish_pattern_image'); /* スタイリッシュな模様の画像URLを追加 */
-    background-image: url('path_to_your_stylish_pattern_image');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
