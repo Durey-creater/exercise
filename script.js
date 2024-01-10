@@ -60,11 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         
         // 日本語と英語の選択肢が異なる場合のみ、両方を表示
-        button.textContent = choiceJp === choiceEn ? choiceJp : `${choiceJp} / ${choiceEn}`;
+        if (choiceJp !== choiceEn) {
+            button.textContent = `${choiceJp} / ${choiceEn}`;
+        } else {
+            button.textContent = choiceJp; // 同じ場合、日本語の選択肢のみを表示
+        }
         button.onclick = function() { chooseAnswer(question, choiceJp); };
         li.appendChild(button);
         choicesList.appendChild(li);
     });
+
+    // その他のコード...
+}
 
         explanation.innerHTML = `${question.explanation.jp}<br>${question.explanation.en}`;
     }
