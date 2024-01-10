@@ -9,22 +9,16 @@
     <div id="quiz-container">
         <h1 id="question-number">問題 #1</h1>
         <div id="difficulty">難易度: 1</div> <!-- 難易度表示 -->
-        
-        <!-- 問題文の表示 -->
-        <div id="question-text-jp" class="question-text">ここに日本語の問題文が表示されます。</div>
-        <div id="question-text-en" class="question-text">Here the English question will be displayed.</div>
-        
-        <!-- 選択肢のリスト -->
-        <ul id="choices-list-jp" class="choices-list"></ul>
-        <ul id="choices-list-en" class="choices-list"></ul>
-        
-        <!-- 解説の表示 -->
-        <div id="answer-explanation-jp" class="answer-explanation"></div>
-        <div id="answer-explanation-en" class="answer-explanation"></div>
-        
-        <!-- ボタン -->
+        <div id="question-text">What does H (Hadamard gate) change |0⟩ to?</div>
+        <ul id="choices-list">
+            <li><button>1: |0⟩</button></li>
+            <li><button>2: |1⟩</button></li>
+            <li><button>3: |+⟩</button></li>
+            <li><button>4: |-⟩</button></li>
+        </ul>
+        <div id="answer-explanation"></div>
         <button id="next-question-button" class="button">次の問題へ</button>
-        <button id="show-incorrect-questions-button" class="button">不正解の問題</button>
+        <button id="show-incorrect-questions-button" class="button">不正解の問題</button>        
         <div id="incorrect-questions-container" style="display: none;"></div>
     </div>
     <script src="script.js"></script>
