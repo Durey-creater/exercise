@@ -50,19 +50,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // 以下のコードは変更なし...        
         
             difficulty.textContent = '難易度: ' + question.difficulty;
-            questionText.innerHTML = question.text.replace(/\n/g, '<br>'); // 改行を <br> に置換
+            questionText.innerHTML = `${question.text.jp}<br>${question.text.en}`;
             choicesList.innerHTML = '';
             explanation.style.display = 'none';
             nextQuestionButton.style.display = 'none';
         
-            question.choices.forEach(function(choice) {
+            choicesList.innerHTML = '';
+            question.choices.jp.forEach((choice, index) => {
                 const li = document.createElement('li');
                 const button = document.createElement('button');
-                button.textContent = choice;
-                button.onclick = function() { chooseAnswer(choice, question); };
+                button.textContent = `${choice} / ${question.choices.en[index]}`;
+                button.onclick = function() { chooseAnswer(choice, question.answer.jp); };
                 li.appendChild(button);
                 choicesList.appendChild(li);
             });
+
+            explanation.innerHTML = `${question.explanation.jp}<br>${question.explanation.en}`;
         }
         
         function chooseAnswer(choice, question) {

@@ -1,9 +1,21 @@
 [
     {
         "difficulty": 1,
-        "text": "日本の首都はどこですか？\nWhat is the capital of Japan?",
-        "choices": ["東京", "大阪", "札幌", "福岡"],
-        "answer": "東京",
-        "explanation": "日本の首都は東京です。\nThe capital of Japan is Tokyo."
+        "text": {
+            "jp": "日本の首都はどこですか？",
+            "en": "What is the capital of Japan?"
+        },
+        "choices": {
+            "jp": ["東京", "大阪", "札幌", "福岡"],
+            "en": ["Tokyo", "Osaka", "Sapporo", "Fukuoka"]
+        },
+        "answer": {
+            "jp": "東京",
+            "en": "Tokyo"
+        },
+        "explanation": {
+            "jp": "日本の首都は東京です。",
+            "en": "The capital of Japan is Tokyo."
+        }
     }
 ]
