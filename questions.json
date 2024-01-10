@@ -961,7 +961,4463 @@
                 "jp": "Sゲート（位相ゲート）は、|0⟩の状態には影響せず、|1⟩の状態にπ/2の位相を追加します。つまり、初期状態が|0⟩である場合、終了状態も|0⟩となります。",
                 "en": "The S-gate (phase gate) does not affect the state |0⟩, but adds a π/2 phase to the state |1⟩. This means if the initial state is |0⟩, the end state will also be |0⟩."
             }
+        }, 
+        {
+            "Number": 2,
+            "difficulty": 3,
+            "text": {
+                "jp": "CNOTゲートの制御ビットが|1⟩の時、ターゲットビット|0⟩に何が起こりますか？",
+                "en": "What happens to the target bit |0⟩ when the control bit of the CNOT gate is |1⟩?"
+            },
+            "choices": {
+                "jp": ["変化なし", "|0⟩に変化する", "|1⟩に変化する", "もつれる"],
+                "en": ["No change", "Changes to |0⟩", "Changes to |1⟩", "Becomes entangled"]
+            },
+            "answer": {
+                "jp": "|1⟩に変化する",
+                "en": "Changes to |1⟩"
+            },
+            "explanation": {
+                "jp": "CNOTゲートは制御ビットが|1⟩の時にターゲットビットの状態を反転させます。よって、|0⟩は|1⟩に変化します。",
+                "en": "The CNOT gate inverts the state of the target bit when the control bit is |1⟩. Therefore, |0⟩ changes to |1⟩."
+            }
+        },
+        {
+            "Number": 3,
+            "difficulty": 3,
+            "text": {
+                "jp": "測定を行ったときに|ψ⟩=√0.4|0⟩+√0.6|1⟩で|1⟩を取得する確率は？",
+                "en": "What is the probability of getting |1⟩ with |ψ⟩=√0.4|0⟩+√0.6|1⟩ when the measurement is taken?"
+            },
+            "choices": {
+                "jp": ["0.16", "0.36", "0.4", "0.6"],
+                "en": ["0.16", "0.36", "0.4", "0.6"]
+            },
+            "answer": {
+                "jp": "0.6",
+                "en": "0.6"
+            },
+            "explanation": {
+                "jp": "確率は確率振幅の絶対値の2乗に等しく、|1⟩の確率振幅は√0.6なので0.6^2 = 0.36です。しかし、確率振幅がすでに√0.6と書かれていて、確率を求めるには2乗する必要があるので単に0.6です。",
+                "en": "The probability is equal to the square of the absolute value of the probability amplitude, and the probability amplitude of |1⟩ is √0.6, so 0.6^2 = 0.36. However, it is simply 0.6 because the probability amplitude is already written as √0.6 and must be squared to find the probability."
+            }
+        },
+        {
+            "Number": 5,
+            "difficulty": 3,
+            "text": {
+                "jp": "正規直交基底{|x⟩,|y⟩,|z⟩}において、|x⟩と|y⟩が直交している場合、⟨x|y⟩はいくつになりますか？",
+                "en": "In an orthonormal basis {|x⟩, |y⟩, |z⟩}, if |x⟩ and |y⟩ are orthogonal, then ⟨x|y⟩ is how many?"
+            },
+            "choices": {
+                "jp": ["-1", "0", "1", "1/√2"],
+                "en": ["-1", "0", "1", "1/√2"]
+            },
+            "answer": {
+                "jp": "0",
+                "en": "0"
+            },
+            "explanation": {
+                "jp": "直交するとは、内積が0になることを意味します。したがって、|x⟩と|y⟩が直交している場合、その内積⟨x|y⟩は0です。",
+                "en": "To be orthogonal means that the inner product is zero. Thus, if |x⟩ and |y⟩ are orthogonal, then their inner product ⟨x|y⟩ is 0."
+            }
+        },  
+        {
+            "Number": 6,
+            "difficulty": 3,
+            "text": {
+                "jp": "3量子ビット状態|101⟩にXゲートを中央の量子ビットに適用したときの状態はどれですか？",
+                "en": "Which of the following is the state when the X-gate is applied to the central qubit in the 3-qubit state |101⟩?"
+            },
+            "choices": {
+                "jp": ["|111⟩", "|000⟩", "|100⟩", "|001⟩"],
+                "en": ["|111⟩", "|000⟩", "|100⟩", "|001⟩"]
+            },
+            "answer": {
+                "jp": "|111⟩",
+                "en": "|111⟩"
+            },
+            "explanation": {
+                "jp": "Xゲートを適用すると、対応する量子ビットの状態が反転されます。したがって、中央の量子ビットが|0⟩から|1⟩に反転し、結果は|111⟩になります。",
+                "en": "Applying an X-gate inverts the state of the corresponding qubit. Thus, the central qubit is flipped from |0⟩ to |1⟩, resulting in |111⟩."
+            }
+        },
+        {
+            "Number": 7,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートが|0⟩に作用した結果は何ですか？",
+                "en": "What is the result of the Z-gate acting on |0⟩?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "-|0⟩", "|1⟩", "-|1⟩"],
+                "en": ["|0⟩", "-|0⟩", "|1⟩", "-|1⟩"]
+            },
+            "answer": {
+                "jp": "|0⟩",
+                "en": "|0⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは、|0⟩をそのまま|0⟩とし、|1⟩の位相を反転させ|1⟩を-|1⟩に変える効果があります。よって|0⟩にZゲートを適用しても状態は変化せず|0⟩です。",
+                "en": "The Z-gate has the effect of keeping |0⟩ as it is |0⟩ and inverting the phase of |1⟩ to change |1⟩ to -|1⟩. Therefore, applying a Z-gate to |0⟩ does not change the state, which remains |0⟩."
+            }
+        },
+        {
+            "Number": 8,
+            "difficulty": 3,
+            "text": {
+                "jp": "2つの量子ビットの状態 |ψ⟩=(|01⟩+|10⟩)/√2 はどのような状態ですか？",
+                "en": "What is the state |ψ⟩=(|01⟩+|10⟩)/√2 of two qubits?"
+            },
+            "choices": {
+                "jp": ["もつれ状態", "因数分解可能な状態", "純粋状態", "混合状態"],
+                "en": ["Entangled state", "Factorizable state", "Pure state", "Mixed state"]
+            },
+            "answer": {
+                "jp": "もつれ状態",
+                "en": "Entangled state"
+            },
+            "explanation": {
+                "jp": "この状態は2つの量子ビットがエンタングルメントされている状態です。それぞれの量子ビットの状態は相手の量子ビットに依存しているため、これらを個別に因数分解することはできません。",
+                "en": "This state is the entanglement of two qubits. Since the state of each qubit depends on the other qubit, they cannot be factorized separately."
+            }
+        },
+        {
+            "Number": 9,
+            "difficulty": 3,
+            "text": {
+                "jp": "H (Hadamard) ゲートは |0⟩ を何に変えますか？",
+                "en": "What does the H (Hadamard) gate change |0⟩ to?"
+            },
+            "choices": {
+                "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+                "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
+            },
+            "answer": {
+                "jp": "|+⟩",
+                "en": "|+⟩"
+            },
+            "explanation": {
+                "jp": "Hadamardゲートは|0⟩を|+⟩状態（(|0⟩+|1⟩)/√2）に変換します。これは、|0⟩と|1⟩の重ね合わせを生成するのに使われる一般的なゲートです。",
+                "en": "The Hadamard gate converts |0⟩ to a |+⟩ state ((|0⟩+|1⟩)/√2). This is a common gate used to generate a superposition of |0⟩ and |1⟩."
+            }
+        },
+        {
+            "Number": 10,
+            "difficulty": 3,
+            "text": {
+                "jp": "H (Hadamard) ゲートは |1⟩ を何に変えますか？",
+                "en": "What does the H (Hadamard) gate change |1⟩ to?"
+            },
+            "choices": {
+                "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+                "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
+            },
+            "answer": {
+                "jp": "|−⟩",
+                "en": "|−⟩"
+            },
+            "explanation": {
+                "jp": "Hadamardゲートは|1⟩を|−⟩状態（(|0⟩-|1⟩)/√2）に変換します。これは、|0⟩と|1⟩を用いて別のタイプの重ね合わせを生成するのに使われます。",
+                "en": "The Hadamard gate converts |1⟩ to a |−⟩ state ((|0⟩-|1⟩)/√2). This is used to generate another type of superposition using |0⟩ and |1⟩."
+            }
+        },
+        {
+            "Number": 11,
+            "difficulty": 3,
+            "text": {
+                "jp": "2つの量子ビットの基底状態|01⟩に対してCNOTゲートが適用された後の状態は何ですか？",
+                "en": "What is the state after the CNOT gate is applied to the ground state |01⟩ of the two qubits?"
+            },
+            "choices": {
+                "jp": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"],
+                "en": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]
+            },
+            "answer": {
+                "jp": "|01⟩",
+                "en": "|01⟩"
+            },
+            "explanation": {
+                "jp": "コントロールビットが|0⟩の状態で、CNOTゲートはターゲットビットに影響を与えません。したがって、状態|01⟩にCNOTゲートを適用しても状態は変化せず|01⟩のままです。",
+                "en": "With the control bit in state |0⟩, the CNOT gate has no effect on the target bit. Therefore, applying the CNOT gate to state |01⟩ does not change the state and it remains at |01⟩."
+            }
+        },
+        {
+            "Number": 12,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子ビットが|ψ⟩=(α, β)で表されるとき、この量子ビットが妥当な量子状態であるための条件は何ですか？",
+                "en": "If a qubit is represented by |ψ⟩=(α, β), what are the conditions for this qubit to be a valid quantum state?"
+            },
+            "choices": {
+                "jp": ["αとβは実数である", "αとβは整数である", "|α|^2+|β|^2=1", "α+β=1"],
+                "en": ["α and β are real numbers", "α and β are integers", "|α|^2+|β|^2=1", "α+β=1"]
+            },
+            "answer": {
+                "jp": "|α|^2+|β|^2=1",
+                "en": "|α|^2+|β|^2=1"
+            },
+            "explanation": {
+                "jp": "量子ビットの状態ベクトルについて、確率振幅αとβは確率解釈を持つため、|α|^2+|β|^2=1となる必要があります。これは規格化条件と呼ばれ、量子状態全体で確率が合計100%であることを保証します。",
+                "en": "For a vector of states of a quantum bit, the probability amplitudes α and β must have a probability interpretation so that |α|^2+|β|^2=1. This is called the normalization condition and guarantees that the probabilities total 100% for the entire quantum state."
+            }
+        },
+        {
+            "Number": 13,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートは |+⟩ を何に変えますか？",
+                "en": "What does the Z-gate change |+⟩ to?"
+            },
+            "choices": {
+                "jp": ["|1⟩", "|−⟩", "|+⟩", "-|+⟩"],
+                "en": ["|1⟩", "|−⟩", "|+⟩", "-|+⟩"]
+            },
+            "answer": {
+                "jp": "|−⟩",
+                "en": "|−⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは位相を変更する量子ゲートであり、|+⟩=(|0⟩+|1⟩)/√2に適用すると、|0⟩の位相は変わらず、|1⟩の位相が反転するため、次のようになります：|−⟩=(|0⟩-|1⟩)/√2。",
+                "en": "Z-gate is a phase-changing quantum gate, and when applied to |+⟩=(|0⟩+|1⟩)/√2, the phase of |0⟩ remains the same and the phase of |1⟩ reverses. Therefore, we have: |-⟩=(|0⟩-|1⟩)/√2."
+            }
+        },
+        {
+            "Number": 14,
+            "difficulty": 3,
+            "text": {
+                "jp": "2つのケット状態|Ψ⟩=α|0⟩+β|1⟩と|Φ⟩=γ|0⟩+δ|1⟩が直交するための条件は何ですか？",
+                "en": "What are the conditions for two ket states |Ψ⟩=α|0⟩+β|1⟩ and |Φ⟩=γ|0⟩+δ|1⟩ to be orthogonal?"
+            },
+            "choices": {
+                "jp": ["αδ-βγ=0", "αγ+βδ=0", "αβ=γδ", "α/β=γ/δ"],
+                "en": ["αδ-βγ=0", "αγ+βδ=0", "αβ=γδ", "α/β=γ/δ"]
+            },
+            "answer": {
+                "jp": "αγ+βδ=0",
+                "en": "αγ+βδ=0"
+            },
+            "explanation": {
+                "jp": "2つの状態が直交するとは、それらの内積が0であることを意味します。すなわち、⟨Ψ|Φ⟩=α*γ+β*δ=0でなくてはなりません。",
+                "en": "For two states to be orthogonal means that their inner product must be zero. That is, ⟨Ψ|Φ⟩=α*γ+β*δ=0."
+            }
+        },   
+        {
+            "Number": 15,
+            "difficulty": 3,
+            "text": {
+                "jp": "HadamardゲートHを適用した後、|0⟩の状態はどうなりますか？",
+                "en": "What happens to the state of |0⟩ after applying Hadamard gate H?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+                "en": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"]
+            },
+            "answer": {
+                "jp": "|+⟩",
+                "en": "|+⟩"
+            },
+            "explanation": {
+                "jp": "Hadamardゲートは |0⟩ と |1⟩ の基底を |+⟩ と |−⟩ へ変換するゲートです。|0⟩に適用した場合、|+⟩=(|0⟩+|1⟩)/√2に変換されます。",
+                "en": "The Hadamard gate converts the basis of |0⟩ and |1⟩ to |+⟩ and |-⟩. When applied to |0⟩, it converts to |+⟩=(|0⟩+|1⟩)/√2."
+            }
+        },
+        {
+            "Number": 16,
+            "difficulty": 3,
+            "text": {
+                "jp": "|0⟩と|1⟩の状態の確率振幅がそれぞれ1/√2, i/√2の場合、この量子ビットの状態を表すケットはどれですか？",
+                "en": "If the probability amplitudes of the |0⟩ and |1⟩ states are 1/√2 and i/√2, respectively, which ket represents this qubit state?"
+            },
+            "choices": {
+                "jp": ["|Ψ⟩=1/√2|0⟩+1/√2|1⟩", "|Ψ⟩=1/√2|0⟩-1/√2|1⟩", "|Ψ⟩=1/√2|0⟩+i/√2|1⟩", "|Ψ⟩=1/√2|0⟩-i/√2|1⟩"],
+                "en": ["|Ψ⟩=1/√2|0⟩+1/√2|1⟩", "|Ψ⟩=1/√2|0⟩-1/√2|1⟩", "|Ψ⟩=1/√2|0⟩+i/√2|1⟩", "|Ψ⟩=1/√2|0⟩-i/√2|1⟩"]
+            },
+            "answer": {
+                "jp": "|Ψ⟩=1/√2|0⟩+i/√2|1⟩",
+                "en": "|Ψ⟩=1/√2|0⟩+i/√2|1⟩"
+            },
+            "explanation": {
+                "jp": "ケット状態|Ψ⟩では、|0⟩の確率振幅が1/√2、|1⟩の確率振幅がi/√2と与えられているので、|Ψ⟩=1/√2|0⟩+i/√2|1⟩と表すことができます。",
+                "en": "In the ket state |Ψ⟩, the probability amplitude of |0⟩ is 1/√2 and that of |1⟩ is i/√2 given that |Ψ⟩=1/√2|0⟩+i/√2|1 can be expressed as."
+            }
+        },
+        {
+            "Number": 17,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートの作用は |+⟩ 状態にどのような影響を与えますか？",
+                "en": "How does the action of the Z-gate affect the |+⟩ state?"
+            },
+            "choices": {
+                "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+                "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
+            },
+            "answer": {
+                "jp": "|−⟩",
+                "en": "|−⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは位相を反転させるゲートで、|+⟩ = (|0⟩+|1⟩)/√2 に作用させると |-⟩ = (|0⟩-|1⟩)/√2 に変換されます。",
+                "en": "The Z-gate is a phase-reversing gate that, when acted on |+⟩ = (|0⟩+|1⟩)/√2, converts to |-⟩ = (|0⟩-|1⟩)/√2."
+            }
+        },
+        {
+            "Number": 18,
+            "difficulty": 3,
+            "text": {
+                "jp": "光子の偏光状態 |H⟩ (水平) と |V⟩ (垂直) を使った場合、|+⟩ はどのように表されますか？",
+                "en": "How is |+⟩ represented when using the photon polarization states |H⟩ (horizontal) and |V⟩ (vertical)?"
+            },
+            "choices": {
+                "jp": ["|H⟩", "|V⟩", "(|H⟩ + |V⟩)/√2", "(|H⟩ - |V⟩)/√2"],
+                "en": ["|H⟩", "|V⟩", "(|H⟩ + |V⟩)/√2", "(|H⟩ - |V⟩)/√2"]
+            },
+            "answer": {
+                "jp": "(|H⟩ + |V⟩)/√2",
+                "en": "(|H⟩ + |V⟩)/√2"
+            },
+            "explanation": {
+                "jp": "量子ビットの基底状態 |H⟩ と |V⟩ を使用した場合、|+⟩ はこれらの重ね合わせで表され (|H⟩ + |V⟩)/√2 になります。",
+                "en": "Using the ground states |H⟩ and |V⟩ of the quantum bit, |+⟩ is represented by their superposition (|H⟩ + |V⟩)/√2."
+            }
+        },
+        {
+            "Number": 19,
+            "difficulty": 3,
+            "text": {
+                "jp": "|0⟩の状態をZゲートに入力するとどうなりますか？",
+                "en": "What happens when the |0⟩ state is input to the Z gate?"
+            },
+            "choices": {
+                "jp": ["-|0⟩", "|0⟩", "|1⟩", "-|1⟩"],
+                "en": ["-|0⟩", "|0⟩", "|1⟩", "-|1⟩"]
+            },
+            "answer": {
+                "jp": "|0⟩",
+                "en": "|0⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは、|0⟩の位相を変えずにそのまま|0⟩を出力します。しかし、|1⟩を入力すると、Zゲートはその位相を反転させて-|1⟩を出力します。",
+                "en": "The Z gate outputs |0⟩ without changing the phase of |0⟩. However, if you input |1⟩, the Z gate inverts its phase and outputs -|1⟩."
+            }
+        },
+        {
+            "Number": 20,
+            "difficulty": 3,
+            "text": {
+                "jp": "2つの量子ビットがもつれている場合、一方の量子ビットの測定が他方にどのような影響をもたらしますか？",
+                "en": "If two qubits are entangled, how does the measurement of one qubit affect the other?"
+            },
+            "choices": {
+                "jp": ["状態がランダムになる", "他方も同時に測定される", "他方の状態が決定される", "影響は全くない"],
+                "en": ["State is randomized", "The other is also measured simultaneously", "The other state is determined", "No impact at all"]
+            },
+            "answer": {
+                "jp": "他方の状態が決定される",
+                "en": "The other state is determined"
+            },
+            "explanation": {
+                "jp": "もつれた量子ビットは、一方の量子ビットの測定結果が他方の状態を決定します。例えば、もつれたペアの一方が |0⟩と測定された場合、もう一方は確実に|1⟩の状態になります（逆もまた然り）。",
+                "en": "For entangled qubits, the measurement result of one qubit determines the state of the other. For example, if one of the entangled pair is measured to be |0⟩, the other will certainly be in the |1⟩ state (and vice versa)."
+            }
+        },
+        {
+            "Number": 21,
+            "difficulty": 3,
+            "text": {
+                "jp": "次の量子ビット|ψ⟩=1/√3|0⟩ + √2/√3|1⟩に対して実行される測定で|0⟩が得られる確率はどれくらいですか？",
+                "en": "What is the probability that a measurement performed on the following qubit |ψ⟩=1/√3|0⟩ + √2/√3|1⟩ will yield |0⟩?"
+            },
+            "choices": {
+                "jp": ["1/3", "2/3", "1/2", "1/√3"],
+                "en": ["1/3", "2/3", "1/2", "1/√3"]
+            },
+            "answer": {
+                "jp": "1/3",
+                "en": "1/3"
+            },
+            "explanation": {
+                "jp": "状態|ψ⟩において、|0⟩が得られる確率は、|0⟩の確率振幅の絶対値を2乗して計算されます。この場合、(1/√3)^2 = 1/3です。",
+                "en": "In state |ψ⟩, the probability of obtaining |0⟩ is calculated by squaring the absolute value of the probability amplitude of |0⟩. In this case, (1/√3)^2 = 1/3."
+            }
+        },
+        {
+            "Number": 22,
+            "difficulty": 3,
+            "text": {
+                "jp": "|ψ⟩ = α|0⟩ + β|1⟩が|1⟩の状態で測定される確率が36%の場合、βの絶対値はいくつですか？",
+                "en": "|ψ⟩ = α|0⟩ + β|1⟩ has a 36% probability of being measured with |1⟩, what is the absolute value of β?"
+            },
+            "choices": {
+                "jp": ["0.4", "0.6", "0.8", "1.0"],
+                "en": ["0.4", "0.6", "0.8", "1.0"]
+            },
+            "answer": {
+                "jp": "0.6",
+                "en": "0.6"
+            },
+            "explanation": {
+                "jp": "測定される確率は確率振幅の2乗に等しいので、|β|^2 = 0.36、したがって、|β| = √0.36 = 0.6です。",
+                "en": "The probability of being measured is equal to the square of the probability amplitude, so that |β|^2 = 0.36, thus |β| = √0.36 = 0.6."
+            }
+        },
+        {
+            "Number": 23,
+            "difficulty": 3,
+            "text": {
+                "jp": "ベル状態 |Ψ+⟩ = (|00⟩ + |11⟩)/√2 で、最初の量子ビットが |1⟩の状態で測定される確率はいくつですか？",
+                "en": "In the Bell state |Ψ+⟩ = (|00⟩ + |11⟩)/√2, what is the probability that the first qubit is measured in the |1⟩ state?"
+            },
+            "choices": {
+                "jp": ["0%", "25%", "50%", "100%"],
+                "en": ["0%", "25%", "50%", "100%"]
+            },
+            "answer": {
+                "jp": "50%",
+                "en": "50%"
+            },
+            "explanation": {
+                "jp": "ベル状態|Ψ+⟩において、どちらの量子ビットも50%の確率で |0⟩または |1⟩の状態で測定されます。したがって、最初の量子ビットが |1⟩で測定される確率は50%です。",
+                "en": "In the Bell state |Ψ+⟩, both qubits have a 50% chance of being measured in the |0⟩ or |1⟩ state. Thus, there is a 50% probability that the first qubit is measured in the |1⟩ state."
+            }
+        },
+        {
+            "Number": 24,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子もつれ状態 |Φ+⟩ の定義として正しいものはどれですか？",
+                "en": "Which is the correct definition of the quantum entangled state |Φ+⟩?"
+            },
+            "choices": {
+                "jp": ["|Φ+⟩=(|00⟩-|11⟩)/√2", "|Φ+⟩=(|01⟩+|10⟩)/√2", "|Φ+⟩=(|00⟩+|11⟩)/√2", "|Φ+⟩=(|01⟩-|10⟩)/√2"],
+                "en": ["|Φ+⟩=(|00⟩-|11⟩)/√2", "|Φ+⟩=(|01⟩+|10⟩)/√2", "|Φ+⟩=(|00⟩+|11⟩)/√2", "|Φ+⟩=(|01⟩-|10⟩)/√2"]
+            },
+            "answer": {
+                "jp": "|Φ+⟩=(|00⟩+|11⟩)/√2",
+                "en": "|Φ+⟩=(|00⟩+|11⟩)/√2"
+            },
+            "explanation": {
+                "jp": "量子もつれ状態 |Φ+⟩ は、ベル状態の一つで、|00⟩ と |11⟩ の均等な重ね合わせ状態を表しています。",
+                "en": "The quantum entangled state |Φ+⟩ is one of the Bell states and represents an equal superposition of |00⟩ and |11⟩ states."
+            }
+        },
+        {
+            "Number": 25,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子測定後、|0⟩ 状態が観測される確率が25%である量子ビット |ψ⟩ の確率振幅 α はいくつですか？",
+                "en": "What is the probability amplitude α of a qubit |ψ⟩ that has a 25% probability of observing a |0⟩ state after quantum measurement?"
+            },
+            "choices": {
+                "jp": ["1/2", "-1/2", "1/4", "√1/2"],
+                "en": ["1/2", "-1/2", "1/4", "√1/2"]
+            },
+            "answer": {
+                "jp": "1/2",
+                "en": "1/2"
+            },
+            "explanation": {
+                "jp": "確率は確率振幅の絶対値の2乗であるため、α^2=0.25です。よってα=±1/2ですが、ここでは正の値を選びます。",
+                "en": "Since probability is the square of the absolute value of the probability amplitude, α^2=0.25. Therefore, α = ±1/2, but here we choose a positive value."
+            }
+        },
+        {
+            "Number": 26,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子もつれが起こるとは、次のうちどれが真ですか？",
+                "en": "Which of the following is TRUE when quantum entanglement occurs?"
+            },
+            "choices": {
+                "jp": ["量子ビットがそれぞれ独立して振る舞う", "一方の量子ビットの測定結果がもう一方に影響を与えない", "量子ビット同士が互いに強く関連し、一方が決まるともう一方も即座に決定する", "量子ビットが時間とともに同期する"],
+                "en": ["Each qubit behaves independently", "The measurement result of one qubit does not affect the other", "Quantum bits are strongly related to each other, and when one is determined, the other is also immediately determined", "Quantum bits synchronize with time"]
+            },
+            "answer": {
+                "jp": "量子ビット同士が互いに強く関連し、一方が決まるともう一方も即座に決定する",
+                "en": "Quantum bits are strongly related to each other, and when one is determined, the other is also immediately determined"
+            },
+            "explanation": {
+                "jp": "量子もつれは量子ビット間で特殊な相関関係が生じ、一方の量子ビットの状態が即座に他方の量子ビットの状態を決定づける現象です。",
+                "en": "Quantum entanglement is a phenomenon in which a special correlation occurs between qubits such that the state of one qubit immediately determines the state of the other qubit."
+            }
+        },
+        {
+            "Number": 27,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートはどのような状態の量子ビットに対して何も変化をもたらさないでしょうか？",
+                "en": "Would a Z-gate make any change to a qubit in any state?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+                "en": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"]
+            },
+            "answer": {
+                "jp": "|0⟩",
+                "en": "|0⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは、|0⟩状態の量子ビットに適用しても何も変化をもたらしませんが、|1⟩状態の量子ビットに適用するとその位相が反転します。",
+                "en": "Applying a Z-gate to a qubit in the |0⟩ state will not change anything, but applying it to a qubit in the |1⟩ state will invert its phase."
+            }
+        },
+        {
+            "Number": 28,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子ビット|ψ⟩を2つの異なる基底で測定した場合、2つの測定結果が同じ確率で現れるための条件は何ですか？",
+                "en": "What are the conditions for two measurements of a qubit |ψ⟩ in two different bases to appear with the same probability?"
+            },
+            "choices": {
+                "jp": ["両方の基底が直交している", "|ψ⟩が両方の基底の中心状態にある", "|ψ⟩が両方の基底の状態の重ね合わせである", "1つの基底が他方の基底に対して45度回転している"],
+                "en": ["Both bases are orthogonal", "|ψ⟩ in the central state of both bases", "|ψ⟩ is a superposition of the states of both bases", "One base is rotated 45 degrees with respect to the other base"]
+            },
+            "answer": {
+                "jp": "|ψ⟩が両方の基底の中心状態にある",
+                "en": "|ψ⟩ in the central state of both bases"
+            },
+            "explanation": {
+                "jp": "量子ビットが異なる基底で測定された場合、測定結果が同じ確率で現れるためには、その量子ビットの状態は両方の基底の中心状態、つまり重ね合わせの状態にある必要があります。",
+                "en": "If a qubit is measured in different bases, its state must be in the central state of both bases, i.e., in superposition, for the measurement results to appear with the same probability."
+            }
+        },
+        {
+            "Number": 29,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートは|+⟩を何に変えますか？",
+                "en": "What does the Z-gate change |+⟩ to?"
+            },
+            "choices": {
+                "jp": ["|+⟩", "|−⟩", "-|+⟩", "-|-⟩"],
+                "en": ["|+⟩", "|−⟩", "-|+⟩", "-|-⟩"]
+            },
+            "answer": {
+                "jp": "|−⟩",
+                "en": "|−⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは位相反転ゲートとも呼ばれ、|+⟩に適用すると基底状態|1⟩の位相が反転し、|-⟩に変えます。",
+                "en": "The Z-gate, also called a phase-reversal gate, when applied to |+⟩, inverts the phase of the ground state |1⟩ and changes it to |-⟩."
+            }
+        },
+        {
+            "Number": 30,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子ビットのZゲートは |+⟩ を何に変えますか？",
+                "en": "What does the Z-gate of a qubit change |+⟩ to?"
+            },
+            "choices": {
+                "jp": ["-|+⟩", "-|−⟩", "|+⟩", "|−⟩"],
+                "en": ["-|+⟩", "-|-⟩", "|+⟩", "|−⟩"]
+            },
+            "answer": {
+                "jp": "|−⟩",
+                "en": "|−⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは位相反転ゲートであり、|0⟩ の状態はそのままで、|1⟩ の状態は位相が反転します。|+⟩ = (|0⟩+|1⟩)/√2 と考えると、Zゲートを適用すると (|0⟩−|1⟩)/√2 = |−⟩ になります。",
+                "en": "The Z-gate is a phase-reversal gate; the |0⟩ state remains the same and the |1⟩ state reverses phase. Considering that |+⟩ = (|0⟩+|1⟩)/√2, applying the Z gate, (|0⟩-|1⟩)/√2 = |-⟩."
+            }
+        },
+        {
+            "Number": 31,
+            "difficulty": 3,
+            "text": {
+                "jp": "2つの量子ビットがもつれている場合、一方の量子ビットが |0⟩ の確率が1/2の場合、もう一方の量子ビットの状態はどうなりますか？",
+                "en": "If two qubits are entangled and one qubit has probability 1/2 of |0⟩, what is the state of the other qubit?"
+            },
+            "choices": {
+                "jp": ["確実に |0⟩", "確実に |1⟩", "|0⟩ の確率も1/2", "不明"],
+                "en": ["Definitely |0⟩", "Ensure |1⟩", "|0⟩ probability is also 1/2", "Unknown"]
+            },
+            "answer": {
+                "jp": "|0⟩ の確率も1/2",
+                "en": "|0⟩ probability is also 1/2"
+            },
+            "explanation": {
+                "jp": "2つの量子ビットがもつれている場合、一方の量子ビットが確定した状態を持つと同時に、もう一方の量子ビットもそれに関連した確定した状態を持つようになります。しかし、具体的なもつれの形成方法が提示されていないため、もう一方のビットがどの状態かは不明です。通常は一方が |0⟩ の確率が1/2ならば、もう一方も |0⟩ あるいは |1⟩ の確率が1/2になります。",
+                "en": "When two qubits are entangled, as soon as one qubit has a definite state, the other qubit will also have a definite state associated with it. However, it is not known which state the other bit is in, since no specific method of entanglement formation has been presented. Usually, if one has a 1/2 probability of |0⟩, then the other will also have a 1/2 probability of |0⟩ or |1⟩."
+            }
+        },
+        {
+            "Number": 32,
+            "difficulty": 3,
+            "text": {
+                "jp": "Hadamard トランスフォームは |0⟩ を何に変えますか？",
+                "en": "What does the Hadamard transform change |0⟩ to?"
+            },
+            "choices": {
+                "jp": ["|+⟩", "|−⟩", "1/2(|0⟩ + |1⟩)", "1/√2(|0⟩ - |1⟩)"],
+                "en": ["|+⟩", "|−⟩", "1/2(|0⟩ + |1⟩)", "1/√2(|0⟩ - |1⟩)"]
+            },
+            "answer": {
+                "jp": "|+⟩",
+                "en": "|+⟩"
+            },
+            "explanation": {
+                "jp": "Hadamard トランスフォームは一つの量子ビットに対して施されるゲートであり、|0⟩ を重ね合わせ状態に変換します。具体的には、|0⟩ が |+⟩ = 1/√2(|0⟩ + |1⟩) に変換されます。",
+                "en": "The Hadamard transform is a gate applied to a single qubit, which transforms |0⟩ into a superposition state. Specifically, |0⟩ is transformed to |+⟩ = 1/√2(|0⟩ + |1⟩)."
+            }
+        },
+        {
+            "Number": 33,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子ビットのデコヒーレンスとは何を指しますか？",
+                "en": "What is meant by decoherence of a qubit?"
+            },
+            "choices": {
+                "jp": ["量子状態の収束", "量子情報の保存", "量子状態の重ね合わせ", "量子状態の環境への散逸"],
+                "en": ["Convergence of quantum states", "Quantum information storage", "Superposition of quantum states", "Dissipation of quantum states into the environment"]
+            },
+            "answer": {
+                "jp": "量子状態の環境への散逸",
+                "en": "Dissipation of quantum states into the environment"
+            },
+            "explanation": {
+                "jp": "デコヒーレンスは、量子系が環境と相互作用することにより、その量子的特性（重ね合わせやもつれなど）を失い、古典的な状態に遷移することを指します。",
+                "en": "Decoherence refers to a quantum system losing its quantum properties (such as superposition and entanglement) and transitioning to a classical state when it interacts with its environment."
+            }
+        },
+        {
+            "Number": 34,
+            "difficulty": 3,
+            "text": {
+                "jp": "Zゲートは |1⟩ を何に変えますか？",
+                "en": "What does the Z-gate change |1⟩ to?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "-|0⟩", "-|1⟩"],
+                "en": ["|0⟩", "|1⟩", "-|0⟩", "-|1⟩"]
+            },
+            "answer": {
+                "jp": "-|1⟩",
+                "en": "-|1⟩"
+            },
+            "explanation": {
+                "jp": "Zゲートは|0⟩状態には影響を与えず、|1⟩状態の符号を反転させます。したがって、Zゲートは|1⟩を-|1⟩に変えます。",
+                "en": "The Z-gate does not affect the |0⟩ state, but reverses the sign of the |1⟩ state. Thus, the Z-gate changes the |1⟩ to -|1⟩."
+            }
+        },
+        {
+            "Number": 35,
+            "difficulty": 3,
+            "text": {
+                "jp": "Hadamard (H) ゲートは |1⟩ を何に変えますか？",
+                "en": "What does the Hadamard (H) gate change |1⟩ to?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩)/√2"],
+                "en": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩)/√2"]
+            },
+            "answer": {
+                "jp": "(|0⟩ - |1⟩)/√2",
+                "en": "(|0⟩ - |1⟩)/√2"
+            },
+            "explanation": {
+                "jp": "Hadamardゲートは基底状態|0⟩と|1⟩をそれぞれ重ね合わせ状態に変換します。|1⟩に適用すると(|0⟩ - |1⟩)/√2に変換されます。",
+                "en": "The Hadamard gate converts the ground states |0⟩ and |1⟩ to superposition states, respectively. Applied to |1⟩, it converts to (|0⟩ - |1⟩)/√2."
+            }
+        },
+        {
+            "Number": 36,
+            "difficulty": 3,
+            "text": {
+                "jp": "量子コンピュータにおける量子ゲートが古典コンピュータの論理ゲートと異なる点は何ですか?",
+                "en": "How do quantum gates in a quantum computer differ from logic gates in a classical computer?"
+            },
+            "choices": {
+                "jp": ["破壊的でない操作を行う", "逆操作が常に可能である", "データを一時的に保存する", "情報を消去する"],
+                "en": ["Perform non-destructive operations", "Reverse operation is always possible", "Temporarily store data", "Erase information"]
+            },
+            "answer": {
+                "jp": "逆操作が常に可能である",
+                "en": "Reverse operation is always possible"
+            },
+            "explanation": {
+                "jp": "量子ゲートはユニタリ変換を行うため、その操作は逆操作が可能です。一方、古典コンピュータの論理ゲートは逆操作ができないものも多く存在します。",
+                "en": "Quantum gates perform unitary transformations and their operations can be reversed. On the other hand, many logic gates in classical computers cannot be reversed."
+            }
+        },
+        {
+            "Number": 37,
+            "difficulty": 3,
+            "text": {
+                "jp": "|Φ⟩=(1, 0), |ψ⟩=(1, 0)のとき、⟨ϕ∣ψ⟩を求めなさい。",
+                "en": "|Φ⟩=(1, 0), |ψ⟩=(1, 0), find ⟨ϕ∣ψ⟩."
+            },
+            "choices": {
+                "jp": ["0", "1", "2", "3"],
+                "en": ["0", "1", "2", "3"]
+            },
+            "answer": {
+                "jp": "1",
+                "en": "1"
+            },
+            "explanation": {
+                "jp": "内積⟨ϕ∣ψ⟩は、対応するベクトル要素の積の合計です。ここでは、両方のベクトルが (1, 0) なので、内積は 1×1 + 0×0 = 1 です。",
+                "en": "The inner product ⟨ϕ∣ψ⟩ is the sum of the products of the corresponding vector elements. Here, both vectors are (1, 0), so the inner product is 1 × 1 + 0 × 0 = 1."
+            }
+        },
+        {
+            "Number": 38,
+            "difficulty": 3,
+            "text": {
+                "jp": "|Φ⟩=(1, 0), |ψ⟩=(1/√2, 1/√2)のとき、⟨ϕ∣ψ⟩を求めなさい。",
+                "en": "|Φ⟩=(1, 0), |ψ⟩=(1/√2, 1/√2), find ⟨ϕ∣ψ⟩."
+            },
+            "choices": {
+                "jp": ["0", "1/√2", "1", "1/2"],
+                "en": ["0", "1/√2", "1", "1/2"]
+            },
+            "answer": {
+                "jp": "1/√2",
+                "en": "1/√2"
+            },
+            "explanation": {
+                "jp": "内積⟨ϕ∣ψ⟩は、1×(1/√2) + 0×(1/√2) = 1/√2 です。この値は、量子ビットの重なり具合を示しています。",
+                "en": "The inner product ⟨ϕ∣ψ⟩ is 1 × (1/√2) + 0 × (1/√2) = 1/√2. This value indicates the degree of overlap of the qubits."
+            }
+        },
+        {
+            "Number": 39,
+            "difficulty": 3,
+            "text": {
+                "jp": "Xゲートは |0⟩ を何に変えますか？",
+                "en": "What does the X-gate change |0⟩ to?"
+            },
+            "choices": {
+                "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+                "en": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"]
+            },
+            "answer": {
+                "jp": "|1⟩",
+                "en": "|1⟩"
+            },
+            "explanation": {
+                "jp": "Xゲートは量子ビットの状態を反転させる量子ゲートです。具体的には、|0⟩を入力すると|1⟩に、また|1⟩を入力すると|0⟩に変換されます。これは古典コンピューターにおけるビット反転と似ています。",
+                "en": "An X-gate is a quantum gate that inverts the state of a qubit. Specifically, an input of |0⟩ is converted to |1⟩ and an input of |1⟩ is converted to |0⟩. This is similar to bit inversion in classical computers."
+            }
+        },
+        {
+            "Number": 40,
+            "difficulty": 3,
+            "text": {
+                "jp": "Yゲートは |1⟩ を何に変えますか？",
+                "en": "What does Y-gate change |1⟩ to?"
+            },
+            "choices": {
+                "jp": ["-|0⟩", "|1⟩", "-|+⟩", "|−⟩"],
+                "en": ["-|0⟩", "|1⟩", "-|+⟩", "|−⟩"]
+            },
+            "answer": {
+                "jp": "-|0⟩",
+                "en": "-|0⟩"
+            },
+            "explanation": {
+                "jp": "Yゲートは量子ビットの状態を変換し、その位相も変えます。|1⟩を入力とすると、結果は-|0⟩になります。また、|0⟩を入力とすると、結果は|1⟩（位相が反転されるので実際には-|1⟩）になります。この「-」符号は、位相の反転を示しており、量子コンピューティングにおいて重要な役割を果たします。",
+                "en": "The Y-gate transforms the state of a qubit and also changes its phase. If we take the input of |1⟩, the result will be -|0⟩. If you take the input of |0⟩, the result will be |1⟩ (actually -|1⟩ because the phase is inverted). This '-' sign indicates a phase inversion, which plays an important role in quantum computing."
+            }
+        },
+        {
+            "Number": 41,
+            "difficulty": 3,
+            "text": {
+                "jp": "ブロッホ球において、状態 |+⟩ と |−⟩ は球のどの位置に対応しますか？",
+                "en": "In the Bloch sphere, to which position on the sphere do the states |+⟩ and |-⟩ correspond?"
+            },
+            "choices": {
+                "jp": ["北極と南極", "東と西", "等緯度線上", "素子の直線上"],
+                "en": ["Arctic and Antarctic", "East and West", "On the equirectangular line", "On the straight line of the element"]
+            },
+            "answer": {
+                "jp": "東と西",
+                "en": "East and West"
+            },
+            "explanation": {
+                "jp": "ブロッホ球では、|+⟩ と |−⟩ の状態は球のx軸に沿って対称の位置にあります。|+⟩はx軸の正の方向、|−⟩はx軸の負の方向に対応します。",
+                "en": "In the Bloch sphere, the |+⟩ and |-⟩ states are located symmetrically along the x-axis of the sphere. |+⟩ corresponds to the positive direction of the x-axis and |-⟩ to the negative direction of the x-axis."
+            }
+        },
+        {
+            "Number": 1,
+            "difficulty": 4,
+            "text": {
+                "jp": "2つの量子ビットが次のような状態にあるとき|ϕ⟩=α|00⟩ + β|11⟩、もつれていると考えられるのはどの条件でしょうか？",
+                "en": "When two qubits are in the following state |ϕ⟩=α|00⟩ + β|11⟩, which condition is considered entangled?"
+            },
+            "choices": {
+                "jp": ["α = β", "α = 0 または β = 0", "α ≠ 0 かつ β ≠ 0", "α = 1 かつ β = 1"],
+                "en": ["α = β", "α = 0 or β = 0", "α ≠ 0 and β ≠ 0", "α = 1 and β = 1"]
+            },
+            "answer": {
+                "jp": "α ≠ 0 かつ β ≠ 0",
+                "en": "α ≠ 0 and β ≠ 0"
+            },
+            "explanation": {
+                "jp": "もつれた量子ビットは片方の量子ビットの状態がもう片方に依存している状態です。状態|ϕ⟩を二つの独立した量子ビットの状態に分解できない場合、量子ビットはもつれています。これはαとβが両方とも0でない場合に当てはまります。",
+                "en": "An entangled qubit is a state in which the state of one qubit depends on the other. A qubit is entangled if the state |ϕ⟩ cannot be decomposed into two independent qubit states. This is true when both α and β are nonzero."
+            }
+        },
+        {
+            "Number": 2,
+            "difficulty": 4,
+            "text": {
+                "jp": "|ψ⟩ = α|0⟩ + β|1⟩という状態で、αとβが以下の関係を満たすとき、この状態が正規化されているとは言えますか？ α^2 = 3/4, β^2 = 1/4",
+                "en": "|ψ⟩ = α|0⟩ + β|1⟩, can we say that this state is normalized if α and β satisfy the following relations? α^2 = 3/4, β^2 = 1/4"
+            },
+            "choices": {
+                "jp": ["はい", "いいえ"],
+                "en": ["Yes", "No"]
+            },
+            "answer": {
+                "jp": "はい",
+                "en": "Yes"
+            },
+            "explanation": {
+                "jp": "正規化された状態では、確率振幅の2乗和が1になります。α^2 + β^2 = 3/4 + 1/4 = 1、従って、この状態は正規化されています。",
+                "en": "In the normalized state, the sum of the squares of the probability amplitudes is 1. α^2 + β^2 = 3/4 + 1/4 = 1, thus this state is normalized."
+            }
+        },
+        {
+            "Number": 3,
+            "difficulty": 4,
+            "text": {
+                "jp": "量子情報のノイズや誤りを訂正するために用いられる技術を何と言いますか？",
+                "en": "What is the term for a technique used to correct noise or errors in quantum information?"
+            },
+            "choices": {
+                "jp": ["量子テレポーテーション", "量子もつれ", "量子符号化", "量子通信"],
+                "en": ["Quantum teleportation", "Quantum entanglement", "Quantum Coding", "Quantum Communication"]
+            },
+            "answer": {
+                "jp": "量子符号化",
+                "en": "Quantum Coding"
+            },
+            "explanation": {
+                "jp": "量子誤り訂正は量子情報を保護するために用いられ、誤りの発生を訂正する技術です。これはしばしば量子符号化として知られています。",
+                "en": "Quantum error correction is a technique used to protect quantum information and correct the occurrence of errors. This is often known as quantum coding."
+            }
+        },
+        {
+            "Number": 4,
+            "difficulty": 4,
+            "text": {
+                "jp": "|ψ⟩=α|00⟩＋β|11⟩であるとき、|ψ⟩がエンタングルメント状態である条件をaとbを使って表してください。",
+                "en": "If|ψ⟩=α|00⟩+β|11⟩, use a and b to express the conditions under which|ψ⟩ is an entanglement state."
+            },
+            "choices": {
+                "jp": ["αβ ≠ 0", "α+β = 1", "α^2+β^2 = 1", "αβ = 1"],
+                "en": ["αβ ≠ 0", "α+β = 1", "α^2+β^2 = 1", "αβ = 1"]
+            },
+            "answer": {
+                "jp": "αβ ≠ 0",
+                "en": "αβ ≠ 0"
+            },
+            "explanation": {
+                "jp": "エンタングルメント状態は、量子ビット間の相関が存在する状態を指します。この状態でαかβのどちらかが0でなければ、相関が生じ、状態はエンタングルメント状態になります。αやβが0の場合は、状態は2つの独立した量子ビットに因数分解可能で、エンタングルメントされていないことになります。",
+                "en": "The entanglement state is a state in which correlations exist between qubits. If either α or β is non-zero in this state, correlation occurs and the state is entangled; if α or β is zero, the state is factorizable into two independent qubits and is not entangled."
+            }
+        },
+        {
+            "Number": 5,
+            "difficulty": 4,
+            "text": {
+                "jp": "量子システムの状態|ψ⟩が(|0⟩+2|1⟩)/√5で与えられたとき、この状態で|0⟩を測定する確率はどれくらいですか？",
+                "en": "If the state|ψ⟩ of a quantum system is given by (|0⟩+2|1⟩)/√5, what is the probability of measuring|0⟩ in this state?"
+            },
+            "choices": {
+                "jp": ["1/5", "2/5", "3/5", "4/5"],
+                "en": ["1/5", "2/5", "3/5", "4/5"]
+            },
+            "answer": {
+                "jp": "1/5",
+                "en": "1/5"
+            },
+            "explanation": {
+                "jp": "量子状態における測定確率は振幅の絶対値の平方によって与えられます。したがって、|0⟩を測定する確率は(|1/√5|)^2=1/5です。",
+                "en": "The probability of measurement in a quantum state is given by the square of the absolute value of the amplitude. Thus, the probability of measuring|0⟩ is (|1/√5|)^2=1/5."
+            }
+        },
+        
+    {
+        "Number": 6,
+        "difficulty": 4,
+        "text": {
+            "jp": "Zゲートは|+⟩状態を何に変えますか？",
+            "en": "What does the Z-gate change the |+⟩ state to?"
+        },
+        "choices": {
+            "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+            "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
+        },
+        "answer": {
+            "jp": "|−⟩",
+            "en": "|−⟩"
+        },
+        "explanation": {
+            "jp": "Zゲートは位相反転ゲートであり、基底状態|1⟩の位相を反転させます。|+⟩=（|0⟩+|1⟩）/√2にZゲートを適用すると、|0⟩の位相はそのままで|1⟩の位相が反転するため、結果は（|0⟩−|1⟩）/√2、すなわち|−⟩になります。",
+            "en": "The Z-gate is a phase inversion gate, which inverts the phase of the ground state|1⟩. Applying the Z-gate to |+⟩= (|0⟩+|1⟩)/√2, the phase of |0⟩ remains the same and the phase of |1⟩ is inverted, resulting in (|0⟩-|1⟩)/√2, i.e., |-⟩."
         }
+    },
+    {
+        "Number": 7,
+        "difficulty": 4,
+        "text": {
+            "jp": "2量子ビットがもつれた状態|Ψ⟩=(|01⟩-|10⟩)/√2という状態が与えられた場合、実際にはどのような表現が可能ですか？",
+            "en": "Given the state|Ψ⟩=(|01⟩-|10⟩)/√2 where two qubits are entangled, what is the actual representation?"
+        },
+        "choices": {
+            "jp": ["|Ψ⟩=(|0⟩-|1⟩)/√2 ⊗ (|0⟩+|1⟩)/√2", "|Ψ⟩=|0⟩ ⊗ |1⟩ - |1⟩ ⊗ |0⟩", "|Ψ⟩が表すのはBell状態の1つである", "|Ψ⟩の表現は不可能である"],
+            "en": ["|Ψ⟩=(|0⟩-|1⟩)/√2 ⊗ (|0⟩+|1⟩)/√2", "|Ψ⟩=|0⟩ ⊗ |1⟩ - |1⟩ ⊗ |0⟩", "|Ψ⟩ represents one of the Bell states", "|Ψ⟩ cannot be expressed in terms of"]
+        },
+        "answer": {
+            "jp": "|Ψ⟩が表すのはBell状態の1つである",
+            "en": "|Ψ⟩ represents one of the Bell states"
+        },
+        "explanation": {
+            "jp": "|Ψ⟩=(|01⟩-|10⟩)/√2はエンタングルメント（もつれ状態）を示しており、Bell状態の一つです。これは、一方の量子ビットの状態が測定されると、もう一方の量子ビットの状態も即座に定まる特殊な状態を示しています。",
+            "en": "|Ψ⟩=(|01⟩-|10⟩)/√2 indicates entanglement, which is a Bell state. It represents a special state in which when the state of one qubit is measured, the state of the other qubit is also immediately determined."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 4,
+        "text": {
+            "jp": "1量子ビットの量子状態が1/2|0⟩+√3/2|1⟩と与えられたとき、|1⟩の確率はどうなりますか？",
+            "en": "Given 1/2|0⟩+√3/2|1⟩ the quantum state of one qubit, what is the probability of|1⟩?"
+        },
+        "choices": {
+            "jp": ["1/4", "3/4", "1/2", "1/3"],
+            "en": ["1/4", "3/4", "1/2", "1/3"]
+        },
+        "answer": {
+            "jp": "3/4",
+            "en": "3/4"
+        },
+        "explanation": {
+            "jp": "確率は振幅の2乗で得られます。したがって、|1⟩の確率は(√3/2)^2=3/4です。",
+            "en": "The probability is obtained by squaring the amplitude. Thus, the probability of|1⟩ is (√3/2)^2=3/4."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 4,
+        "text": {
+            "jp": "以下のうち、量子重ね合わせを表すのはどれですか？",
+            "en": "Which of the following represents a quantum superposition?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩ + |2⟩)/√3"],
+            "en": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩ + |2⟩)/√3"]
+        },
+        "answer": {
+            "jp": "(|0⟩ - |1⟩)/√2",
+            "en": "(|0⟩ - |1⟩)/√2"
+        },
+        "explanation": {
+            "jp": "重ね合わせは複数の状態が同時に存在することを意味し、(|0⟩ - |1⟩)/√2 は2つの状態の重ね合わせを表しています。",
+            "en": "Superposition implies the simultaneous existence of multiple states, and (|0⟩ - |1⟩)/√2 represents the superposition of two states."
+        }
+    },
+    {
+        "Number": 6,
+        "difficulty": 4,
+        "text": {
+            "jp": "Zゲートは|+⟩状態を何に変えますか？",
+            "en": "What does the Z-gate change the |+⟩ state to?"
+        },
+        "choices": {
+            "jp": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"],
+            "en": ["|+⟩", "|−⟩", "|0⟩", "|1⟩"]
+        },
+        "answer": {
+            "jp": "|−⟩",
+            "en": "|−⟩"
+        },
+        "explanation": {
+            "jp": "Zゲートは位相反転ゲートであり、基底状態|1⟩の位相を反転させます。|+⟩=（|0⟩+|1⟩）/√2にZゲートを適用すると、|0⟩の位相はそのままで|1⟩の位相が反転するため、結果は（|0⟩−|1⟩）/√2、すなわち|−⟩になります。",
+            "en": "The Z-gate is a phase inversion gate, which inverts the phase of the ground state|1⟩. Applying the Z-gate to |+⟩= (|0⟩+|1⟩)/√2, the phase of |0⟩ remains the same and the phase of |1⟩ is inverted, resulting in (|0⟩-|1⟩)/√2, i.e., |-⟩."
+        }
+    },
+    {
+        "Number": 7,
+        "difficulty": 4,
+        "text": {
+            "jp": "2量子ビットがもつれた状態|Ψ⟩=(|01⟩-|10⟩)/√2という状態が与えられた場合、実際にはどのような表現が可能ですか？",
+            "en": "Given the state|Ψ⟩=(|01⟩-|10⟩)/√2 where two qubits are entangled, what is the actual representation?"
+        },
+        "choices": {
+            "jp": ["|Ψ⟩=(|0⟩-|1⟩)/√2 ⊗ (|0⟩+|1⟩)/√2", "|Ψ⟩=|0⟩ ⊗ |1⟩ - |1⟩ ⊗ |0⟩", "|Ψ⟩が表すのはBell状態の1つである", "|Ψ⟩の表現は不可能である"],
+            "en": ["|Ψ⟩=(|0⟩-|1⟩)/√2 ⊗ (|0⟩+|1⟩)/√2", "|Ψ⟩=|0⟩ ⊗ |1⟩ - |1⟩ ⊗ |0⟩", "|Ψ⟩ represents one of the Bell states", "|Ψ⟩ cannot be expressed in terms of"]
+        },
+        "answer": {
+            "jp": "|Ψ⟩が表すのはBell状態の1つである",
+            "en": "|Ψ⟩ represents one of the Bell states"
+        },
+        "explanation": {
+            "jp": "|Ψ⟩=(|01⟩-|10⟩)/√2はエンタングルメント（もつれ状態）を示しており、Bell状態の一つです。これは、一方の量子ビットの状態が測定されると、もう一方の量子ビットの状態も即座に定まる特殊な状態を示しています。",
+            "en": "|Ψ⟩=(|01⟩-|10⟩)/√2 indicates entanglement, which is a Bell state. It represents a special state in which when the state of one qubit is measured, the state of the other qubit is also immediately determined."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 4,
+        "text": {
+            "jp": "1量子ビットの量子状態が1/2|0⟩+√3/2|1⟩と与えられたとき、|1⟩の確率はどうなりますか？",
+            "en": "Given 1/2|0⟩+√3/2|1⟩ the quantum state of one qubit, what is the probability of|1⟩?"
+        },
+        "choices": {
+            "jp": ["1/4", "3/4", "1/2", "1/3"],
+            "en": ["1/4", "3/4", "1/2", "1/3"]
+        },
+        "answer": {
+            "jp": "3/4",
+            "en": "3/4"
+        },
+        "explanation": {
+            "jp": "確率は振幅の2乗で得られます。したがって、|1⟩の確率は(√3/2)^2=3/4です。",
+            "en": "The probability is obtained by squaring the amplitude. Thus, the probability of|1⟩ is (√3/2)^2=3/4."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 4,
+        "text": {
+            "jp": "以下のうち、量子重ね合わせを表すのはどれですか？",
+            "en": "Which of the following represents a quantum superposition?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩ + |2⟩)/√3"],
+            "en": ["|0⟩", "|1⟩", "(|0⟩ - |1⟩)/√2", "(|0⟩ + |1⟩ + |2⟩)/√3"]
+        },
+        "answer": {
+            "jp": "(|0⟩ - |1⟩)/√2",
+            "en": "(|0⟩ - |1⟩)/√2"
+        },
+        "explanation": {
+            "jp": "重ね合わせは複数の状態が同時に存在することを意味し、(|0⟩ - |1⟩)/√2 は2つの状態の重ね合わせを表しています。",
+            "en": "Superposition implies the simultaneous existence of multiple states, and (|0⟩ - |1⟩)/√2 represents the superposition of two states."
+        }
+    },
+    
+    {
+        "Number": 11,
+        "difficulty": 4,
+        "text": {
+            "jp": "ベル状態とは何ですか？",
+            "en": "What is the bell state?"
+        },
+        "choices": {
+            "jp": ["もつれた状態の一種である", "重ね合わせの一種である", "Zゲートの効果", "Xゲートの効果"],
+            "en": ["A kind of tangled state", "A kind of superposition", "Z-gate effect", "Effect of X-gate"]
+        },
+        "answer": {
+            "jp": "もつれた状態の一種である",
+            "en": "A kind of tangled state"
+        },
+        "explanation": {
+            "jp": "ベル状態は2つの量子ビットがもつれている状態の一例で、測定の結果が互いに関連しています。",
+            "en": "The Bell state is an example of a state in which two qubits are entangled and the measurement results are related to each other."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 4,
+        "text": {
+            "jp": "標準的なCNOTゲートでは、制御ビットが |1⟩の状態のときにのみ、ターゲットビットはどのように変化しますか？",
+            "en": "In a standard CNOT gate, how does the target bit change only when the control bit is in the |1⟩ state?"
+        },
+        "choices": {
+            "jp": ["位相が反転する", "状態に変化はない", "|0⟩と|1⟩の重ね合わせになる", "ビット反転される"],
+            "en": ["Phase inversion", "No change in status", "It becomes a superposition of |0⟩ and |1⟩", "Bit is reversed"]
+        },
+        "answer": {
+            "jp": "ビット反転される",
+            "en": "Bit is reversed"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、制御ビットが|1⟩の場合にのみターゲットビットを反転させます。制御ビットが|0⟩であれば、ターゲットビットは変化しません。",
+            "en": "The CNOT gate inverts the target bit only if the control bit is |1⟩. If the control bit is |0⟩, the target bit is unchanged."
+        }
+    },
+    {
+        "Number": 13,
+        "difficulty": 4,
+        "text": {
+            "jp": "ベル状態|Φ+⟩=1/√2(|00⟩+|11⟩)に対する測定は何をもたらしますか？",
+            "en": "What does the measurement for the bell state |Φ+⟩=1/√2(|00⟩+|11⟩) yield?"
+        },
+        "choices": {
+            "jp": ["常に|00⟩と|11⟩のどちらか一方が等しい確率で得られる", "いつも|00⟩が得られる", "いつも|11⟩が得られる", "時々|01⟩または|10⟩が得られる"],
+            "en": ["Always get either |00⟩ or |11⟩ with equal probability", "Always obtain |00⟩", "Always get |11⟩", "Sometimes get |01⟩ or |10⟩"]
+        },
+        "answer": {
+            "jp": "常に|00⟩と|11⟩のどちらか一方が等しい確率で得られる",
+            "en": "Always get either |00⟩ or |11⟩ with equal probability"
+        },
+        "explanation": {
+            "jp": "ベル状態|Φ+⟩の測定では、|00⟩と|11⟩のどちらかが等しい確率で得られます。それぞれが得られる確率は、対応する状態の確率振幅の2乗によって決まり、この状態で両者は同じ大きさです。",
+            "en": "A measurement of the bell state |Φ+⟩ yields either |00⟩ or |11⟩ with equal probability. The probability of obtaining each is determined by the square of the probability amplitude of the corresponding state, and both are of equal magnitude in this state."
+        }
+    },
+    {
+        "Number": 14,
+        "difficulty": 4,
+        "text": {
+            "jp": "3量子ビットのGHZ状態(|000⟩+|111⟩)/√2において、最初の量子ビットが|1⟩と測定される場合、残りの2量子ビットの状態は何になりますか？",
+            "en": "In a 3-qubit GHZ state (|000⟩+|111⟩)/√2, if the first qubit is measured as |1⟩, what are the states of the remaining 2 qubits?"
+        },
+        "choices": {
+            "jp": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"],
+            "en": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "GHZ状態において、いずれかの量子ビットが測定されると、残りの量子ビットも相関した状態に落ち込みます。最初の量子ビットが|1⟩と測定された場合、残りの2量子ビットは|11⟩の状態になります。",
+            "en": "In the GHZ state, if any of the qubits are measured, the remaining qubits will also fall into a correlated state. If the first qubit is measured as |1⟩, the remaining two qubits will be in the |11⟩ state."
+        }
+    },
+    {
+        "Number": 15,
+        "difficulty": 4,
+        "text": {
+            "jp": "CNOTゲートは、制御ビットが|1⟩の場合にのみ、ターゲットビットを反転させます。|10⟩がCNOTゲートを通過した後の状態は何ですか？",
+            "en": "The CNOT gate flips the target bit only when the control bit is |1⟩. What is the state after |10⟩ passes through the CNOT gate?"
+        },
+        "choices": {
+            "jp": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"],
+            "en": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"]
+        },
+        "answer": {
+            "jp": "|01⟩",
+            "en": "|01⟩"
+        },
+        "explanation": {
+            "jp": "最初の量子ビット（制御ビット）が |1⟩なので、CNOTゲートは2番目の量子ビット（ターゲットビット）を反転させます。よって、|10⟩がCNOTゲートを通過すると|01⟩になります。",
+            "en": "Since the first qubit (control bit) is |1⟩, the CNOT gate flips the second qubit (target bit). Thus, when |10⟩ passes through the CNOT gate, it becomes |01⟩."
+        }
+    },    
+    {
+        "Number": 11,
+        "difficulty": 4,
+        "text": {
+            "jp": "ベル状態とは何ですか？",
+            "en": "What is the bell state?"
+        },
+        "choices": {
+            "jp": ["もつれた状態の一種である", "重ね合わせの一種である", "Zゲートの効果", "Xゲートの効果"],
+            "en": ["A kind of tangled state", "A kind of superposition", "Z-gate effect", "Effect of X-gate"]
+        },
+        "answer": {
+            "jp": "もつれた状態の一種である",
+            "en": "A kind of tangled state"
+        },
+        "explanation": {
+            "jp": "ベル状態は2つの量子ビットがもつれている状態の一例で、測定の結果が互いに関連しています。",
+            "en": "The Bell state is an example of a state in which two qubits are entangled and the measurement results are related to each other."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 4,
+        "text": {
+            "jp": "標準的なCNOTゲートでは、制御ビットが |1⟩の状態のときにのみ、ターゲットビットはどのように変化しますか？",
+            "en": "In a standard CNOT gate, how does the target bit change only when the control bit is in the |1⟩ state?"
+        },
+        "choices": {
+            "jp": ["位相が反転する", "状態に変化はない", "|0⟩と|1⟩の重ね合わせになる", "ビット反転される"],
+            "en": ["Phase inversion", "No change in status", "It becomes a superposition of |0⟩ and |1⟩", "Bit is reversed"]
+        },
+        "answer": {
+            "jp": "ビット反転される",
+            "en": "Bit is reversed"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、制御ビットが|1⟩の場合にのみターゲットビットを反転させます。制御ビットが|0⟩であれば、ターゲットビットは変化しません。",
+            "en": "The CNOT gate inverts the target bit only if the control bit is |1⟩. If the control bit is |0⟩, the target bit is unchanged."
+        }
+    },
+    {
+        "Number": 13,
+        "difficulty": 4,
+        "text": {
+            "jp": "ベル状態|Φ+⟩=1/√2(|00⟩+|11⟩)に対する測定は何をもたらしますか？",
+            "en": "What does the measurement for the bell state |Φ+⟩=1/√2(|00⟩+|11⟩) yield?"
+        },
+        "choices": {
+            "jp": ["常に|00⟩と|11⟩のどちらか一方が等しい確率で得られる", "いつも|00⟩が得られる", "いつも|11⟩が得られる", "時々|01⟩または|10⟩が得られる"],
+            "en": ["Always get either |00⟩ or |11⟩ with equal probability", "Always obtain |00⟩", "Always get |11⟩", "Sometimes get |01⟩ or |10⟩"]
+        },
+        "answer": {
+            "jp": "常に|00⟩と|11⟩のどちらか一方が等しい確率で得られる",
+            "en": "Always get either |00⟩ or |11⟩ with equal probability"
+        },
+        "explanation": {
+            "jp": "ベル状態|Φ+⟩の測定では、|00⟩と|11⟩のどちらかが等しい確率で得られます。それぞれが得られる確率は、対応する状態の確率振幅の2乗によって決まり、この状態で両者は同じ大きさです。",
+            "en": "A measurement of the bell state |Φ+⟩ yields either |00⟩ or |11⟩ with equal probability. The probability of obtaining each is determined by the square of the probability amplitude of the corresponding state, and both are of equal magnitude in this state."
+        }
+    },
+    {
+        "Number": 14,
+        "difficulty": 4,
+        "text": {
+            "jp": "3量子ビットのGHZ状態(|000⟩+|111⟩)/√2において、最初の量子ビットが|1⟩と測定される場合、残りの2量子ビットの状態は何になりますか？",
+            "en": "In a 3-qubit GHZ state (|000⟩+|111⟩)/√2, if the first qubit is measured as |1⟩, what are the states of the remaining 2 qubits?"
+        },
+        "choices": {
+            "jp": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"],
+            "en": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "GHZ状態において、いずれかの量子ビットが測定されると、残りの量子ビットも相関した状態に落ち込みます。最初の量子ビットが|1⟩と測定された場合、残りの2量子ビットは|11⟩の状態になります。",
+            "en": "In the GHZ state, if any of the qubits are measured, the remaining qubits will also fall into a correlated state. If the first qubit is measured as |1⟩, the remaining two qubits will be in the |11⟩ state."
+        }
+    },
+    {
+        "Number": 15,
+        "difficulty": 4,
+        "text": {
+            "jp": "CNOTゲートは、制御ビットが|1⟩の場合にのみ、ターゲットビットを反転させます。|10⟩がCNOTゲートを通過した後の状態は何ですか？",
+            "en": "The CNOT gate flips the target bit only when the control bit is |1⟩. What is the state after |10⟩ passes through the CNOT gate?"
+        },
+        "choices": {
+            "jp": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"],
+            "en": ["|10⟩", "|11⟩", "|01⟩", "|00⟩"]
+        },
+        "answer": {
+            "jp": "|01⟩",
+            "en": "|01⟩"
+        },
+        "explanation": {
+            "jp": "最初の量子ビット（制御ビット）が |1⟩なので、CNOTゲートは2番目の量子ビット（ターゲットビット）を反転させます。よって、|10⟩がCNOTゲートを通過すると|01⟩になります。",
+            "en": "Since the first qubit (control bit) is |1⟩, the CNOT gate flips the second qubit (target bit). Thus, when |10⟩ passes through the CNOT gate, it becomes |01⟩."
+        }
+    },
+    {
+        "Number": 16,
+        "difficulty": 4,
+        "text": {
+            "jp": "量子アルゴリズムにおいて、エンタングルメントは何を作り出すためにしばしば使われますか？",
+            "en": "In quantum algorithms, what is entanglement often used to create?"
+        },
+        "choices": {
+            "jp": ["破壊", "クローン", "アルゴリズムの加速", "情報のロス"],
+            "en": ["Destruction", "Clone", "Algorithm Acceleration", "Loss of information"]
+        },
+        "answer": {
+            "jp": "アルゴリズムの加速",
+            "en": "Algorithm Acceleration"
+        },
+        "explanation": {
+            "jp": "エンタングルメントは量子アルゴリズムにおいて重要なリソースであり、アルゴリズムの加速や干渉効果の作出に利用されます。",
+            "en": "Entanglement is an important resource in quantum algorithms and is used to accelerate algorithms and create interference effects."
+        }
+    },
+    {
+        "Number": 17,
+        "difficulty": 4,
+        "text": {
+            "jp": "デバイス依存型量子キーディストリビューション(DQKD)プロトコルで共有される秘密情報のビットは何から生成されますか？",
+            "en": "From what are the bits of secret information shared in the device dependent quantum key distribution (DQKD) protocol generated?"
+        },
+        "choices": {
+            "jp": ["乱数生成器", "古典通信チャネル", "量子ビット", "光子密度"],
+            "en": ["Random number generator", "Classical communication channel", "Quantum bit", "Photon density"]
+        },
+        "answer": {
+            "jp": "量子ビット",
+            "en": "Quantum bit"
+        },
+        "explanation": {
+            "jp": "DQKDプロトコルでは、もつれた量子ビットを使用して2人間で安全なランダムビット列を生成し、秘密情報として共有します。",
+            "en": "The DQKD protocol uses entangled qubits to generate a secure random bit sequence between two people and share it as secret information."
+        }
+    },
+    {
+        "Number": 18,
+        "difficulty": 4,
+        "text": {
+            "jp": "量子回路でCNOTゲートを |10⟩ に適用した結果を選んでください。",
+            "en": "Choose the result of applying a CNOT gate to |10⟩ in a quantum circuit."
+        },
+        "choices": {
+            "jp": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"],
+            "en": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、第一量子ビット（制御ビット）が|1⟩のときにのみ、第二量子ビット（ターゲットビット）を反転させます。",
+            "en": "The CNOT gate inverts the second qubit (target bit) only when the first qubit (control bit) is|1⟩."
+        }
+    },
+    {
+        "Number": 19,
+        "difficulty": 4,
+        "text": {
+            "jp": "量子デバイスが「Noisy Intermediate-Scale Quantum (NISQ)」デバイスとは、どのような特性を指しますか？",
+            "en": "What are the characteristics that make a quantum device a 'Noisy Intermediate-Scale Quantum (NISQ)' device?"
+        },
+        "choices": {
+            "jp": ["全ての種類の量子誤差を完全に校正できる", "非常に高い量子ビット数を持つ", "量子誤差を持ち、中規模の量子ビット数を持つ", "完全にもつれた状態を生成できる"],
+            "en": ["All types of quantum errors can be fully calibrated", "With a very high number of qubits", "With a quantum error and a medium number of qubits", "Can generate fully entangled states."]
+        },
+        "answer": {
+            "jp": "量子誤差を持ち、中規模の量子ビット数を持つ",
+            "en": "With a quantum error and a medium number of qubits"
+        },
+        "explanation": {
+            "jp": "NISQデバイスは、校正が難しいエラーが存在し、中規模の量子ビット数（数十から数百）で動作する量子デバイスを指します。",
+            "en": "NISQ devices refer to quantum devices that have errors that are difficult to calibrate and operate with a medium number of qubits (tens to hundreds)."
+        }
+    },
+    {
+        "Number": 20,
+        "difficulty": 4,
+        "text": {
+            "jp": "CNOTゲートはどのような役割を果たしますか？",
+            "en": "What role do CNOT gates play?"
+        },
+        "choices": {
+            "jp": ["2つの量子ビットの値を入れ替える", "第1の量子ビットが|0⟩の場合のみ第2の量子ビットを反転する", "第1の量子ビットが|1⟩の場合のみ第2の量子ビットを反転する", "常に2つの量子ビットを反転する"],
+            "en": ["Swap the values of two qubits", "Invert the second qubit only if the first qubit is|0⟩.", "Invert the second qubit only if the first qubit is|1⟩.", "Always invert two qubits"]
+        },
+        "answer": {
+            "jp": "第1の量子ビットが|1⟩の場合のみ第2の量子ビットを反転する",
+            "en": "Invert the second qubit only if the first qubit is|1⟩."
+        },
+        "explanation": {
+            "jp": "CNOT(制御NOT)ゲートは、制御量子ビット（第1の量子ビット）が|1⟩の状態にあるとき、ターゲット量子ビット（第2の量子ビット）の状態を反転させる二量子ビットゲートです。",
+            "en": "The CNOT (control NOT) gate is a two-qubit gate that inverts the state of the target qubit (second qubit) only when the control qubit (first qubit) is in the|1⟩ state."
+        }
+    },
+    {
+        "Number": 21,
+        "difficulty": 4,
+        "text": {
+            "jp": "相対位相が重要になる場面はどれですか？",
+            "en": "Which situations are important for relative phase?"
+        },
+        "choices": {
+            "jp": ["古典的データの加算", "量子ゲートが適用された後の測定", "もつれを活用した情報伝送", "古典コンピュータでのエラー修正"],
+            "en": ["Classical data addition", "Measurements after the quantum gate is applied", "Information transmission using entanglement", "Error correction on classical computers"]
+        },
+        "answer": {
+            "jp": "もつれを活用した情報伝送",
+            "en": "Information transmission using entanglement"
+        },
+        "explanation": {
+            "jp": "相対位相は、量子ビット間の確率振幅の位相差が重要になる場面で影響を及ぼします。量子もつれを活用した情報伝送などの量子通信プロトコルでは、相対位相が中心的な役割を担います。",
+            "en": "Relative phase has an impact in situations where the phase difference in probability amplitudes between qubits is important. Relative phase plays a central role in quantum communication protocols such as information transmission utilizing quantum entanglement."
+        }
+    },
+    {
+        "Number": 22,
+        "difficulty": 4,
+        "text": {
+            "jp": "CNOTゲートが|10⟩に適用された際の結果は何ですか？",
+            "en": "What is the result when a CNOT gate is applied to |10⟩?"
+        },
+        "choices": {
+            "jp": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"],
+            "en": ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、制御ビット（第1の量子ビット）が|1⟩の場合にのみ、ターゲットビット（第2の量子ビット）の状態を反転させます。したがって、|10⟩にCNOTゲートを適用すると、結果は|11⟩になります。",
+            "en": "The CNOT gate inverts the state of the target qubit (second qubit) only when the control qubit (first qubit) is in the |1⟩ state. Therefore, when you apply a CNOT gate to |10⟩, the result is |11⟩."
+        }
+    },
+    {
+        "Number": 23,
+        "difficulty": 4,
+        "text": {
+            "jp": "2量子ビットのもつれ状態|Ψ+⟩は以下のうちどれですか？",
+            "en": "Which of the following is the entangled state |Ψ+⟩ of a two-qubit?"
+        },
+        "choices": {
+            "jp": ["(|00⟩+|01⟩)/√2", "(|10⟩+|11⟩)/√2", "(|00⟩+|10⟩)/√2", "(|00⟩+|11⟩)/√2"],
+            "en": ["(|00⟩+|01⟩)/√2", "(|10⟩+|11⟩)/√2", "(|00⟩+|10⟩)/√2", "(|00⟩+|11⟩)/√2"]
+        },
+        "answer": {
+            "jp": "(|00⟩+|11⟩)/√2",
+            "en": "(|00⟩+|11⟩)/√2"
+        },
+        "explanation": {
+            "jp": "|Ψ+⟩は、2量子ビットのもつれたベル状態の1つで、(|00⟩+|11⟩)/√2と表されます。",
+            "en": "|Ψ+⟩ is one of the entangled bell states of a two-qubit, expressed as (|00⟩+|11⟩)/√2."
+        }
+    },
+    {
+        "Number": 24,
+        "difficulty": 4,
+        "text": {
+            "jp": "以下のどの量子ゲートも位相シフトを引き起こさないのはどれですか？",
+            "en": "Which of the following quantum gates does not cause a phase shift?"
+        },
+        "choices": {
+            "jp": ["Xゲート", "Zゲート", "Yゲート", "Sゲート"],
+            "en": ["X gate", "Z gate", "Y gate", "S gate"]
+        },
+        "answer": {
+            "jp": "Xゲート",
+            "en": "X gate"
+        },
+        "explanation": {
+            "jp": "Xゲートはビット反転を行うだけで、位相を変えません。他のゲートはすべてある形で位相の変更を行います。",
+            "en": "The X gate only performs bit inversion and does not change the phase. All other gates perform phase changes in one form or another."
+        }
+    },
+    {
+        "Number": 25,
+        "difficulty": 4,
+        "text": {
+          "jp": "量子回路において、2つのXゲートを逐次適用した場合、どんな効果がありますか？",
+          "en": "What is the effect of applying two X gates sequentially in a quantum circuit?"
+        },
+        "choices": {
+          "jp": [
+            "|0⟩ と |1⟩ を交換する",
+            "状態が反転し、そのままになる",
+            "状態は元に戻る",
+            "エラーが発生する"
+          ],
+          "en": [
+            "Exchange |0⟩ and |1⟩.",
+            "The state is reversed and remains the same.",
+            "State returns to original.",
+            "Error."
+          ]
+        },
+        "answer": {
+          "jp": "状態は元に戻る",
+          "en": "State returns to original."
+        },
+        "explanation": {
+          "jp": "Xゲートはビット反転ゲートなので、1つ目のゲートで状態が反転し、2つ目のゲートで再度反転するため、元の状態に戻ります。",
+          "en": "Since the X gate is a bit inverting gate, the first gate inverts the state and the second gate inverts it again, thus returning it to its original state."
+        }
+      },
+      {
+        "Number": 26,
+        "difficulty": 4,
+        "text": {
+          "jp": "2つの量子ビットがもつれたベル状態にある場合、ベル測定を行ったときその結果はどうなりますか？",
+          "en": "If two qubits are in an entangled bell state, what is the result when a bell measurement is made?"
+        },
+        "choices": {
+          "jp": [
+            "どちらのビットも同じ結果になる",
+            "完全にランダムな結果になる",
+            "一方のビットがゼロならば、もう一方は必ず |1⟩",
+            "必ずエラーになる"
+          ],
+          "en": [
+            "Both bits have the same result.",
+            "Completely random results.",
+            "If one bit is zero, the other must be |1⟩",
+            "Always an error."
+          ]
+        },
+        "answer": {
+          "jp": "どちらのビットも同じ結果になる",
+          "en": "Both bits have the same result."
+        },
+        "explanation": {
+          "jp": "ベル測定はもつれた状態において行われ、2つのビットの測定結果は互いに相関しています。もつれたベル状態では、一方のビットが |0⟩ の場合、もう一方も確実に |0⟩ に、一方が |1⟩ の場合、もう一方も確実に |1⟩ になります。",
+          "en": "Bell measurements are made in an entangled state, where the results of two bit measurements are correlated with each other. In an entangled bell condition, if one bit is |0⟩, the other will definitely be |0⟩, and if one bit is |1⟩, the other will definitely be |1⟩."
+        }
+      },
+      {
+        "Number": 27,
+        "difficulty": 4,
+        "text": {
+          "jp": "次のうち、量子重ね合わせ状態として正しいものはどれですか？",
+          "en": "Which of the following is the correct quantum superposition state?"
+        },
+        "choices": {
+          "jp": [
+            "|ψ⟩ = |0⟩",
+            "|ψ⟩ = |1⟩",
+            "|ψ⟩ = (|0⟩ + |1⟩ + |2⟩)/√3",
+            "|ψ⟩ = (|0⟩ + |1⟩)/√2"
+          ],
+          "en": [
+            "|ψ⟩ = |0⟩",
+            "|ψ⟩ = |1⟩",
+            "|ψ⟩ = (|0⟩ + |1⟩ + |2⟩)/√3",
+            "|ψ⟩ = (|0⟩ + |1⟩)/√2"
+          ]
+        },
+        "answer": {
+          "jp": "|ψ⟩ = (|0⟩ + |1⟩)/√2",
+          "en": "|ψ⟩ = (|0⟩ + |1⟩)/√2"
+        },
+        "explanation": {
+          "jp": "量子重ね合わせ状態とは、複数の異なる状態が同時に存在する量子状態を指します。この例では、（4）が正しい重ね合わせ状態であり、|ψ⟩ = (|0⟩ + |1⟩)/√2 のような平均振幅で2つの基底状態が観測され得る状態です。",
+          "en": "A quantum superposition state is a quantum state in which several different states exist simultaneously. In this example, (4) is the correct superposition state, where two ground states can be observed with an average amplitude such that |ψ⟩ = (|0⟩ + |1⟩)/√2."
+        }
+      },
+      {
+        "Number": 28,
+        "difficulty": 4,
+        "text": {
+          "jp": "2つの量子ビットが以下のエンタングル状態にあります：|ψ⟩ = 1/√2 (|01⟩ - |10⟩)。これは以下の中からどのエンタングルメント状態に相当しますか？",
+          "en": "Two qubits are in the following entanglement state: |ψ⟩ = 1/√2 (|01⟩ - |10⟩). Which entanglement state does this correspond to from the following?"
+        },
+        "choices": {
+          "jp": [
+            "シュレーディンガーの猫状態",
+            "GHZ状態",
+            "ベル状態",
+            "W状態"
+          ],
+          "en": [
+            "Schrodinger's cat state",
+            "GHZ state",
+            "Bell state",
+            "W state"
+          ]
+        },
+        "answer": {
+          "jp": "ベル状態",
+          "en": "Bell state"
+        },
+        "explanation": {
+          "jp": "上記の状態は2量子ビットのエンタングルメントの一例であり、ベル状態と呼ばれます。",
+          "en": "The above state is an example of a two-qubit entanglement and is called a bell state."
+        }
+      },
+      {
+        "Number": 29,
+        "difficulty": 4,
+        "text": {
+          "jp": "|ψ⟩ = (α|0⟩ + β|1⟩) のときに確率 |α|^2 で |0⟩ を測定することを示しますが、|β|^2 はどのような確率を示しますか？",
+          "en": "|ψ⟩ = (α|0⟩ + β|1⟩) with probability |α|^2 to measure |0⟩, what probability does |β|^2 indicate?"
+        },
+        "choices": {
+          "jp": [
+            "|0⟩ の観測確率",
+            "|1⟩ の観測確率",
+            "両状態を一度に観測する確率",
+            "両状態の存在しない確率"
+          ],
+          "en": [
+            "|0⟩ probability of observing",
+            "|1⟩ probability of observing",
+            "Probability of observing both states at once",
+            "Probability of non-existence of both states"
+          ]
+        },
+        "answer": {
+          "jp": "|1⟩ の観測確率",
+          "en": "|1⟩ probability of observing"
+        },
+        "explanation": {
+          "jp": "|β|^2 の値は、|1⟩ 状態を観測する確率を示しています。これは、量子ビットの振幅の2乗がその状態の確率を示す基本原則です。",
+          "en": "The value of |β|^2 indicates the probability of observing the |1⟩ state. It is a basic principle that the square of the amplitude of a qubit indicates the probability of that state."
+        }
+      },
+      {
+        "Number": 30,
+        "difficulty": 4,
+        "text": {
+          "jp": "量子回路で使われるCNOTゲートは何の略ですか？",
+          "en": "What does CNOT gate used in quantum circuits stand for?"
+        },
+        "choices": {
+          "jp": [
+            "Continuous NOT Gate",
+            "Controlled NOT Gate",
+            "Complex NOT Gate",
+            "Complementary NOT Gate"
+          ],
+          "en": [
+            "Continuous NOT Gate",
+            "Controlled NOT Gate",
+            "Complex NOT Gate",
+            "Complementary NOT Gate"
+          ]
+        },
+        "answer": {
+          "jp": "Controlled NOT Gate",
+          "en": "Controlled NOT Gate"
+        },
+        "explanation": {
+          "jp": "CNOTゲートは \"Controlled NOT Gate\" の略で、2つの量子ビットを使用するゲートです。コントロールビットが |1⟩ の場合にのみ、ターゲットビットの状態が反転します。",
+          "en": "CNOT gate stands for \"Controlled NOT Gate\" and is a gate that uses two qubits. The state of the target bit is inverted only when the control bit is |1⟩."
+        }
+      },
+      {
+        "Number": 1,
+        "difficulty": 5,
+        "text": {
+            "jp": "回転ゲート Rz(θ) が |0⟩ に作用したとき、その状態はどうなりますか？",
+            "en": "What happens to the state of the rotating gate Rz(θ) when it acts on |0⟩?"
+        },
+        "choices": {
+            "jp": ["|1⟩", "e^(−iθ/2)|0⟩", "cos(θ/2)|0⟩ − i sin(θ/2)|1⟩", "|0⟩"],
+            "en": ["|1⟩", "e^(-iθ/2)|0⟩", "cos(θ/2)|0⟩ - i sin(θ/2)|1⟩", "|0⟩"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "Rzゲートは位相回転ゲートであり、|0⟩状態に作用した場合は状態が変わらず|0⟩のままです。|1⟩状態に作用させた場合のみ位相が変わります。",
+            "en": "The Rz gate is a phase rotation gate, and when it acts on the|0⟩ state, the state does not change and remains at|0⟩. The phase changes only when it acts on the|1⟩ state."
+        }
+    },
+    
+    {
+        "Number": 2,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子もつれを生じることで知られるBell状態の一つは、次のうちどれですか？",
+            "en": "Which of the following is one of the Bell states known to produce quantum entanglement?"
+        },
+        "choices": {
+            "jp": ["|Φ+⟩ = (|00⟩+|01⟩)/√2", "|Ψ−⟩ = (|01⟩−|10⟩)/√2", "|Φ−⟩ = (|00⟩−|11⟩)/√2", "|Ψ+⟩ = (|01⟩+|10⟩)/√2"],
+            "en": ["|Φ+⟩ = (|00⟩+|01⟩)/√2", "|Ψ−⟩ = (|01⟩−|10⟩)/√2", "|Φ−⟩ = (|00⟩−|11⟩)/√2", "|Ψ+⟩ = (|01⟩+|10⟩)/√2"]
+        },
+        "answer": {
+            "jp": "|Ψ+⟩ = (|01⟩+|10⟩)/√2",
+            "en": "|Ψ+⟩ = (|01⟩+|10⟩)/√2"
+        },
+        "explanation": {
+            "jp": "Bell状態は、量子もつれを示す典型的な2量子ビット状態です。その一つである|Ψ+⟩ = (|01⟩+|10⟩)/√2は、二つの量子ビットがもつれた状態を示しています。",
+            "en": "The Bell state is a typical two-qubit state that exhibits quantum entanglement. One of them, |Ψ+⟩ = (|01⟩+|10⟩)/√2, shows two entangled qubits."
+        }
+    },
+    
+    {
+        "Number": 3,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子重ね合わせ状態|Ψ⟩=(|0⟩+|1⟩)/√2に測定を実行した場合、どの結果が得られますか？",
+            "en": "If you run the measurement on the quantum superposition state|Ψ⟩=(|0⟩+|1⟩)/√2, what result do you get?"
+        },
+        "choices": {
+            "jp": ["常に|0⟩", "50%の確率で|0⟩、残りの50%で|1⟩", "常に|+⟩", "絶対に|−⟩は得られない"],
+            "en": ["Always|0⟩", "50% of the time|0⟩, the other 50% of the time|1⟩.", "Always|+⟩", "Absolutely no|-⟩ can be obtained"]
+        },
+        "answer": {
+            "jp": "50%の確率で|0⟩、残りの50%で|1⟩",
+            "en": "50% of the time|0⟩, the other 50% of the time|1⟩."
+        },
+        "explanation": {
+            "jp": "|Ψ⟩は重ね合わせ状態であり、測定するまで状態は不確定です。しかし測定後は、50%の確率で|0⟩を、もう50%の確率で|1⟩を得ることになります。",
+            "en": "|Ψ⟩ is a superposition state and its state is indeterminate until it is measured. After measurement, however, there is a 50% chance of getting |0⟩ and another 50% chance of getting |1⟩."
+        }
+    },
+    
+    {
+        "Number": 4,
+        "difficulty": 5,
+        "text": {
+            "jp": "CNOTゲートが|10⟩に作用した後の状態は何ですか？",
+            "en": "What is the state of the CNOT gate after it acts on |10⟩?"
+        },
+        "choices": {
+            "jp": ["|10⟩", "|11⟩", "|00⟩", "|01⟩"],
+            "en": ["|10⟩", "|11⟩", "|00⟩", "|01⟩"]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "CNOT(Controlled-NOT)ゲートは第一量子ビット（制御ビット）が|1⟩の場合にのみ第二量子ビット（ターゲットビット）の状態反転を行います。|10⟩の場合、ターゲットビットが反転して|11⟩になります。",
+            "en": "The CNOT (Controlled-NOT) gate inverts the state of the second qubit (target bit) only when the first qubit (control bit) is|1⟩. If|10⟩, the target bit is inverted to|11⟩."
+        }
+    },
+    
+    {
+        "Number": 5,
+        "difficulty": 5,
+        "text": {
+            "jp": "Tゲートが|0⟩に作用すると、どのような状態が得られますか？",
+            "en": "What state is obtained when the T-gate acts on |0⟩?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "|+⟩", "-|0⟩"],
+            "en": ["|0⟩", "|1⟩", "|+⟩", "-|0⟩"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "Tゲートはπ/4の位相を与えるゲートで、|0⟩の状態に適用しても状態は変わりませんが、位相が変化します。ここでは|0⟩の位相には影響が無いため、結果は依然として|0⟩です。",
+            "en": "A T-gate is a gate that gives a phase of π/4. Applying it to a state of|0⟩ does not change the state, but it does change the phase. Here the phase of|0⟩ is not affected, so the result is still|0⟩."
+        }
+    },
+    
+    {
+        "Number": 6,
+        "difficulty": 5,
+        "text": {
+            "jp": "CNOTゲートにおいて、制御量子ビットが|0⟩のとき、目標量子ビットに何が起こりますか？",
+            "en": "In a CNOT gate, what happens to the target qubit when the control qubit is|0⟩?"
+        },
+        "choices": {
+            "jp": ["ビット反転", "なにも起こらない", "位相反転", "もつれ状態が生成される"],
+            "en": ["Bit Flip", "Nothing happens.", "Phase inversion", "Entanglement state is generated."]
+        },
+        "answer": {
+            "jp": "なにも起こらない",
+            "en": "Nothing happens."
+        },
+        "explanation": {
+            "jp": "CNOTゲートでは、制御量子ビットが|1⟩の場合のみ目標量子ビットが反転します。制御量子ビットが|0⟩の場合は何も起こりません。",
+            "en": "In the CNOT gate, the target qubit is flipped only when the control qubit is|1⟩. If the control qubit is|0⟩, nothing happens."
+        }
+    },
+    
+    {
+        "Number": 7,
+        "difficulty": 5,
+        "text": {
+            "jp": "回路図において、2つの量子ゲートが同じ量子ビット列に直列に接続されている場合、そのゲートの効果はどのように計算されますか？",
+            "en": "In a schematic, if two quantum gates are connected in series to the same qubit series, how is the effect of the gates calculated?"
+        },
+        "choices": {
+            "jp": ["和", "積", "XOR", "NAND"],
+            "en": ["WA", "product", "XOR", "NAND"]
+        },
+        "answer": {
+            "jp": "積",
+            "en": "product"
+        },
+        "explanation": {
+            "jp": "量子ゲートの効果は、対応するユニタリ変換の積として計算されます。従って2つのゲートが直列にある場合、それぞれのゲートの変換を順番に適用することに相当します。",
+            "en": "The effect of a quantum gate is calculated as the product of the corresponding unitary transformations. Thus, if two gates are in series, it is equivalent to applying the transformations of each gate in turn."
+        }
+    },
+    
+    {
+        "Number": 8,
+        "difficulty": 5,
+        "text": {
+            "jp": "以下のうち、量子アルゴリズムとして知られているものはどれですか？",
+            "en": "Which of the following is known as a quantum algorithm?"
+        },
+        "choices": {
+            "jp": ["グローバーのアルゴリズム", "アインシュタインのアルゴリズム", "ニュートンのアルゴリズム", "マクスウェルのアルゴリズム"],
+            "en": ["Grover's algorithm", "Einstein's algorithm", "Newton's Algorithm", "Maxwell's algorithm"]
+        },
+        "answer": {
+            "jp": "グローバーのアルゴリズム",
+            "en": "Grover's algorithm"
+        },
+        "explanation": {
+            "jp": "グローバーのアルゴリズムは、非順序のデータベース検索問題をクアドラティックスピードアップで解決することで知られています。他の選択肢に上がっている名前は、量子アルゴリズムとは関連がありません。",
+            "en": "Grover's algorithm is known for solving unordered database search problems with quadratic speedups. The names listed in the other choices are not related to the quantum algorithm."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子もつれ状態におけるBELL状態はいくつ存在するか？",
+            "en": "How many BELL states exist in quantum entangled states?"
+        },
+        "choices": {
+            "jp": ["2", "3", "4", "5"],
+            "en": ["2", "3", "4", "5"]
+        },
+        "answer": {
+            "jp": "3",
+            "en": "3"
+        },
+        "explanation": {
+            "jp": "BELL状態は、量子もつれ状態を表す基本的な状態で、2つの量子ビットで形成されます。これには|Φ+⟩、|Φ-⟩、|Ψ+⟩、および|Ψ-⟩の4つの状態が存在します。",
+            "en": "The BELL state is the fundamental state of quantum entanglement, which is formed by two qubits. There are four states: |Φ+⟩, |Φ-⟩, |Ψ+⟩, and |Ψ-⟩."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子アルゴリズムでよく使用されるGroverのアルゴリズムのオラクルは、どのような役割を果たしますか？",
+            "en": "What role does the oracle of Grover's algorithm, often used in quantum algorithms, play?"
+        },
+        "choices": {
+            "jp": ["特定の解を増幅する", "特定の解を反転させる", "すべての解を一様に重ね合わせる", "アルゴリズムを逐一監視する"],
+            "en": ["Amplify a specific solution", "Reversing a specific solution", "Uniformly superimpose all solutions", "Monitor the algorithm every step of the way"]
+        },
+        "answer": {
+            "jp": "特定の解を反転させる",
+            "en": "Reversing a specific solution"
+        },
+        "explanation": {
+            "jp": "Groverのアルゴリズムにおけるオラクルは、探索問題における特定の解（正解）の状態の位相を反転させる役割をします。これにより、後に実行される振幅増幅ステップで、解の確率振幅が増幅され、発見されやすくなります。",
+            "en": "The oracle in Grover's algorithm is responsible for inverting the phase of a particular solution (correct answer) state in the search problem. This amplifies the probability amplitude of the solution in a later amplitude amplification step, making it easier to find."
+        }
+    },
+    {
+        "Number": 11,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子コンピューティングで使用されるDeutsch-Jozsaアルゴリズムは何を解決するために使われますか？",
+            "en": "What is the Deutsch-Jozsa algorithm used to solve in quantum computing?"
+        },
+        "choices": {
+            "jp": [
+                "事実oringの因数分解",
+                "関数のバランスまたは定数性を判定する",
+                "最短経路問題",
+                "データベース検索"
+            ],
+            "en": [
+                "Factoring of factoring",
+                "Determine the balance or constant nature of a function",
+                "Shortest path problem",
+                "Database Search"
+            ]
+        },
+        "answer": {
+            "jp": "関数のバランスまたは定数性を判定する",
+            "en": "Determine the balance or constant nature of a function"
+        },
+        "explanation": {
+            "jp": "Deutsch-Jozsaアルゴリズムは量子計算において、与えられた関数がバランス型（出力が半分は0、半分は1）か定数型（すべての出力が0または1）であるかを効率的に判定するために使われます。これは古典的なアルゴリズムよりも指数関数的に高速です。",
+            "en": "The Deutsch-Jozsa algorithm is used in quantum computation to efficiently determine whether a given function is balanced (output is half 0 and half 1) or constant (all output is 0 or 1). It is exponentially faster than classical algorithms."
+        }
+    },
+    
+    {
+        "Number": 12,
+        "difficulty": 5,
+        "text": {
+            "jp": "CNOTゲートを2つの量子ビットに適用した場合、|10⟩状態はどう変換されますか？",
+            "en": "If a CNOT gate is applied to two qubits, how is the |10⟩ state converted?"
+        },
+        "choices": {
+            "jp": [
+                "|11⟩",
+                "|10⟩",
+                "|01⟩",
+                "変換されない"
+            ],
+            "en": [
+                "|11⟩",
+                "|10⟩",
+                "|01⟩",
+                "Not converted"
+            ]
+        },
+        "answer": {
+            "jp": "|11⟩",
+            "en": "|11⟩"
+        },
+        "explanation": {
+            "jp": "CNOTゲート（制御NOTゲート）は、2つの量子ビットを入力とし、最初の量子ビット（制御ビット）が|1⟩の場合にのみ、2つ目の量子ビット（ターゲットビット）にNOT演算を適用します。|10⟩状態では、最初のビットは|1⟩なので、2つ目のビット|0⟩は反転し、|1⟩になります。結果として|11⟩になります。",
+            "en": "The CNOT gate (control NOT gate) takes two qubits as inputs and applies the NOT operation to the second qubit (target bit) only if the first qubit (control bit) is |1⟩. In the |10⟩ state, the first bit is |1⟩, so the second bit |0⟩ is inverted and becomes |1⟩. The result is |11⟩."
+        }
+    },
+    
+    {
+        "Number": 13,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子アルゴリズムによく使われる四角いユニタリ行列Uについて、この行列のエルミート共役U†の定義は何ですか？",
+            "en": "For a square unitary matrix U often used in quantum algorithms, what is the definition of the Hermitian conjugate U† of this matrix?"
+        },
+        "choices": {
+            "jp": [
+                "Uの各要素に-1をかけた行列",
+                "Uを転置した行列",
+                "Uの各要素の複素共役を取った行列",
+                "Uを転置し、それぞれの要素の複素共役を取った行列"
+            ],
+            "en": [
+                "A matrix in which each element of U is multiplied by -1",
+                "The matrix transposed over U",
+                "A matrix taking the complex conjugate of each element of U",
+                "A matrix transposing U and taking the complex conjugate of each element"
+            ]
+        },
+        "answer": {
+            "jp": "Uを転置し、それぞれの要素の複素共役を取った行列",
+            "en": "A matrix transposing U and taking the complex conjugate of each element"
+        },
+        "explanation": {
+            "jp": "ユニタリ行列Uのエルミート共役U†はUを転置し、全ての要素について複素共役を取ることで得られます。U†U=UU†=Iであれば、Uはユニタリであると言えます。",
+            "en": "The Hermitian conjugate U† of a unitary matrix U is obtained by transposing U and taking the complex conjugate for all elements; if U†U=UU†=I, then U is unitary."
+        }
+    },
+    
+    {
+        "Number": 15,
+        "difficulty": 5,
+        "text": {
+            "jp": "Hadamardゲートを二回適用するとどうなりますか？",
+            "en": "What happens if I apply the Hadamard gate twice?"
+        },
+        "choices": {
+            "jp": [
+                "Xゲートの作用に等しい",
+                "Yゲートの作用に等しい",
+                "ゲートは何の影響も与えない",
+                "Zゲートの作用に等しい"
+            ],
+            "en": [
+                "Equal to the action of the X-gate",
+                "Equal to the action of the Y-gate",
+                "Gates have no effect.",
+                "Equal to the action of the Z-gate"
+            ]
+        },
+        "answer": {
+            "jp": "ゲートは何の影響も与えない",
+            "en": "Gates have no effect."
+        },
+        "explanation": {
+            "jp": "Hadamardゲートを二回適用すると、最初の状態に戻ります。つまり、何の影響も与えません。",
+            "en": "Applying the Hadamard gate twice will return it to its initial state. In other words, it has no effect."
+        }
+    },
+    
+    {
+        "Number": 16,
+        "difficulty": 5,
+        "text": {
+            "jp": "CNOTゲートはどのようなタイプのゲートですか？",
+            "en": "What type of CNOT gate is it?"
+        },
+        "choices": {
+            "jp": [
+                "単一量子ビット操作",
+                "量子エラー訂正",
+                "二量子ビット操作",
+                "測定操作"
+            ],
+            "en": [
+                "Single qubit operation",
+                "Quantum error correction",
+                "Two-qubit operation",
+                "Measurement Operation"
+            ]
+        },
+        "answer": {
+            "jp": "二量子ビット操作",
+            "en": "Two-qubit operation"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは制御ビットと標的ビットの2つの量子ビットに作用する二量子ビット操作ゲートです。",
+            "en": "The CNOT gate is a two-qubit manipulation gate that acts on two qubits, the control bit and the target bit."
+        }
+    },
+    
+    {
+        "Number": 17,
+        "difficulty": 5,
+        "text": {
+            "jp": "次のうち、量子ビットの状態が最も低いエネルギー準位に対応するのはどれですか？",
+            "en": "Which of the following corresponds to the lowest energy level of a qubit state?"
+        },
+        "choices": {
+            "jp": [
+                "|0⟩",
+                "|1⟩",
+                "|+⟩",
+                "|−⟩"
+            ],
+            "en": [
+                "|0⟩",
+                "|1⟩",
+                "|+⟩",
+                "|−⟩"
+            ]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "典型的には、|0⟩は量子システムにおける基底状態、つまり最も低いエネルギー準位を表します。他の状態|1⟩, |+⟩, |−⟩は励起状態またはそれを作るのに必要なエネルギーがより高い状態です。",
+            "en": "Typically, the state |0⟩ represents the ground state, or lowest energy level, in a quantum system. The other states |1⟩, |+⟩, and |−⟩ are excited states or states with higher energy required to create them."
+        }
+    },
+    
+    {
+        "Number": 18,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子アルゴリズムの1つであるGroverのアルゴリズムは、どのような問題の解決に特に有効ですか？",
+            "en": "One of the quantum algorithms, Grover's algorithm, is particularly effective in solving what kind of problems?"
+        },
+        "choices": {
+            "jp": [
+                "因数分解",
+                "データベース検索",
+                "積分計算",
+                "ベクトル正規化"
+            ],
+            "en": [
+                "Factorization",
+                "Database Search",
+                "Integral Calculation",
+                "Vector Normalization"
+            ]
+        },
+        "answer": {
+            "jp": "データベース検索",
+            "en": "Database Search"
+        },
+        "explanation": {
+            "jp": "Groverのアルゴリズムは未ソートデータベースにおける検索問題を解決するための量子アルゴリズムで、古典的なアルゴリズムに比べ平方根のスピードアップを達成します。",
+            "en": "Grover's algorithm was developed to solve the unstructured database search problem. The algorithm is expected to significantly reduce computation time compared to classical algorithms."
+        }
+    },
+    
+    {
+        "Number": 19,
+        "difficulty": 5,
+        "text": {
+            "jp": "グローバーのアルゴリズムはどのような問題を効率的に解決するために使用されますか？",
+            "en": "What problem is Grover's algorithm used to efficiently solve?"
+        },
+        "choices": {
+            "jp": [
+                "整数因数分解",
+                "データベース検索",
+                "線形方程式の解算",
+                "フーリエ変換"
+            ],
+            "en": [
+                "Integer factorization",
+                "Database Search",
+                "Solving linear equations",
+                "Fourier transform"
+            ]
+        },
+        "answer": {
+            "jp": "データベース検索",
+            "en": "Database Search"
+        },
+        "explanation": {
+            "jp": "Groverのアルゴリズムは未ソートデータベース内で特定のアイテムを効率的に探索するための量子アルゴリズムです。",
+            "en": "Grover's algorithm is a quantum algorithm for efficiently searching for specific items in an unstructured database."
+        }
+    },
+    {
+        "Number": 20,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子アルゴリズムのGroverのアルゴリズムは何を目的としていますか？",
+            "en": "What is the purpose of Grover's algorithm in quantum computing?"
+        },
+        "choices": {
+            "jp": [
+                "素因数分解",
+                "データベース検索",
+                "暗号解読",
+                "エラー訂正"
+            ],
+            "en": [
+                "Prime factorization",
+                "Database search",
+                "Cryptography",
+                "Error correction"
+            ]
+        },
+        "answer": {
+            "jp": "データベース検索",
+            "en": "Database search"
+        },
+        "explanation": {
+            "jp": "Groverのアルゴリズムは未ソートのデータベース内でのアイテム検索を効率的に行うための量子アルゴリズムです。",
+            "en": "Grover's algorithm is a quantum algorithm designed to efficiently perform item searches in unsorted databases."
+        }
+    },
+    {
+        "Number": 21,
+        "difficulty": 5,
+        "text": {
+            "jp": "次のうち、ユニタリ変換ではないものはどれですか？",
+            "en": "Which of the following quantum gates does not cause a phase shift?"
+        },
+        "choices": {
+            "jp": ["2つの状態ベクトルの内積を変化させない変換", "確率の合計が必ず1になるようにする変換", "ある確率振幅を絶対値が1より大きい値に増幅する変換", "量子ゲートによって実装される変換"],
+            "en": ["Transformations that do not change the inner product of two state vectors", "Conversions that ensure that the sum of the probabilities always equals 1.", "Transformations that amplify a certain probability amplitude to an absolute value greater than 1", "Transformations implemented by quantum gates"]
+        },
+        "answer": {
+            "jp": "ある確率振幅を絶対値が1より大きい値に増幅する変換",
+            "en": "Transformations that amplify a certain probability amplitude to an absolute value greater than 1"
+        },
+        "explanation": {
+            "jp": "ユニタリ変換は状態ベクトルのノルムを保ち、内積を変化させない線形変換です。確率振幅を絶対値が1より大きい値に増幅する変換は、量子力学で許されているユニタリな性質を保てません。",
+            "en": "A unitary transformation is a linear transformation that preserves the norm of the state vector and does not change the inner product. Transformations that amplify the probability amplitude to an absolute value greater than 1 do not preserve the unitary property allowed by quantum mechanics."
+        }
+    },
+    
+    {
+        "Number": 22,
+        "difficulty": 5,
+        "text": {
+            "jp": "ベル状態とは何を指しますか？",
+            "en": "What is the bell state?"
+        },
+        "choices": {
+            "jp": ["もつれた2つの量子ビットの状態", "重ね合わせの状態", "2つの独立した量子ビットの状態", "多体系での地上状態"],
+            "en": ["The state of two entangled qubits", "Overlapping condition", "Two independent qubit states", "Ground state in a multibody system"]
+        },
+        "answer": {
+            "jp": "もつれた2つの量子ビットの状態",
+            "en": "The state of two entangled qubits"
+        },
+        "explanation": {
+            "jp": "ベル状態はもつれた2つの量子ビットが取りうる4つの特殊な最大もつれ状態の一つです。これらの状態は量子情報処理における基本的な資源とされています。",
+            "en": "The Bell state is one of the four special maximum entanglement states that two entangled qubits can take. These states are considered fundamental resources in quantum information processing."
+        }
+    },
+    
+    {
+        "Number": 23,
+        "difficulty": 5,
+        "text": {
+            "jp": "「量子収束」とは何を意味しますか？",
+            "en": "What does 'quantum convergence' mean?"
+        },
+        "choices": {
+            "jp": ["量子コンピュータの計算が収束しないこと", "量子状態がより安定したものに変化すること", "量子コンピュータが収束に必要な最小条件を満たすこと", "量子コンピュータが最適解に収束する計算プロセス"],
+            "en": ["The lack of convergence of quantum computer calculations.", "The change of quantum state to a more stable one.", "Satisfying the minimum conditions necessary for quantum computers to converge", "Computational process by which a quantum computer converges to an optimal solution"]
+        },
+        "answer": {
+            "jp": "量子コンピュータが最適解に収束する計算プロセス",
+            "en": "Computational process by which a quantum computer converges to an optimal solution"
+        },
+        "explanation": {
+            "jp": "「量子収束」とは、量子アルゴリズムが問題の解に収束していく過程を意味します。多くの場合、アルゴリズムは、ある条件下で確率振幅を適切な解へ向けて増幅することにより最適解を得ることを目指します。",
+            "en": "'Quantum convergence' refers to the process by which a quantum algorithm converges to a solution to a problem. In many cases, the algorithm aims to obtain an optimal solution by amplifying the probability amplitude toward a suitable solution under certain conditions."
+        }
+    },
+    
+    {
+        "Number": 24,
+        "difficulty": 5,
+        "text": {
+            "jp": "はじめに|0⟩の状態であった量子ビットにアダマールゲートを2回適用したらどうなりますか？",
+            "en": "What happens if we apply the Adamar gate twice to a qubit that was initially in the |0⟩ state?"
+        },
+        "choices": {
+            "jp": ["-|0⟩", "|1⟩", "|0⟩", "(|0⟩-|1⟩)/√2"],
+            "en": ["-|0⟩", "|1⟩", "|0⟩", "(|0⟩-|1⟩)/√2"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "初めのアダマールゲート適用により量子ビットは(|0⟩+|1⟩)/√2の状態になります。2回目のアダマールゲート適用でまた初期状態|0⟩に戻ります。よって、（3）が正解です。",
+            "en": "The first application of the Adamar gate brings the qubit to the state (|0⟩+|1⟩)/√2. The second application of the Adamar gate brings it back to the initial state |0⟩ again. Therefore, (3) is the correct answer."
+        }
+    },
+    
+    {
+        "Number": 25,
+        "difficulty": 5,
+        "text": {
+            "jp": "どの量子ゲートが単一量子ビットの状態を固有ベクトルに対して180度回転させますか？",
+            "en": "Which quantum gate rotates the state of a single qubit 180 degrees with respect to an eigenvector?"
+        },
+        "choices": {
+            "jp": ["Xゲート", "Yゲート", "Zゲート", "Hadamard ゲート"],
+            "en": ["X gate", "Y gate", "Z gate", "Hadamard Gate"]
+        },
+        "answer": {
+            "jp": "Yゲート",
+            "en": "Y gate"
+        },
+        "explanation": {
+            "jp": "Yゲートは、単一量子ビットに対して固有ベクトルを軸として180度回転させる操作を行います。これにより、ビットの状態が |0⟩ ⇔ -|1⟩ もしくは |1⟩ ⇔ -|0⟩ のように変換されます。",
+            "en": "The Y gate performs an operation that rotates a single qubit by 180 degrees around an eigenvector axis. This transforms the state of the bit as follows: |0⟩ ⇔ -|1⟩ or |1⟩ ⇔ -|0⟩."
+        }
+    },
+    {
+        "Number": 26,
+        "difficulty": 5,
+        "text": {
+            "jp": "測定後に量子ビットが |0⟩ の状態に崩壊する確率が75%の場合、その量子ビットの状態ベクトルはどのように表されますか？",
+            "en": "If there is a 75% probability that a qubit will decay to the |0⟩ state after measurement, how is the state vector of that qubit represented?"
+        },
+        "choices": {
+            "jp": ["(3/4|0⟩ + 1/4|1⟩)/√2", "√(3/4)|0⟩ + √(1/4)|1⟩", "(1/√3|0⟩ + √2/√3|1⟩)", "(1/√2|0⟩ + 1/√2|1⟩)"],
+            "en": ["(3/4|0⟩ + 1/4|1⟩)/√2", "√(3/4)|0⟩ + √(1/4)|1⟩", "(1/√3|0⟩ + √2/√3|1⟩)", "(1/√2|0⟩ + 1/√2|1⟩)"]
+        },
+        "answer": {
+            "jp": "√(3/4)|0⟩ + √(1/4)|1⟩",
+            "en": "√(3/4)|0⟩ + √(1/4)|1⟩"
+        },
+        "explanation": {
+            "jp": "測定確率は量子ビットの状態ベクトルの確率振幅の絶対値を2乗したものです。|0⟩ 崩壊確率が75%なら、その量子ビットの確率振幅の絶対値は √0.75 = √(3/4) です。同様に |1⟩ は 25%なので、√(1/4) です。ゆえに、状態ベクトルは √(3/4)|0⟩ + √(1/4)|1⟩ になります。",
+            "en": "The measurement probability is the absolute value of the probability amplitude of the state vector of a qubit squared. If the decay probability is 75%, then the absolute value of the probability amplitude of that qubit is √0.75 = √(3/4). Similarly, since |1⟩ is 25%, the absolute value of the probability amplitude of the qubit is √(1/4). Hence, the state vector is √(3/4)|0⟩ + √(1/4)|1⟩."
+        }
+    },
+    {
+        "Number": 27,
+        "difficulty": 5,
+        "text": {
+            "jp": "量子ビット|ϕ⟩=3/5|0⟩−4/5|1⟩が与えられたとき、|0⟩の状態を測定する確率はいくつですか？",
+            "en": "Given a qubit |ϕ⟩=3/5|0⟩-4/5|1⟩, what is the probability of measuring a |0⟩ state?"
+        },
+        "choices": {
+            "jp": ["9/25", "16/25", "3/5", "4/5"],
+            "en": ["9/25", "16/25", "3/5", "4/5"]
+        },
+        "answer": {
+            "jp": "9/25",
+            "en": "9/25"
+        },
+        "explanation": {
+            "jp": "|0⟩の状態を測定する確率は振幅の絶対値の2乗に等しいので、(3/5)² = 9/25 です。",
+            "en": "The probability of measuring a state of |0⟩ is equal to the square of the absolute value of the amplitude, so (3/5)² = 9/25."
+        }
+    },
+    
+    {
+        "Number": 28,
+        "difficulty": 5,
+        "text": {
+            "jp": "ケットプラスの状態にあるのは次のうちのどれか答えてください。",
+            "en": "Answer which of the following is in ket-plus status?"
+        },
+        "choices": {
+            "jp": ["|+⟩=|0⟩+|1⟩", "|+⟩=(|0⟩+|1⟩)/√2", "|+⟩=|0⟩", "|+⟩=|1⟩"],
+            "en": ["|+⟩=|0⟩+|1⟩", "|+⟩=(|0⟩+|1⟩)/√2", "|+⟩=|0⟩", "|+⟩=|1⟩"]
+        },
+        "answer": {
+            "jp": "|+⟩=(|0⟩+|1⟩)/√2",
+            "en": "|+⟩=(|0⟩+|1⟩)/√2"
+        },
+        "explanation": {
+            "jp": "|+⟩は量子ビットの基本的な重ね合わせ状態の一つです。これは、|0⟩と|1⟩の状態が均等に混在している状態を意味します。重ね合わせは、量子ビットが同時に複数の可能性を持つことを可能にします。",
+            "en": "|+⟩ is one of the fundamental superposition states of a qubit. This means that there is an equal mix of |0⟩ and |1⟩ states. Superposition allows a qubit to have multiple possibilities at the same time."
+        }
+    },
+    
+    {
+        "Number": 29,
+        "difficulty": 5,
+        "text": {
+            "jp": "|ψ⟩=(|000⟩+|111⟩)/√2を因数分解するとどのようになるか、以下の選択肢から選んでください。",
+            "en": "Choose from the following options to find out how |ψ⟩=(|000⟩+|111⟩)/√2 can be factorized."
+        },
+        "choices": {
+            "jp": ["|ψ⟩=(|00⟩+|01⟩)/√2)(|0⟩+|1⟩)/√2)", "|ψ⟩=(|00⟩+|01⟩)/√2)", "因数分解できない", "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"],
+            "en": ["|ψ⟩=(|00⟩+|01⟩)/√2)(|0⟩+|1⟩)/√2)", "|ψ⟩=(|00⟩+|01⟩)/√2)", "Cannot be factorized.", "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"]
+        },
+        "answer": {
+            "jp": "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)",
+            "en": "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+        },
+        "explanation": {
+            "jp": "与えられた状態|ψ⟩=(|000⟩+|111⟩)/√2は、因数分解することができます。これはエンタングルメントされた状態です。正しい因数分解は次のようになります。|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)",
+            "en": "The given state |ψ⟩=(|000⟩+|111⟩)/√2 can be factorized. This is the entangled state. The correct factorization is as follows. |ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+        }
+    },
+    {
+        "Number": 30,
+        "difficulty": 5,
+        "text": {
+            "jp": "|ψ⟩=(|000⟩+|111⟩)/√2を因数分解するとどのようになるか、以下の選択肢から選んでください。",
+            "en": "Choose from the following options to find out how |ψ⟩=(|000⟩+|111⟩)/√2 can be factorized."
+        },
+        "choices": {
+            "jp": [
+                "|ψ⟩=(|00⟩+|01⟩)/√2)(|0⟩+|1⟩)/√2)",
+                "|ψ⟩=(|00⟩+|01⟩)/√2)",
+                "因数分解できない",
+                "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+            ],
+            "en": [
+                "|ψ⟩=(|00⟩+|01⟩)/√2)(|0⟩+|1⟩)/√2)",
+                "|ψ⟩=(|00⟩+|01⟩)/√2)",
+                "Cannot be factorized.",
+                "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+            ]
+        },
+        "answer": {
+            "jp": "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)",
+            "en": "|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+        },
+        "explanation": {
+            "jp": "与えられた状態 |ψ⟩=(|000⟩+|111⟩)/√2 は、因数分解することができます。これはエンタングルメントされた状態です。正しい因数分解は次のようになります。|ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)",
+            "en": "The given state |ψ⟩=(|000⟩+|111⟩)/√2 can be factorized. This is the entangled state. The correct factorization is as follows. |ψ⟩=(|0⟩+|1⟩)/√2)(|00⟩+|11⟩)/√2)"
+        }
+    },
+    {
+        "Number": 31,
+        "difficulty": 5,
+        "text": {
+            "jp": "スワップゲートが |01⟩ 状態に作用するとどうなりますか？",
+            "en": "What happens when the swap gate acts on the |01⟩ state?"
+        },
+        "choices": {
+            "jp": [
+                "|10⟩",
+                "|01⟩",
+                "|00⟩",
+                "|11⟩"
+            ],
+            "en": [
+                "|10⟩",
+                "|01⟩",
+                "|00⟩",
+                "|11⟩"
+            ]
+        },
+        "answer": {
+            "jp": "|10⟩",
+            "en": "|10⟩"
+        },
+        "explanation": {
+            "jp": "スワップゲートは2つの量子ビットの状態を入れ替えるゲートです。したがって、|01⟩ 状態に作用させると、状態は |10⟩ になります。",
+            "en": "A swap gate is a gate that swaps the states of two qubits. Thus, if we act on the |01⟩ state, the state becomes |10⟩."
+        }
+    },
+    {
+        "Number": 1,
+        "difficulty": 6,
+        "text": {
+            "jp": "|Φ⟩=(a, b) と |Ψ⟩=(c, d) のとき、⟨Φ|Ψ⟩の結果は何ですか？",
+            "en": "|Φ⟩=(a, b) and |Ψ⟩=(c, d), what is the result of ⟨Φ|Ψ⟩?"
+        },
+        "choices": {
+            "jp": ["ac + bd", "ad + bc", "ab + cd", "ac - bd"],
+            "en": ["ac + bd", "ad + bc", "ab + cd", "ac - bd"]
+        },
+        "answer": {
+            "jp": "ac + bd",
+            "en": "ac + bd"
+        },
+        "explanation": {
+            "jp": "ベクトルの内積は対応する成分の積の合計です。したがって、⟨Φ|Ψ⟩=a*c + b*d です。",
+            "en": "The inner product between vectors is the sum of the products of the corresponding components. Thus, ⟨Φ|Ψ⟩=a*c + b*d."
+        }
+    },
+    {
+        "Number": 2,
+        "difficulty": 6,
+        "text": {
+            "jp": "回路に続けて2個のXゲートを適応する場合、最初の|0⟩状態はどうなりますか？",
+            "en": "What happens to the first |0⟩ state if we continue to adapt two X gates to the circuit?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"],
+            "en": ["|0⟩", "|1⟩", "|+⟩", "|−⟩"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "Xゲートはビット反転ゲートです。最初に|0⟩を|1⟩に変えた後、もう一度Xゲートを適用すると、再び|0⟩に戻ります。",
+            "en": "The X-gate is a bit inversion gate. After first changing |0⟩ to |1⟩, applying the X-gate again returns it to |0⟩ again."
+        }
+    },
+    {
+        "Number": 3,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子アルゴリズムの一つであるGroverのアルゴリズムは何を目的としていますか？",
+            "en": "What is the purpose of Grover's algorithm, one of the quantum algorithms?"
+        },
+        "choices": {
+            "jp": ["素因数分解", "データベース検索", "量子もつれ生成", "量子通信"],
+            "en": ["prime factorization", "Database Search", "Quantum entanglement generation", "Quantum Communication"]
+        },
+        "answer": {
+            "jp": "データベース検索",
+            "en": "Database Search"
+        },
+        "explanation": {
+            "jp": "Groverのアルゴリズムは、無秩序なデータベースから特定の要素を効率的に検索するための量子アルゴリズムです。",
+            "en": "Grover's algorithm is a quantum algorithm for efficiently retrieving specific elements from an unordered database."
+        }
+    },
+    {
+        "Number": 4,
+        "difficulty": 6,
+        "text": {
+            "jp": "|φ⟩ = (|00⟩+|01⟩+|10⟩-|11⟩)/2という状態が与えられたとき、この状態の正規化条件を満たしていますか？",
+            "en": "Given the state |φ⟩ = (|00⟩+|01⟩+|10⟩-|11⟩)/2, does this state satisfy the normalization condition?"
+        },
+        "choices": {
+            "jp": ["はい", "いいえ"],
+            "en": ["Yes", "No"]
+        },
+        "answer": {
+            "jp": "いいえ",
+            "en": "No"
+        },
+        "explanation": {
+            "jp": "確率振幅の2乗の合計が1である必要がありますが、この状態では(|00⟩の振幅)^2 + (|01⟩の振幅)^2 + (|10⟩の振幅)^2 + (−|11⟩の振幅)^2 = (1/2)^2 + (1/2)^2 + (1/2)^2 + (1/2)^2 = 4*(1/4) = 1、従ってこの状態は正規化されていると言えます。",
+            "en": "The sum of the squares of the probability amplitudes must be 1. In this state, (|00⟩ amplitude)^2 + (|01⟩ amplitude)^2 + (|10⟩ amplitude)^2 + (-|11 amplitude of⟩)^2 = (1/2)^2 + (1/2)^2 + (1/2)^2 + (1/2)^2 = 4*(1/4) = 1, thus this state is normalized."
+        }
+    },
+    {
+        "Number": 5,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子フーリエ変換(QFT)はどのような種類のアルゴリズムに広く使用されますか？",
+            "en": "For what types of algorithms is the Quantum Fourier Transform (QFT) widely used?"
+        },
+        "choices": {
+            "jp": ["検索アルゴリズム", "整数因数分解アルゴリズム", "データベース管理アルゴリズム", "ソートアルゴリズム"],
+            "en": ["Search Algorithm", "Integer factorization algorithm", "Database Management Algorithm", "Sort Algorithm"]
+        },
+        "answer": {
+            "jp": "整数因数分解アルゴリズム",
+            "en": "Integer factorization algorithm"
+        },
+        "explanation": {
+            "jp": "量子フーリエ変換(QFT)は、ショアのアルゴリズムなどの整数因数分解アルゴリズムにおいて、基本的な作用を果たします。これは、周期性を見つけ出すことで、大きな数を素因数分解する際に使用されます。",
+            "en": "The Quantum Fourier Transform (QFT) plays a fundamental action in integer factorization algorithms such as Shore's algorithm. It is used to factorize large numbers by finding periodicity."
+        }
+    },
+    {
+        "Number": 6,
+        "difficulty": 6,
+        "text": {
+            "jp": "|ψ⟩=1/√3(|00⟩+2|11⟩)において、最初の量子ビットが|0⟩を観測された時、残りの量子ビットの状態は何ですか？",
+            "en": "In |ψ⟩=1/√3(|00⟩+2|11⟩), when the first qubit is observed |0⟩, what is the state of the remaining qubit?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "状態に変化はない", "このような観測は不可能"],
+            "en": ["|0⟩", "|1⟩", "No change in status", "Such an observation is impossible"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "もし最初の量子ビットが|0⟩を観測された場合、それが真である唯一の状態は|00⟩になります。したがって、2番目の量子ビットの状態は|0⟩になります。",
+            "en": "If the first qubit is observed to be |0⟩, then the only state in which it is true is |00⟩. Therefore, the state of the second qubit will be |0⟩."
+        }
+    },
+    {
+        "Number": 7,
+        "difficulty": 6,
+        "text": {
+            "jp": "次の状態でエンタングルメントされた量子ビットペアがあるとき、片方の量子ビットが|1⟩と測定されたらもう一方の量子ビットの状態は何ですか？",
+            "en": "Given a pair of qubits entangled in the following states, if one qubit is measured to be |1⟩ what is the state of the other qubit?\n|Ψ⟩ = (|01⟩ + |10⟩)/√2"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "(|0⟩ + |1⟩)/√2", "(|0⟩ - |1⟩)/√2"],
+            "en": ["|0⟩", "|1⟩", "(|0⟩ + |1⟩)/√2", "(|0⟩ - |1⟩)/√2"]
+        },
+        "answer": {
+            "jp": "|0⟩",
+            "en": "|0⟩"
+        },
+        "explanation": {
+            "jp": "与えられたエンタングルメント状態において、片方の量子ビットが|1⟩と測定されれば、もう一方は必ず|0⟩となります。これは、エンタングルメント状態|Ψ⟩の成分|01⟩と|10⟩が、一方が1であれば他方が0になっているためです。",
+            "en": "For a given entanglement state, if one qubit is measured to be |1⟩, the other will always be |0⟩. This is because the components |01⟩ and |10⟩ of the entanglement state |Ψ⟩ are such that if one is 1, the other is 0."
+        }
+    },
+    {
+        "Number": 8,
+        "difficulty": 6,
+        "text": {
+            "jp": "Tゲートは量子ビットの状態に対してどのような変換を行いますか？",
+            "en": "What transformation does the T-gate perform on the state of the qubit?"
+        },
+        "choices": {
+            "jp": ["ビット反転", "Hadamard変換", "位相をπ/4だけシフトする", "エンタングルメントを作る"],
+            "en": ["Bit Flip", "Hadamard conversion", "Shift the phase by π/4", "Creating Entanglements"]
+        },
+        "answer": {
+            "jp": "位相をπ/4だけシフトする",
+            "en": "Shift the phase by π/4"
+        },
+        "explanation": {
+            "jp": "Tゲート、しばしばπ/8ゲートとも呼ばれる、は量子ビットの位相をπ/4だけシフトするゲートです。",
+            "en": "A T-gate, often called a π/8 gate, is a gate that shifts the phase of a qubit by π/4."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 6,
+        "text": {
+            "jp": "3つの量子ビットからなるGHZ状態はどのように書かれますか？",
+            "en": "How is a GHZ state consisting of three qubits written?"
+        },
+        "choices": {
+            "jp": ["(|000⟩ + |111⟩)/√2", "(|001⟩ + |110⟩)/√2", "(|010⟩ + |101⟩)/√2", "(|011⟩ + |100⟩)/√2"],
+            "en": ["(|000⟩ + |111⟩)/√2", "(|001⟩ + |110⟩)/√2", "(|010⟩ + |101⟩)/√2", "(|011⟩ + |100⟩)/√2"]
+        },
+        "answer": {
+            "jp": "(|000⟩ + |111⟩)/√2",
+            "en": "(|000⟩ + |111⟩)/√2"
+        },
+        "explanation": {
+            "jp": "GHZ状態は3つの量子ビットのもつれ状態で、(|000⟩ + |111⟩)/√2 で表されます。",
+            "en": "The GHZ state is an entangled state of three qubits, represented by (|000⟩ + |111⟩)/√2."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子コンピューターにおいて、デコヒーレンスとは何ですか？",
+            "en": "In quantum computing, what is decoherence?"
+        },
+        "choices": {
+            "jp": ["量子ビット間のもつれの解消", "量子情報の復元", "エラー訂正プロセス", "ゲート操作の逆操作"],
+            "en": ["Dissolving entanglement between qubits", "Restoration of quantum information", "Error Correction Process", "Reverse gate operation"]
+        },
+        "answer": {
+            "jp": "量子ビット間のもつれの解消",
+            "en": "Dissolving entanglement between qubits"
+        },
+        "explanation": {
+            "jp": "デコヒーレンスは、量子ビットの量子的な情報が周囲の環境との相互作用によって失われる現象です。",
+            "en": "Decoherence is a phenomenon in which the quantum information of a qubit is lost due to its interaction with the surrounding environment."
+        }
+    },
+    {
+        "Number": 11,
+        "difficulty": 6,
+        "text": {
+            "jp": "4量子ビットのGHZ状態は次のうちどれですか？",
+            "en": "Which of the following is a GHZ state of 4 qubits?"
+        },
+        "choices": {
+            "jp": ["(|0000⟩+|1111⟩)/√2", "(|0000⟩+|0011⟩+|1100⟩+|1111⟩)/2", "(|000⟩-|111⟩)/√2", "(|000⟩+|001⟩+|010⟩+|011⟩+|100⟩+|101⟩+|110⟩+|111⟩)/√8"],
+            "en": ["(|0000⟩+|1111⟩)/√2", "(|0000⟩+|0011⟩+|1100⟩+|1111⟩)/2", "(|000⟩-|111⟩)/√2", "(|000⟩+|001⟩+|010⟩+|011⟩+|100⟩+|101⟩+|110⟩+|111⟩)/√8"]
+        },
+        "answer": {
+            "jp": "(|0000⟩+|1111⟩)/√2",
+            "en": "(|0000⟩+|1111⟩)/√2"
+        },
+        "explanation": {
+            "jp": "GHZ状態（Greenberger–Horne–Zeilinger状態）は量子もつれ状態の一つであり、ケット|0⟩とケット|1⟩の重ね合わせによりすべての量子ビットがエンタングルされています。n量子ビットのGHZ状態は(|0...0⟩ + |1.... 1⟩)/√2で表されます。ここでn=4ですから、(|0000⟩+|1111⟩)/√2が正解です。",
+            "en": "The GHZ state is an entangled state of n qubits, represented by (|0...0⟩ + |1.... 1⟩)/√2. Since n=4 here, (|0000⟩+|1111⟩)/√2 is correct."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 6,
+        "text": {
+            "jp": "もつれ量子ビットペアの一方を極端に離れた場所に送った場合、もう一方の量子ビットの測定結果が即座に影響を受けますか？",
+            "en": "If one of a pair of entangled qubits is sent to an extremely remote location, is the measurement result of the other qubit immediately affected?"
+        },
+        "choices": {
+            "jp": ["はい", "いいえ", "情報は光速を超えて伝播する", "影響を受けるが、遅延がある"],
+            "en": ["Yes.", "No.", "Information propagates beyond the speed of light.", "Affected, but with delays."]
+        },
+        "answer": {
+            "jp": "はい",
+            "en": "Yes."
+        },
+        "explanation": {
+            "jp": "量子もつれは距離に依存しないため、もつれ量子ビットペアの一方の測定が他方に即座に影響を及ぼします。しかし、この過程で情報が光速を超えて伝播するわけではなく、相対性理論に反することはありません。",
+            "en": "Quantum entanglement is distance-independent, so a measurement of one entangled qubit pair has an immediate effect on the other. However, this process does not propagate information beyond the speed of light and does not violate relativity."
+        }
+    },
+    {
+        "Number": 13,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子暗号化において、安全な鍵配送を保証する主要な原理は何ですか？",
+            "en": "In quantum computing, what is decoherence?"
+        },
+        "choices": {
+            "jp": ["エラー訂正符号", "量子もつれ", "不確定性原理", "データの完全な複製が不可能"],
+            "en": ["Error-Correcting Code", "Quantum Entanglement", "Uncertainty Principle", "Complete duplication of data is impossible."]
+        },
+        "answer": {
+            "jp": "不確定性原理",
+            "en": "Uncertainty Principle"
+        },
+        "explanation": {
+            "jp": "量子暗号化において、不確定性原理は安全な鍵配送を保証するための主要な原理です。量子ビットの状態は測定前には不確定であるため、盗聴者が量子ビットを測定しても、元の状態を知ることができず、かつその干渉が検出されます。",
+            "en": "In quantum encryption, the uncertainty principle is the main principle to guarantee secure key delivery. Since the state of a qubit is indeterminate before measurement, an eavesdropper cannot measure the qubit and still know its original state and detect its interference."
+        }
+    },
+    {
+        "Number": 14,
+        "difficulty": 6,
+        "text": {
+            "jp": "以下の量子ゲートのうち、2量子ビットに作用するゲートはどれですか？",
+            "en": "Which of the following quantum gates acts on 2 qubits?"
+        },
+        "choices": {
+            "jp": ["Hadamardゲート", "Pauli-Xゲート", "CNOTゲート", "Zゲート"],
+            "en": ["Hadamard gate", "Pauli-X gate", "CNOT gate", "Z gate"]
+        },
+        "answer": {
+            "jp": "CNOTゲート",
+            "en": "CNOT gate"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは2量子ビットに作用するゲートであり、制御ビットに依存してターゲットビットを反転させるゲートです。他のゲートは主に1量子ビットに作用します。",
+            "en": "The CNOT gate is a gate that acts on two qubits and inverts the target bit depending on the control bit. The other gates act primarily on a single qubit."
+        }
+    },
+    {
+        "Number": 15,
+        "difficulty": 6,
+        "text": {
+            "jp": "状態 |ψ⟩=(1/√3|0⟩+√2/√3|1⟩) に対して、Zゲートを適用した後の新しい状態はどれですか？",
+            "en": "For state |ψ⟩=(1/√3|0⟩+√2/√3|1⟩), which is the new state after applying the Z gate?"
+        },
+        "choices": {
+            "jp": ["|ψ⟩'=1/√3|0⟩+√2/√3|1⟩", "|ψ⟩'=-1/√3|0⟩+√2/√3|1⟩", "|ψ⟩'=1/√3|0⟩-√2/√3|1⟩", "|ψ⟩'=1/√3|1⟩+√2/√3|0⟩"],
+            "en": ["|ψ⟩'=1/√3|0⟩+√2/√3|1⟩", "|ψ⟩'=-1/√3|0⟩+√2/√3|1⟩", "|ψ⟩'=1/√3|0⟩-√2/√3|1⟩", "|ψ⟩'=1/√3|1⟩+√2/√3|0⟩"]
+        },
+        "answer": {
+            "jp": "|ψ⟩'=1/√3|0⟩-√2/√3|1⟩",
+            "en": "|ψ⟩'=1/√3|0⟩-√2/√3|1⟩"
+        },
+        "explanation": {
+            "jp": "Zゲートは |1⟩ の位相を反転させます。したがって、状態 |ψ⟩ に適用すると、|0⟩ の係数は変わらず、|1⟩ の係数は符号が反転します。",
+            "en": "The Z-gate inverts the phase of |1⟩. Thus, when applied to state |ψ⟩, the coefficient of |0⟩ remains the same, while the coefficient of |1⟩ reverses sign."
+        }
+    },
+    {
+        "Number": 16,
+        "difficulty": 6,
+        "text": {
+            "jp": "ネイマー手術とは次のうち何を指しますか？",
+            "en": "What of the following is considered to be a Namer operation?"
+        },
+        "choices": {
+            "jp": ["古典コンピュータで使われるプログラムの修正手法", "量子エラー訂正のために使用される手順", "量子状態の単一量子ビットを調整する操作", "量子プログラム中のバグを修正するための手順"],
+            "en": ["Program modification techniques used in classical computers.", "Procedures used for quantum error correction", "Operation to tune a single qubit of a quantum state", "Procedures for fixing bugs in the quantum program"]
+        },
+        "answer": {
+            "jp": "量子状態の単一量子ビットを調整する操作",
+            "en": "Operation to tune a single qubit of a quantum state"
+        },
+        "explanation": {
+            "jp": "ネイマー手術（ニールセン＆チュアンに由来する）は、単一量子ビットの量子状態を変更する手法であり、測定を介して補助的な量子ビットに状態を移し換えることにより、ユニタリ変換を適用せずに特定の状態にすることができます。",
+            "en": "Neymer surgery (derived from Nielsen & Chuan) is a technique for changing the quantum state of a single qubit to a specific state without applying unitary transformation by transferring the state to an auxiliary qubit via measurement."
+        }
+    },
+    {
+        "Number": 17,
+        "difficulty": 6,
+        "text": {
+            "jp": "以下の量子ビットペア|Ψ-⟩を因数分解するには何を計算する必要がありますか？",
+            "en": "What do I need to compute to factor the following qubit pair|Ψ-⟩?"
+        },
+        "choices": {
+            "jp": ["(|Ψ-⟩=|0⟩-|1⟩)", "(|Ψ-⟩=|00⟩-|11⟩)", "(|Ψ-⟩=|01⟩-|10⟩)", "及び(2)、(3)は因数分解できない"],
+            "en": ["(|Ψ-⟩=|0⟩-|1⟩)", "(|Ψ-⟩=|00⟩-|11⟩)", "(|Ψ-⟩=|01⟩-|10⟩)", "and (2) and (3) cannot be factorized"]
+        },
+        "answer": {
+            "jp": "及び(2)、(3)は因数分解できない",
+            "en": "and (2) and (3) cannot be factorized"
+        },
+        "explanation": {
+            "jp": "|Ψ-⟩=|01⟩-|10⟩は因数分解できません。この状態は量子もつれを示していて、個々の量子ビットにそれぞれ別々に分けて記述することはできません。",
+            "en": "|Ψ-⟩=|01⟩-|10⟩ cannot be factorized. This state represents quantum entanglement and cannot be described separately for each individual qubit."
+        }
+    },
+    {
+        "Number": 18,
+        "difficulty": 6,
+        "text": {
+            "jp": "次のうち、どの量子アルゴリズムがデータベース検索の問題を解決するために利用されますか？",
+            "en": "Which of the following quantum algorithms would be used to solve the database retrieval problem?"
+        },
+        "choices": {
+            "jp": ["グローバーのアルゴリズム", "ショアのアルゴリズム", "BB84プロトコル", "量子フーリエ変換"],
+            "en": ["Grover's algorithm", "Shor's algorithm", "BB84 protocol", "Quantum Fourier Transform"]
+        },
+        "answer": {
+            "jp": "グローバーのアルゴリズム",
+            "en": "Grover's algorithm"
+        },
+        "explanation": {
+            "jp": "グローバーのアルゴリズムは、非構造化データベース内での検索問題を効率的に解決するために設計されています。これにより、特定のデータの位置を見つけることができます。",
+            "en": "Grover's algorithm is designed to efficiently solve search problems within unstructured databases. It allows one to locate specific data."
+        }
+    },
+    {
+        "Number": 19,
+        "difficulty": 6,
+        "text": {
+            "jp": "Vゲート（√Xゲート）が|0⟩に適用された後の状態はどれですか？",
+            "en": "Which is the state after the V-gate (√X-gate) is applied to |0⟩?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "(|0⟩+|1⟩)/√2", "(|0⟩+i|1⟩)/√2"],
+            "en": ["|0⟩", "|1⟩", "(|0⟩+|1⟩)/√2", "(|0⟩+i|1⟩)/√2"]
+        },
+        "answer": {
+            "jp": "(|0⟩+|1⟩)/√2",
+            "en": "(|0⟩+|1⟩)/√2"
+        },
+        "explanation": {
+            "jp": "Vゲートは|0⟩を(√Xゲート）が|0⟩に適用された後の状態はどれですか？の平方根に相当し、|0⟩に適用された場合には重ね合わせ状態(|0⟩+|1⟩)/√2に変換されます。",
+            "en": "The V-gate is equivalent to the square root of (√X gate), which when applied to |0⟩ is converted to the superposition state (|0⟩+|1⟩)/√2."
+        }
+    },
+    {
+        "Number": 19,
+        "difficulty": 6,
+        "text": {
+            "jp": "Vゲート（√Xゲート）が|0⟩に適用された後の状態はどれですか？",
+            "en": "Which is the state after the V-gate (√X-gate) is applied to |0⟩?"
+        },
+        "choices": {
+            "jp": ["|0⟩", "|1⟩", "(|0⟩+|1⟩)/√2", "(|0⟩+i|1⟩)/√2"],
+            "en": ["|0⟩", "|1⟩", "(|0⟩+|1⟩)/√2", "(|0⟩+i|1⟩)/√2"]
+        },
+        "answer": {
+            "jp": "(|0⟩+|1⟩)/√2",
+            "en": "(|0⟩+|1⟩)/√2"
+        },
+        "explanation": {
+            "jp": "Vゲートは|0⟩を(√Xゲート）が|0⟩に適用された後の状態はどれですか？の平方根に相当し、|0⟩に適用された場合には重ね合わせ状態(|0⟩+|1⟩)/√2に変換されます。",
+            "en": "The V-gate is equivalent to the square root of (√X gate), which when applied to |0⟩ is converted to the superposition state (|0⟩+|1⟩)/√2."
+        }
+    },
+    {
+        "Number": 20,
+        "difficulty": 6,
+        "text": {
+            "jp": "ショアのアルゴリズムはどのような数学的問題を解くために開発されましたか？",
+            "en": "What mathematical problem was Shor's algorithm developed to solve?"
+        },
+        "choices": {
+            "jp": ["素因数分解", "グラフ理論の問題", "ディジタル署名の生成", "データベース検索"],
+            "en": ["Prime factorization", "Problems in Graph Theory", "Digital Signature Generation", "Database Search"]
+        },
+        "answer": {
+            "jp": "素因数分解",
+            "en": "Prime factorization"
+        },
+        "explanation": {
+            "jp": "ショアのアルゴリズムは、大きな整数を素因数分解するために開発された量子アルゴリズムです。これは、現在のところ量子計算の最も有名な応用の一つであり、古典コンピューターでは困難なこの問題を指数関数的に速く解く可能性があります。",
+            "en": "Shor's algorithm is a quantum algorithm developed for prime factorizing large integers. It is currently one of the most well-known applications of quantum computation and has the potential to solve this problem exponentially fast, which is difficult with classical computers."
+        }
+    },
+    {
+        "Number": 21,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子符号の目的は何ですか？",
+            "en": "What is the purpose of quantum codes?"
+        },
+        "choices": {
+            "jp": ["エラー検出", "エラー修正", "古典情報の暗号化", "ランダム数生成"],
+            "en": ["Error detection", "Error Correction", "Encryption of classical information", "Random number generation"]
+        },
+        "answer": {
+            "jp": "エラー修正",
+            "en": "Error Correction"
+        },
+        "explanation": {
+            "jp": "量子符号は量子エラー修正に使用されます。これにより、量子情報がデコヒーレンスや他のエラー源から失われることを防ぎ、量子計算の信頼性を高めることができます。",
+            "en": "Quantum codes are used for quantum error correction. This prevents quantum information from being lost due to decoherence or other sources of error, thus increasing the reliability of quantum computation."
+        }
+    },
+    {
+        "Number": 22,
+        "difficulty": 6,
+        "text": {
+            "jp": "量子テレポーテーションには、いくつの量子もつれ状態の量子ビットのペアが必要か?",
+            "en": "How many entangled pairs of qubits are needed for quantum teleportation?"
+        },
+        "choices": {
+            "jp": ["1", "2", "3", "4"],
+            "en": ["1", "2", "3", "4"]
+        },
+        "answer": {
+            "jp": "1",
+            "en": "1"
+        },
+        "explanation": {
+            "jp": "量子テレポーテーションは、情報を転送するためにもつれた2量子ビットのペアを使用します。1つのもつれたペアが必要です。",
+            "en": "Quantum teleportation uses an entangled pair of two qubits to transfer information, and only one entangled pair is needed."
+        }
+    },
+    {
+        "Number": 1,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子コンピューターでは、同時に複数の計算を行う能力によってクラスター状態が利用されることがあります。どのような状態を指しますか？",
+            "en": "Cluster states are sometimes used in quantum computers due to their ability to perform multiple calculations at the same time. What type of state is this?"
+        },
+        "choices": {
+            "jp": ["重ね合わせの状態", "エンタングルメント状態", "基底状態", "興奮状態"],
+            "en": ["Overlapping condition", "Entanglement state", "ground state", "state of excitement"]
+        },
+        "answer": {
+            "jp": "エンタングルメント状態",
+            "en": "Entanglement state"
+        },
+        "explanation": {
+            "jp": "クラスター状態は多数の量子ビットがもつれ合った状態で、複数の計算を同時に行うことが期待される量子並列性を活かします。",
+            "en": "Cluster state is an entangled state of many qubits and takes advantage of quantum parallelism, where multiple calculations are expected to be performed simultaneously."
+        }
+    },
+    {
+        "Number": 2,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子誤り訂正に用いられるパリティ検査では、どのような演算が主に使用されますか？",
+            "en": "What operations are primarily used in parity checking for quantum error correction?"
+        },
+        "choices": {
+            "jp": ["Hadamard変換", "CNOTゲート", "Zゲート", "Tゲート"],
+            "en": ["Hadamard conversion", "CNOT gate", "Z gate", "T gate"]
+        },
+        "answer": {
+            "jp": "CNOTゲート",
+            "en": "CNOT gate"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、ある量子ビットの状態に基づいて別の量子ビットの状態を反転させる古典的な論理演算です。量子誤り訂正においては、2つの量子ビットのパリティ（偶数または奇数）を検査するために使用されます。",
+            "en": "The CNOT gate is a classical logic operation that inverts the state of one qubit based on the state of another qubit. In quantum error correction, it is used to check the parity (even or odd) of two qubits."
+        }
+    },
+    {
+        "Number": 3,
+        "difficulty": 7,
+        "text": {
+            "jp": "次の量子ゲートのうち、非クローン定理に反しないものはどれですか？",
+            "en": "Which of the following quantum gates does not violate the non-cloning theorem?"
+        },
+        "choices": {
+            "jp": ["量子コピー機", "ファンアウトゲート", "量子テレポーテーション", "量子デリーター"],
+            "en": ["Quantum copier", "Fan-out gate", "Quantum teleportation", "Quantum Deliter"]
+        },
+        "answer": {
+            "jp": "量子テレポーテーション",
+            "en": "Quantum teleportation"
+        },
+        "explanation": {
+            "jp": "非クローン定理は、未知の量子状態は完全にはコピーできないという定理です。量子テレポーテーションは、情報を別の場所へ移送するが、その過程で元の状態を破壊するため、非クローン定理に反しません。他の選択肢は仮想的なゲートであり、物理的には実現不可能です。",
+            "en": "The non-cloning theorem is the theorem that an unknown quantum state cannot be completely copied. Quantum teleportation does not violate the non-cloning theorem because it transfers information to another location but destroys the original state in the process. The other option is a virtual gate, which is physically unfeasible."
+        }
+    },
+    {
+        "Number": 4,
+        "difficulty": 7,
+        "text": {
+            "jp": "2量子ビット系の状態|ψ⟩=1/√2(|00⟩ + |11⟩)における第1量子ビットの減衰を考慮した場合、状態はどのように変化するか？",
+            "en": "How does the state of a two-qubit system change when the decay of the first qubit at state |ψ⟩=1/√2(|00⟩ + |11⟩) is considered?"
+        },
+        "choices": {
+            "jp": ["|ψ⟩=1/√2(|00⟩)", "|ψ⟩=1/√2(|01⟩ + |11⟩)", "|ψ⟩=1/√2(|10⟩ + |11⟩)", "減衰は状態に影響を与えない"],
+            "en": ["|ψ⟩=1/√2(|00⟩)", "|ψ⟩=1/√2(|01⟩ + |11⟩)", "|ψ⟩=1/√2(|10⟩ + |11⟩)", "Attenuation does not affect the state"]
+        },
+        "answer": {
+            "jp": "|ψ⟩=1/√2(|01⟩ + |11⟩)",
+            "en": "|ψ⟩=1/√2(|01⟩ + |11⟩)"
+        },
+        "explanation": {
+            "jp": "第1量子ビットが減衰すると、|0⟩状態が保たれる確率が減少し、結果として|ψ⟩=1/√2(|01⟩ + |11⟩)のように第1量子ビットが|1⟩状態であることが確定します。",
+            "en": "As the first qubit decays, the probability that the |0⟩ state is preserved decreases, resulting in |ψ⟩=1/√2(|01⟩ + |11⟩), where the |1⟩ state is established."
+        }
+    },
+    {
+        "Number": 5,
+        "difficulty": 7,
+        "text": {
+            "jp": "もしもつれた2量子ビット状態が以下のように表されるとき、これはどのベル状態に相当しますか？",
+            "en": "If an entangled two-qubit state is represented as follows, to which bell state does this correspond?"
+        },
+        "choices": {
+            "jp": ["|Φ+⟩", "|Φ-⟩", "|Ψ+⟩", "|Ψ-⟩"],
+            "en": ["|Φ+⟩", "|Φ-⟩", "|Ψ+⟩", "|Ψ-⟩"]
+        },
+        "answer": {
+            "jp": "必要な情報が与えられていません。",
+            "en": "The required information is not given."
+        },
+        "explanation": {
+            "jp": "問題で2量子ビット状態がどのように表されているかが指定されていません。ベル状態には4つあります：|Φ+⟩ = (|00⟩+|11⟩)/√2、|Φ-⟩ = (|00⟩-|11⟩)/√2、|Ψ+⟩ = (|01⟩+|10⟩)/√2、および|Ψ−⟩ = (|01⟩−|10⟩)/√2。この問題で状態の表現を与える必要があります。",
+            "en": "It is not specified how the 2-qubit state is represented in the problem. There are four Bell states: |Φ+⟩ = (|00⟩+|11⟩)/√2, |Φ-⟩ = (|00⟩-|11⟩)/√2, |Ψ+⟩ = (|01⟩+|10⟩)/√2, and |Ψ-⟩ = (|01⟩-|10⟩)/√2. We need to give a representation of the state in this problem."
+        }
+    },
+    {
+        "Number": 6,
+        "difficulty": 7,
+        "text": {
+            "jp": "2つの量子ビットが以下の状態にある場合、2つ目の量子ビットが|0⟩である確率はいくつですか？\n|ψ⟩ = 1/√3 |00⟩ + √2/√3 |11⟩",
+            "en": "If two qubits are in the following states, what is the probability that the second qubit is |0⟩?\n|ψ⟩ = 1/√3 |00⟩ + √2/√3 |11⟩"
+        },
+        "choices": {
+            "jp": ["1/3", "2/3", "1/2", "2/5"],
+            "en": ["1/3", "2/3", "1/2", "2/5"]
+        },
+        "answer": {
+            "jp": "1/3",
+            "en": "1/3"
+        },
+        "explanation": {
+            "jp": "2つ目の量子ビットが|0⟩であるのは、状態|00⟩に限られます。これの確率は (1/√3)^2 = 1/3 です。他の状態は2つ目の量子ビットが|1⟩です。",
+            "en": "The second qubit is |0⟩ only in state |00⟩. The probability of this is (1/√3)^2 = 1/3. The other states have the second qubit being |1⟩."
+        }
+    },
+    {
+        "Number": 7,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子コンピューターでは、同時に複数の計算を行う能力によってクラスター状態が利用されることがあります。どのような状態を指しますか？",
+            "en": "Cluster states are sometimes used in quantum computers due to their ability to perform multiple calculations at the same time. What type of state is this?"
+        },
+        "choices": {
+            "jp": ["重ね合わせの状態", "エンタングルメント状態", "基底状態", "興奮状態"],
+            "en": ["Overlapping condition", "Entanglement state", "ground state", "state of excitement"]
+        },
+        "answer": {
+            "jp": "エンタングルメント状態",
+            "en": "Entanglement state"
+        },
+        "explanation": {
+            "jp": "クラスター状態は多数の量子ビットがもつれ合った状態で、複数の計算を同時に行うことが期待される量子並列性を活かします。",
+            "en": "Cluster state is an entangled state of many qubits and takes advantage of quantum parallelism, where multiple calculations are expected to be performed simultaneously."
+        }
+    },
+    {
+        "Number": 8,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子誤り訂正に用いられるパリティ検査では、どのような演算が主に使用されますか？",
+            "en": "What operations are primarily used in parity checking for quantum error correction?"
+        },
+        "choices": {
+            "jp": ["Hadamard変換", "CNOTゲート", "Zゲート", "Tゲート"],
+            "en": ["Hadamard conversion", "CNOT gate", "Z gate", "T gate"]
+        },
+        "answer": {
+            "jp": "CNOTゲート",
+            "en": "CNOT gate"
+        },
+        "explanation": {
+            "jp": "CNOTゲートは、ある量子ビットの状態に基づいて別の量子ビットの状態を反転させる古典的な論理演算です。量子誤り訂正においては、2つの量子ビットのパリティ（偶数または奇数）を検査するために使用されます。",
+            "en": "The CNOT gate is a classical logic operation that inverts the state of one qubit based on the state of another qubit. In quantum error correction, it is used to check the parity (even or odd) of two qubits."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 7,
+        "text": {
+            "jp": "次の量子ゲートのうち、非クローン定理に反しないものはどれですか？",
+            "en": "Which of the following quantum gates does not violate the non-cloning theorem?"
+        },
+        "choices": {
+            "jp": ["量子コピー機", "ファンアウトゲート", "量子テレポーテーション", "量子デリーター"],
+            "en": ["Quantum copier", "Fan-out gate", "Quantum teleportation", "Quantum Deliter"]
+        },
+        "answer": {
+            "jp": "量子テレポーテーション",
+            "en": "Quantum teleportation"
+        },
+        "explanation": {
+            "jp": "非クローン定理は、未知の量子状態は完全にはコピーできないという定理です。量子テレポーテーションは、情報を別の場所へ移送するが、その過程で元の状態を破壊するため、非クローン定理に反しません。他の選択肢は仮想的なゲートであり、物理的には実現不可能です。",
+            "en": "The non-cloning theorem is the theorem that an unknown quantum state cannot be completely copied. Quantum teleportation does not violate the non-cloning theorem because it transfers information to another location but destroys the original state in the process. The other option is a virtual gate, which is physically unfeasible."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 7,
+        "text": {
+            "jp": "2量子ビット系の状態|ψ⟩=1/√2(|00⟩ + |11⟩)における第1量子ビットの減衰を考慮した場合、状態はどのように変化するか？",
+            "en": "How does the state of a two-qubit system change when the decay of the first qubit at state |ψ⟩=1/√2(|00⟩ + |11⟩) is considered?"
+        },
+        "choices": {
+            "jp": ["|ψ⟩=1/√2(|00⟩)", "|ψ⟩=1/√2(|01⟩ + |11⟩)", "|ψ⟩=1/√2(|10⟩ + |11⟩)", "減衰は状態に影響を与えない"],
+            "en": ["|ψ⟩=1/√2(|00⟩)", "|ψ⟩=1/√2(|01⟩ + |11⟩)", "|ψ⟩=1/√2(|10⟩ + |11⟩)", "Attenuation does not affect the state"]
+        },
+        "answer": {
+            "jp": "|ψ⟩=1/√2(|01⟩ + |11⟩)",
+            "en": "|ψ⟩=1/√2(|01⟩ + |11⟩)"
+        },
+        "explanation": {
+            "jp": "第1量子ビットが減衰すると、|0⟩状態が保たれる確率が減少し、結果として|ψ⟩=1/√2(|01⟩ + |11⟩)のように第1量子ビットが|1⟩状態であることが確定します。",
+            "en": "As the first qubit decays, the probability that the |0⟩ state is preserved decreases, resulting in |ψ⟩=1/√2(|01⟩ + |11⟩), where the |1⟩ state is established."
+        }
+    },
+    {
+        "Number": 11,
+        "difficulty": 7,
+        "text": {
+            "jp": "もつれを利用したEPRパラドックスの本質は何でしょうか？",
+            "en": "What is the nature of the EPR paradox using entanglement?"
+        },
+        "choices": {
+            "jp": [
+                "光速を超える情報の伝達が可能",
+                "もつれた粒子が相互に距離に関わらず即座に影響を与え合う",
+                "量子計算が古典計算よりも常に速い",
+                "同じ量子状態を無数に複製できる"
+            ],
+            "en": [
+                "Capable of transmitting information beyond the speed of light",
+                "Entangled particles immediately affect each other regardless of their mutual distance.",
+                "Quantum computation is always faster than classical computation",
+                "The same quantum state can be replicated countless times."
+            ]
+        },
+        "answer": {
+            "jp": "もつれた粒子が相互に距離に関わらず即座に影響を与え合う",
+            "en": "Entangled particles immediately affect each other regardless of their mutual distance."
+        },
+        "explanation": {
+            "jp": "EPRパラドックス（アインシュタイン・ポドルスキー・ローゼンパラドックス）では、量子もつれを通じて、もつれた粒子同士がどんなに離れていても、一方の粒子の状態測定が他方の粒子の状態に即座に影響を与えるという現象が指摘されています。光速を超える情報の伝達は現象の解釈に関するもので、物理法則に反するためこの選択肢は誤りです。",
+            "en": "The EPR paradox (Einstein-Podolsky-Rosen paradox) points to the phenomenon that through quantum entanglement, the state measurement of one particle immediately affects the state of the other, no matter how far apart the entangled particles are. This option is incorrect because the transmission of information beyond the speed of light relates to the interpretation of the phenomenon and violates the laws of physics."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子エラー訂正を可能にするためには、エラーが起こったときにどのような情報が必要ですか？",
+            "en": "What information is needed when an error occurs to enable quantum error correction?"
+        },
+        "choices": {
+            "jp": [
+                "エラーが起こった量子ビットの正確な状態",
+                "エラーが生じた後の総システムの状態",
+                "エラーの種類と影響を受けた量子ビット",
+                "エラー訂正のための追加量子ビットが不要"
+            ],
+            "en": [
+                "The exact state of the qubit in which the error occurred",
+                "Total system state after an error occurs.",
+                "Type of error and affected qubits",
+                "No need for additional qubits for error correction"
+            ]
+        },
+        "answer": {
+            "jp": "エラーの種類と影響を受けた量子ビット",
+            "en": "Type of error and affected qubits"
+        },
+        "explanation": {
+            "jp": "量子エラー訂正では、エラーの種類（例えばビットフリップや位相フリップなど）および何番目の量子ビットが影響を受けたかが重要です。この情報があれば、エラー訂正コードを適用して修正することができます。",
+            "en": "For quantum error correction, it is important to know the type of error (e.g., bit flip or phase flip) and how many qubits were affected. With this information, error correction codes can be applied to correct the error."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子エラー訂正を可能にするためには、エラーが起こったときにどのような情報が必要ですか？",
+            "en": "What information is needed when an error occurs to enable quantum error correction?"
+        },
+        "choices": {
+            "jp": [
+                "エラーが起こった量子ビットの正確な状態",
+                "エラーが生じた後の総システムの状態",
+                "エラーの種類と影響を受けた量子ビット",
+                "エラー訂正のための追加量子ビットが不要"
+            ],
+            "en": [
+                "The exact state of the qubit in which the error occurred",
+                "Total system state after an error occurs.",
+                "Type of error and affected qubits",
+                "No need for additional qubits for error correction"
+            ]
+        },
+        "answer": {
+            "jp": "エラーの種類と影響を受けた量子ビット",
+            "en": "Type of error and affected qubits"
+        },
+        "explanation": {
+            "jp": "量子エラー訂正では、エラーの種類（例えばビットフリップや位相フリップなど）および何番目の量子ビットが影響を受けたかが重要です。この情報があれば、エラー訂正コードを適用して修正することができます。",
+            "en": "For quantum error correction, it is important to know the type of error (e.g., bit flip or phase flip) and how many qubits were affected. With this information, error correction codes can be applied to correct the error."
+        }
+    },
+    {
+        "Number": 14,
+        "difficulty": 7,
+        "text": {
+            "jp": "因数分解アルゴリズムにおいて、量子計算がどのような役割を果たしますか？",
+            "en": "What role does quantum computation play in the factorization algorithm?"
+        },
+        "choices": {
+            "jp": [
+                "古典的な試行錯誤法で因子を見つける",
+                "素因数をランダムに照合する",
+                "素因数の周期性を見つける効率的な手法を提供する",
+                "すべての可能な素数を列挙する"
+            ],
+            "en": [
+                "Finding factors using the classical trial-and-error method",
+                "Random matching of prime factors",
+                "Provides an efficient method for finding the periodicity of prime factors",
+                "Enumerate all possible prime numbers"
+            ]
+        },
+        "answer": {
+            "jp": "素因数の周期性を見つける効率的な手法を提供する",
+            "en": "Provides an efficient method for finding the periodicity of prime factors"
+        },
+        "explanation": {
+            "jp": "量子アルゴリズムでは、量子フーリエ変換を使用して、数の因子分解が持つ周期的な性質を利用し、効率的に素因数を見つけることができます。これにより、従来の古典的な計算法よりもはるかに速く因数分解可能になります。",
+            "en": "Quantum algorithms use quantum Fourier transforms to take advantage of the cyclic nature of number factorization and efficiently find prime factors. This allows factorization to be done much faster than with traditional classical methods."
+        }
+    },
+    {
+        "Number": 15,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子不確定性原理とはどのような原理ですか？",
+            "en": "What is the quantum uncertainty principle?"
+        },
+        "choices": {
+            "jp": [
+                "観測によって量子状態がコヒーレンスを失うと説明する原理",
+                "量子ビットが同時に複数の状態を超位置できると説明する原理",
+                "他の量子ビットとのエンタングルメントによって状態が決定されるとする原理",
+                "一対の観測可能な物理量には、同時に正確な値を持つことができないとする原理"
+            ],
+            "en": [
+                "Principle that explains the loss of coherence of a quantum state by observation",
+                "Principle explaining that a qubit can super-position multiple states simultaneously.",
+                "Principle that states are determined by entanglement with other qubits",
+                "The principle that a pair of observable physical quantities cannot have exact values at the same time"
+            ]
+        },
+        "answer": {
+            "jp": "一対の観測可能な物理量には、同時に正確な値を持つことができないとする原理",
+            "en": "The principle that a pair of observable physical quantities cannot have exact values at the same time"
+        },
+        "explanation": {
+            "jp": "量子不確定性原理は、ある一対の対になる物理量（例えば、位置と運動量）について、それらの精度を同時に任意に高くすることは不可能であると述べるものです。",
+            "en": "The quantum uncertainty principle states that for a given pair of physical quantities (e.g., position and momentum), it is impossible for their accuracy to be simultaneously arbitrarily high."
+        }
+    },
+    {
+        "Number": 17,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子アルゴリズムの中で、ある関数が全単射であるか否かを高速に判定するアルゴリズムは何ですか？",
+            "en": "What is the fastest algorithm in quantum algorithms to determine if a function is a total monojection or not?"
+        },
+        "choices": {
+            "jp": [
+                "Shorのアルゴリズム",
+                "Groverのアルゴリズム",
+                "量子フーリエ変換",
+                "Deutsch-Jozsaアルゴリズム"
+            ],
+            "en": [
+                "Shor's algorithm",
+                "Grover's algorithm",
+                "Quantum Fourier Transform",
+                "Deutsch-Jozsa algorithm"
+            ]
+        },
+        "answer": {
+            "jp": "Deutsch-Jozsaアルゴリズム",
+            "en": "Deutsch-Jozsa algorithm"
+        },
+        "explanation": {
+            "jp": "Deutsch-Jozsaアルゴリズムは、与えられた隠された関数が一様な関数か全単射かの確認を、効率的に行うことができるアルゴリズムです。古典的なアルゴリズムと比べ指数関数的に高速です。",
+            "en": "The Deutsch-Jozsa algorithm is an efficient algorithm for checking whether a given hidden function is a uniform function or a total monjection. It is exponentially faster than the classical algorithm."
+        }
+    },
+    {
+        "Number": 18,
+        "difficulty": 7,
+        "text": {
+            "jp": "3量子ビット状態 |ψ⟩=(|000⟩−2|101⟩+|110⟩)/√6 における、最初の量子ビットが |1⟩ である確率はどれくらいですか？",
+            "en": "In a 3-qubit state |ψ⟩=(|000⟩-2|101⟩+|110⟩)/√6, the probability that the first qubit is |1⟩ is What is the probability that the first qubit is |1⟩ in"
+        },
+        "choices": {
+            "jp": ["1/3", "1/2", "1/6", "1/9"],
+            "en": ["1/3", "1/2", "1/6", "1/9"]
+        },
+        "answer": {
+            "jp": "1/2",
+            "en": "1/2"
+        },
+        "explanation": {
+            "jp": "最初の量子ビットが |1⟩ の状態は |101⟩ と |110⟩ です。これらの確率振幅を合計すると、合計確率は (2^2 + 1^2)/6 = 5/6 です。これは全体の2倍なので、元の確率は 5/12 ですが、選択肢にないため、正しい解答は与えられていないことになります。この問題文を修正する必要があります。",
+            "en": "The states with the first qubit of |1⟩ are |101⟩ and |110⟩. Summing these probability amplitudes, the total probability is (2^2 + 1^2)/6 = 5/6. Since this is twice the total, the original probability is 5/12, but since this is not an option, the correct answer is not given. This problem statement needs to be corrected."
+        }
+    },
+    {
+        "Number": 19,
+        "difficulty": 7,
+        "text": {
+            "jp": "分散型量子計算において、エンタングルメントスワッピングが重要である理由は何ですか？",
+            "en": "Why is entanglement swapping important in distributed quantum computation?"
+        },
+        "choices": {
+            "jp": [
+                "電子状態を転送するため",
+                "独立した量子ビット間のもつれを拡張するため",
+                "量子通信を暗号化するため",
+                "量子コンピュータのクロック速度を増加させるため"
+            ],
+            "en": [
+                "To transfer the electronic state",
+                "To extend entanglement between independent qubits",
+                "To encrypt quantum communication",
+                "To increase the clock speed of quantum computers"
+            ]
+        },
+        "answer": {
+            "jp": "独立した量子ビット間のもつれを拡張するため",
+            "en": "To extend entanglement between independent qubits"
+        },
+        "explanation": {
+            "jp": "エンタングルメントスワッピングは、空間的に分離した量子ビット間でエンタングルメントを生成し、遠隔地間で量子通信や量子ネットワーキングを行うために使用されます。",
+            "en": "Entanglement swapping is used to generate entanglements between spatially separated qubits for quantum communication and quantum networking between remote locations."
+        }
+    },
+    {
+        "Number": 20,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子コンピュータにおける「デコヒーレンス」とは何を意味しますか？",
+            "en": "What does 'decoherence' mean in quantum computing?"
+        },
+        "choices": {
+            "jp": [
+                "量子ゲートが不完全であることによるエラー",
+                "量子状態が外部環境との相互作用によりもつれ解消し、古典的振る舞いをする現象",
+                "量子ビット間の相互作用による意図しない情報のやり取り",
+                "量子コンピュータの計算速度が向上する現象"
+            ],
+            "en": [
+                "Errors due to incomplete quantum gates",
+                "A phenomenon in which a quantum state becomes entanglement-free and behaves in a classical manner due to interaction with the external environment.",
+                "Unintended exchange of information through interactions between qubits",
+                "Phenomenon that increases the computational speed of quantum computers"
+            ]
+        },
+        "answer": {
+            "jp": "量子状態が外部環境との相互作用によりもつれ解消し、古典的振る舞いをする現象",
+            "en": "A phenomenon in which a quantum state becomes entanglement-free and behaves in a classical manner due to interaction with the external environment."
+        },
+        "explanation": {
+            "jp": "デコヒーレンスは、量子状態が外部環境との相互作用により重ね合わせやもつれの性質を失い、古典的な振る舞いをするようになる現象です。これは量子情報を壊す原因となり、量子コンピューティングにおいて主要な課題の一つです。",
+            "en": "Decoherence is a phenomenon in which a quantum state loses its superposition or entanglement properties due to interaction with the external environment and begins to behave in a classical manner. This causes quantum information corruption and is one of the main challenges in quantum computing."
+        }
+    },
+    {
+        "Number": 16,
+        "difficulty": 7,
+        "text": {
+            "jp": "次のうちどれが量子誤差訂正に関連する概念ですか？",
+            "en": "Which of the following concepts relates to quantum error correction?"
+        },
+        "choices": {
+            "jp": [
+                "ハイゼンベルクの不確定性原理",
+                "ビットフリップコード",
+                "テレポーテーション",
+                "波動関数の収縮"
+            ],
+            "en": [
+                "Heisenberg's uncertainty principle",
+                "Bit Flip Code",
+                "Teleportation",
+                "Contraction of the wave function"
+            ]
+        },
+        "answer": {
+            "jp": "ビットフリップコード",
+            "en": "Bit Flip Code"
+        },
+        "explanation": {
+            "jp": "ビットフリップコードは量子誤差訂正の手法の一つで、量子ビットの誤った状態を修正するのに使用されます。",
+            "en": "A bit flip code is a quantum error correction technique used to correct erroneous states of a qubit."
+        }
+    },
+    {
+        "Number": 21,
+        "difficulty": 7,
+        "text": {
+            "jp": "次のうちどれが量子誤差訂正に関連する概念ですか？",
+            "en": "Which of the following concepts relates to quantum error correction?"
+        },
+        "choices": {
+            "jp": [
+                "ハイゼンベルクの不確定性原理",
+                "ビットフリップコード",
+                "テレポーテーション",
+                "波動関数の収縮"
+            ],
+            "en": [
+                "Heisenberg's uncertainty principle",
+                "Bit Flip Code",
+                "Teleportation",
+                "Contraction of the wave function"
+            ]
+        },
+        "answer": {
+            "jp": "ビットフリップコード",
+            "en": "Bit Flip Code"
+        },
+        "explanation": {
+            "jp": "ビットフリップコードは量子誤差訂正の手法の一つで、量子ビットの誤った状態を修正するのに使用されます。",
+            "en": "A bit flip code is a quantum error correction technique used to correct erroneous states of a qubit."
+        }
+    },
+    {
+        "Number": 22,
+        "difficulty": 7,
+        "text": {
+            "jp": "ショアのアルゴリズムは、どの種類の問題に対して有効ですか？",
+            "en": "For which types of problems is Shore's algorithm effective?"
+        },
+        "choices": {
+            "jp": [
+                "機械学習",
+                "素因数分解",
+                "グラフ理論",
+                "データベース検索"
+            ],
+            "en": [
+                "Machine Learning",
+                "Prime Factorization",
+                "Graph Theory",
+                "Database Search"
+            ]
+        },
+        "answer": {
+            "jp": "素因数分解",
+            "en": "Prime Factorization"
+        },
+        "explanation": {
+            "jp": "ショアのアルゴリズムは、大きな数の素因数を効率的に見つけるために開発されました。これは公開鍵暗号の安全性に影響を与える可能性があります。",
+            "en": "Shore's algorithm was developed to efficiently find large numbers of prime factors. This can affect the security of public key cryptography."
+        }
+    },
+    {
+        "Number": 23,
+        "difficulty": 7,
+        "text": {
+            "jp": "グローバーのアルゴリズムはどのような種類の問題に効果的ですか？",
+            "en": "What types of problems are Grover's algorithms effective for?"
+        },
+        "choices": {
+            "jp": [
+                "関数のインテグラル計算",
+                "大規模なデータベース内での検索",
+                "数値シミュレーション",
+                "量子テレポーテーション"
+            ],
+            "en": [
+                "Integral computation of functions",
+                "Search in large databases",
+                "Numerical Simulation",
+                "Quantum teleportation"
+            ]
+        },
+        "answer": {
+            "jp": "大規模なデータベース内での検索",
+            "en": "Search in large databases"
+        },
+        "explanation": {
+            "jp": "グローバーのアルゴリズムは未ソートデータベース内での検索問題に対して効果的です。このアルゴリズムは、可能解を持つアイテムの位置を指数関数的な速度ではなく、二乗根の速度で見つけることができます。",
+            "en": "Grover's algorithm is effective for search problems in unsorted databases. The algorithm can locate items with possible solutions at a square-root rate rather than at an exponential rate."
+        }
+    },
+    {
+        "Number": 24,
+        "difficulty": 7,
+        "text": {
+            "jp": "アダマールゲートを2回適用したときの効果は何ですか？",
+            "en": "What is the effect of applying the Adamar gate twice?"
+        },
+        "choices": {
+            "jp": [
+                "ビット反転",
+                "位相反転",
+                "何の効果もなし",
+                "エンタングルメントを作る"
+            ],
+            "en": [
+                "Bit Flip",
+                "Phase inversion",
+                "No effect.",
+                "Creating Entanglements"
+            ]
+        },
+        "answer": {
+            "jp": "何の効果もなし",
+            "en": "No effect."
+        },
+        "explanation": {
+            "jp": "アダマールゲートは自己逆ゲートであり、2回適用すると元の状態に戻ります。したがって、何の効果も生じません。",
+            "en": "The Adamar gate is a self-reverse gate, meaning that after two applications it returns to its original state. Therefore, it produces no effect."
+        }
+    },
+    {
+        "Number": 25,
+        "difficulty": 7,
+        "text": {
+            "jp": "特定の量子アルゴリズムが与えられたとき、量子優位性(quantum supremacy)に達するには、必要な量子ビット数が古典コンピュータに比べて何倍少なくてもよいですか？",
+            "en": "Given a particular quantum algorithm, how many times fewer qubits are needed than in a classical computer to reach quantum supremacy?"
+        },
+        "choices": {
+            "jp": [
+                "10倍",
+                "100倍",
+                "1000倍",
+                "計算ではなく、特定の問題を解決する速度が重要"
+            ],
+            "en": [
+                "10x.",
+                "100x",
+                "1000x",
+                "Speed of solving a particular problem, not calculation, is important."
+            ]
+        },
+        "answer": {
+            "jp": "計算ではなく、特定の問題を解決する速度が重要",
+            "en": "Speed of solving a particular problem, not calculation, is important."
+        },
+        "explanation": {
+            "jp": "量子優位性は、あるタスクにおいて量子コンピュータが古典コンピュータよりも圧倒的に高速であることを示します。必要な量子ビット数が少ないことは 重要ではありませんが、むしろ同じ問題を解決する速度が重要です。",
+            "en": "Quantum supremacy indicates that a quantum computer is significantly faster than a classical computer at a given task. It is not important that fewer qubits are required, but rather the speed with which the same problem can be solved."
+        }
+    },
+    {
+        "Number": 26,
+        "difficulty": 7,
+        "text": {
+            "jp": "次の中で最も一般的な量子エラー訂正コードはどれですか？",
+            "en": "Which of the following is the most common quantum error correction code?"
+        },
+        "choices": {
+            "jp": [
+                "Shorのアルゴリズム",
+                "Steaneコード",
+                "Groverのアルゴリズム",
+                "VQE (Variational Quantum Eigensolver)"
+            ],
+            "en": [
+                "Shor's algorithm",
+                "Steane code",
+                "Grover's algorithm",
+                "VQE (Variational Quantum Eigensolver)"
+            ]
+        },
+        "answer": {
+            "jp": "Steaneコード",
+            "en": "Steane code"
+        },
+        "explanation": {
+            "jp": "Steaneコードは7量子ビットを使用する量子エラー訂正コードで、最も一般的な例の一つです。",
+            "en": "The Steane code is a quantum error correcting code that uses 7 qubits and is one of the most common examples."
+        }
+    },
+    {
+        "Number": 27,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子重ね合わせを破壊しない測定は可能ですか？",
+            "en": "Is it possible to make measurements without destroying the quantum superposition?"
+        },
+        "choices": {
+            "jp": [
+                "はい、常に可能だ",
+                "はい、だが非常に困難だ",
+                "いいえ、重ね合わせは必ず破壊される",
+                "場合による"
+            ],
+            "en": [
+                "Yes, always possible.",
+                "Yes, but very difficult.",
+                "No. Superpositions are always destroyed.",
+                "Depends on the case"
+            ]
+        },
+        "answer": {
+            "jp": "いいえ、重ね合わせは必ず破壊される",
+            "en": "No. Superpositions are always destroyed."
+        },
+        "explanation": {
+            "jp": "量子測定の基本原理により、重ね合わせのある量子状態を測定すると、その状態は1つの確定的な結果に「収束」し、重ね合わせは破壊されます。",
+            "en": "According to the fundamental principle of quantum measurement, when a quantum state with a superposition is measured, the state `converges` to one definite result and the superposition is destroyed."
+        }
+    },
+    {
+        "Number": 12,
+        "difficulty": 7,
+        "text": {
+            "jp": "量子アルゴリズムの中で素因数分解に用いられるものはどれですか？",
+            "en": "Which of the following quantum algorithms is used for prime factorization?"
+        },
+        "choices": {
+            "jp": [
+                "Shorのアルゴリズム",
+                "Groverのアルゴリズム",
+                "Deutsch–Jozsaアルゴリズム",
+                "QAOA (Quantum Approximate Optimization Algorithm)"
+            ],
+            "en": [
+                "Shor's algorithm",
+                "Grover's algorithm",
+                "Deutsch-Jozsa algorithm",
+                "QAOA (Quantum Approximate Optimization Algorithm)"
+            ]
+        },
+        "answer": {
+            "jp": "Shorのアルゴリズム",
+            "en": "Shor's algorithm"
+        },
+        "explanation": {
+            "jp": "Shorのアルゴリズムは大きな数の素因数分解に特化した量子アルゴリズムです。",
+            "en": "Shor's algorithm is a quantum algorithm specialized for prime factorization of large numbers."
+        }
+    },
+    {
+        "Number": 1,
+        "difficulty": 8,
+        "text": {
+            "jp": "量子フーリエ変換（QFT）が3量子ビット状態|111⟩に適用された場合、どのような変換が行われるでしょうか？",
+            "en": "What transformation would occur if the quantum Fourier transform (QFT) is applied to a tri-qubit state |111⟩?"
+        },
+        "choices": {
+            "jp": [
+                "e^(2πi/8)の位相を持つ状態",
+                "各基底状態に等しい振幅分布",
+                "一つの量子ビットだけが反転",
+                "どの基底状態にも見えないランダムな分布"
+            ],
+            "en": [
+                "State with a phase of e^(2πi/8)",
+                "Amplitude distribution equal for each basis state",
+                "Only one qubit is inverted",
+                "Random distribution not visible in any ground state"
+            ]
+        },
+        "answer": {
+            "jp": "各基底状態に等しい振幅分布",
+            "en": "Amplitude distribution equal for each basis state"
+        },
+        "explanation": {
+            "jp": "QFTは基底状態の振幅を変換し、3量子ビットの場合、各基底状態に均等な振幅分布が生成されます。",
+            "en": "QFT transforms the amplitude of basis states, and in the case of three qubits, it generates an even amplitude distribution for each basis state."
+        }
+    },
+    {
+        "Number": 2,
+        "difficulty": 8,
+        "text": {
+            "jp": "状態|Ψ⟩=(1/√5)(2|0⟩+i|1⟩)の規格化が正しくなされているかどうか確認するにはどうすればよいですか？",
+            "en": "How can I check if the normalization of the state |Ψ⟩=(1/√5)(2|0⟩+i|1⟩) is done correctly?"
+        },
+        "choices": {
+            "jp": [
+                "|Ψ⟩そのものがユニタリ変換かどうか確認する",
+                "状態に対して測定操作を行い、結果を見る",
+                "確率振幅の大きさの2乗の合計を計算する",
+                "|Ψ⟩をそのまま放置しておいて、自然に変化するか見る"
+            ],
+            "en": [
+                "Check if |Ψ⟩ itself is a unitary transformation",
+                "Perform measurement operations on the state and view the results",
+                "Calculate the sum of the squares of the magnitudes of the probability amplitudes",
+                "Leave |Ψ⟩ as it is and see if it changes spontaneously"
+            ]
+        },
+        "answer": {
+            "jp": "確率振幅の大きさの2乗の合計を計算する",
+            "en": "Calculate the sum of the squares of the magnitudes of the probability amplitudes"
+        },
+        "explanation": {
+            "jp": "規格化された状態の確率振幅の大きさの2乗の合計は常に1になります。計算を行って合計が1であることを確認します。",
+            "en": "The sum of the squares of the magnitudes of probability amplitudes for a normalized state should always be 1. Calculate it to verify normalization."
+        }
+    },
+    {
+        "Number": 3,
+        "difficulty": 8,
+        "text": {
+            "jp": "6量子ビットシステムの状態が全ての計算基底に対して等しい確率で存在するとき、正規化された状態ベクトルの各成分の大きさはいくつになりますか？",
+            "en": "When the state of a 6-qubit system exists with equal probability for all computational bases, what is the magnitude of each component of the normalized state vector?"
+        },
+        "choices": {
+            "jp": [
+                "1/6",
+                "1/√6",
+                "1/64",
+                "1/√64"
+            ],
+            "en": [
+                "1/6",
+                "1/√6",
+                "1/64",
+                "1/√64"
+            ]
+        },
+        "answer": {
+            "jp": "1/√64",
+            "en": "1/√64"
+        },
+        "explanation": {
+            "jp": "N量子ビットシステムでは2^N個の計算基底が存在し、各成分の大きさは1/√(2^N)になります。ここでN=6なので、2^6=64。したがって、1/√64となります。",
+            "en": "In an N-qubit system, there are 2^N computational bases, and the magnitude of each component is 1/√(2^N). Here, N=6, so 2^6=64. Therefore, 1/√64."
+        }
+    },    
+    {
+        "Number": 4,
+        "difficulty": 8,
+        "text": {
+            "jp": "2つの量子ビット状態のテンソル積 |0⟩⊗|1⟩ はどのように書き表されますか？",
+            "en": "How is the tensor product of two qubit states |0⟩⊗|1⟩ written?"
+        },
+        "choices": {
+            "jp": [
+                "|01⟩",
+                "|10⟩",
+                "|0⟩+|1⟩",
+                "|0⟩-|1⟩"
+            ],
+            "en": [
+                "|01⟩",
+                "|10⟩",
+                "|0⟩+|1⟩",
+                "|0⟩-|1⟩"
+            ]
+        },
+        "answer": {
+            "jp": "|01⟩",
+            "en": "|01⟩"
+        },
+        "explanation": {
+            "jp": "テンソル積は、複数の量子ビットの状態を結合して1つの合成システム状態を形成します。|0⟩⊗|1⟩ は、最初の量子ビットが0で2番目の量子ビットが1の状態であり、|01⟩と書かれます。",
+            "en": "The tensor product combines the states of several qubits to form one composite system state. |0⟩⊗|1⟩ is a state where the first qubit is 0 and the second qubit is 1, written as |01⟩."
+        }
+    },
+    {
+        "Number": 5,
+        "difficulty": 8,
+        "text": {
+            "jp": "3量子ビットのGHZ(Greenberger–Horne–Zeilinger)状態は次のように書けます。この状態は何と呼ばれていますか？",
+            "en": "The tri-qubit GHZ (Greenberger-Horne-Zeilinger) state can be written as follows. What is this state called?"
+        },
+        "choices": {
+            "jp": [
+                "|GHZ⟩ = (|000⟩+|111⟩)/√2",
+                "|GHZ⟩ = (|001⟩+|010⟩+|100⟩+|111⟩)/2",
+                "|GHZ⟩ = (|000⟩+|011⟩+|101⟩+|110⟩)/2",
+                "|GHZ⟩ = (|000⟩-|111⟩)/√2"
+            ],
+            "en": [
+                "|GHZ⟩ = (|000⟩+|111⟩)/√2",
+                "|GHZ⟩ = (|001⟩+|010⟩+|100⟩+|111⟩)/2",
+                "|GHZ⟩ = (|000⟩+|011⟩+|101⟩+|110⟩)/2",
+                "|GHZ⟩ = (|000⟩-|111⟩)/√2"
+            ]
+        },
+        "answer": {
+            "jp": "|GHZ⟩ = (|000⟩+|111⟩)/√2",
+            "en": "|GHZ⟩ = (|000⟩+|111⟩)/√2"
+        },
+        "explanation": {
+            "jp": "GHZ状態は、Greenberger-Horne-Zeilingerの頭文字を取った、3量子ビットのエンタングル状態です。オプション(1)が正しいGHZ状態で、2つの成分が等しい確率振幅で重ね合わされています。",
+            "en": "The GHZ state is a tri-qubit entangle state, an acronym for Greenberger-Horne-Zeilinger. Option (1) is the correct GHZ state, where the two components are superposed with equal probability amplitude."
+        }
+    },
+    {
+        "Number": 6,
+        "difficulty": 8,
+        "text": {
+            "jp": "量子アニーリングは何のために使われますか？",
+            "en": "What is quantum annealing used for?"
+        },
+        "choices": {
+            "jp": [
+                "量子状態の高速伝送",
+                "最適化問題の解決",
+                "符号化された情報の復号化",
+                "量子通信の安全保証"
+            ],
+            "en": [
+                "High-speed transmission of quantum states",
+                "Solving optimization problems",
+                "Decoding of encoded information",
+                "Security assurance for quantum communication"
+            ]
+        },
+        "answer": {
+            "jp": "最適化問題の解決",
+            "en": "Solving optimization problems"
+        },
+        "explanation": {
+            "jp": "量子アニーリングは特定の最適化問題を解決するために用いられるアルゴリズムであり、量子チューニングとエネルギー最小化を利用して解を探索します。",
+            "en": "Quantum annealing is an algorithm used to solve specific optimization problems, utilizing quantum tuning and energy minimization to search for solutions."
+        }
+    },
+    {
+        "Number": 7,
+        "difficulty": 8,
+        "text": {
+            "jp": "量子暗号化における「中間者攻撃」に対してセキュリティを提供する原理は何ですか？",
+            "en": "What are the principles that provide security against 'man-in-the-middle attacks' in quantum encryption?"
+        },
+        "choices": {
+            "jp": [
+                "因数分解の困難さ",
+                "もつれの性質",
+                "ユークリッドの互除法",
+                "不確定性原理"
+            ],
+            "en": [
+                "Difficulties in factoring",
+                "Nature of entanglement",
+                "Euclid's reciprocal division",
+                "Uncertainty Principle"
+            ]
+        },
+        "answer": {
+            "jp": "もつれの性質",
+            "en": "Nature of entanglement"
+        },
+        "explanation": {
+            "jp": "量子暗号化、特に量子キー配布は、中間者攻撃に対してもつれの量子状態の一意の性質によりセキュリティを提供します。状態を測定しようとするすべての試みは、その状態を不可避的に変化させるため、攻撃者の存在が警告されます。",
+            "en": "Quantum encryption, and in particular quantum key distribution, provides security against man-in-the-middle attacks due to the unique nature of the quantum state of entanglement. Every attempt to measure the state inevitably changes that state, thus alerting the attacker to its presence."
+        }
+    },
+    {
+        "Number": 8,
+        "difficulty": 8,
+        "text": {
+            "jp": "エンタングルされた3量子ビットのGHZ状態はどれでしょうか？",
+            "en": "Which is the entangled 3-qubit GHZ state?"
+        },
+        "choices": {
+            "jp": [
+                "|GHZ⟩ = (|000⟩ + |111⟩)/√2",
+                "|GHZ⟩ = (|001⟩ + |010⟩ + |100⟩ + |111⟩)/2",
+                "|GHZ⟩ = (|000⟩ + |011⟩ + |101⟩ + |110⟩)/2",
+                "|GHZ⟩ = (|000⟩ - |111⟩)/√2"
+            ],
+            "en": [
+                "|GHZ⟩ = (|000⟩ + |111⟩)/√2",
+                "|GHZ⟩ = (|001⟩ + |010⟩ + |100⟩ + |111⟩)/2",
+                "|GHZ⟩ = (|000⟩ + |011⟩ + |101⟩ + |110⟩)/2",
+                "|GHZ⟩ = (|000⟩ - |111⟩)/√2"
+            ]
+        },
+        "answer": {
+            "jp": "|GHZ⟩ = (|000⟩ + |111⟩)/√2",
+            "en": "|GHZ⟩ = (|000⟩ + |111⟩)/√2"
+        },
+        "explanation": {
+            "jp": "GHZ状態は、Greenberger-Horne-Zeilingerの頭文字を取った、3量子ビットのエンタングル状態です。オプション(1) が正しいGHZ状態で、2つの成分が等しい確率振幅で重ね合わされています。",
+            "en": "The GHZ state is a tri-qubit entangle state, an acronym for Greenberger-Horne-Zeilinger. Option (1) is the correct GHZ state, where the two components are superposed with equal probability amplitude."
+        }
+    },
+    {
+        "Number": 9,
+        "difficulty": 8,
+        "text": {
+            "jp": "量子アニーリングは何のために使われますか？",
+            "en": "What is quantum annealing used for?"
+        },
+        "choices": {
+            "jp": [
+                "量子状態の高速伝送",
+                "最適化問題の解決",
+                "符号化された情報の復号化",
+                "量子通信の安全保証"
+            ],
+            "en": [
+                "High-speed transmission of quantum states",
+                "Solving optimization problems",
+                "Decoding of encoded information",
+                "Security assurance for quantum communication"
+            ]
+        },
+        "answer": {
+            "jp": "最適化問題の解決",
+            "en": "Solving optimization problems"
+        },
+        "explanation": {
+            "jp": "量子アニーリングは特定の最適化問題を解決するために用いられるアルゴリズムであり、量子チューニングとエネルギー最小化を利用して解を探索します。",
+            "en": "Quantum annealing is an algorithm used to solve specific optimization problems, utilizing quantum tuning and energy minimization to search for solutions."
+        }
+    },
+    {
+        "Number": 10,
+        "difficulty": 8,
+        "text": {
+            "jp": "次のユニタリ変換Uが|ψ⟩=(|0⟩+|1⟩)/√2を|0⟩に変換するとき、Uは何らかのゲートと等価ですか？",
+            "en": "Is U equivalent to some gate when the following unitary transformation U transforms |ψ⟩=(|0⟩+|1⟩)/√2 to |0⟩?"
+        },
+        "choices": {
+            "jp": [
+                "Xゲート",
+                "Yゲート",
+                "Zゲート",
+                "Hゲート"
+            ],
+            "en": [
+                "X gate",
+                "Y gate",
+                "Z gate",
+                "H gate"
+            ]
+        },
+        "answer": {
+            "jp": "Hゲート",
+            "en": "H gate"
+        },
+        "explanation": {
+            "jp": "(|0⟩+|1⟩)/√2はHゲートによる|0⟩の変換結果です。もう一度Hゲートを適応すると逆変換が行われて元の|0⟩に戻ります。",
+            "en": "(|0⟩+|1⟩)/√2 is the result of the transformation of |0⟩ by the H-gate. Adapting the H-gate again performs the inverse transformation and returns to the original|0⟩."
+        }
+    },
+    {
+        "Number": 11,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "量子重ね合わせ状態(|0⟩+|1⟩)/√2と(|0⟩-|1⟩)/√2の間の内積⟨ψ|φ⟩はどれですか？",
+          "en": "What is the inner product ⟨ψ|φ⟩ between the quantum superposition states (|0⟩+|1⟩)/√2 and (|0⟩-|1⟩)/√2?"
+        },
+        "Choices": {
+          "jp": [
+            "0",
+            "1",
+            "-1",
+            "1/√2"
+          ],
+          "en": [
+            "0",
+            "1",
+            "-1",
+            "1/√2"
+          ]
+        },
+        "Answer": {
+          "jp": "0",
+          "en": "0"
+        },
+        "Explanation": {
+          "jp": "これらの二つの重ね合わせ状態は直交しています。したがって、彼らの内積は0になります。計算は次のようになります：(1/√2)(⟨0|0⟩-⟨0|1⟩+⟨1|0⟩-⟨1|1⟩) = (1/√2)(1-0+0-1) = 0。",
+          "en": "These two superposition states are orthogonal. Therefore, their inner product is zero. The calculation is as follows: (1/√2)(⟨0|0⟩-⟨0|1⟩+⟨1|0⟩-⟨1|1 ⟩) = (1/√2)(1-0+0-1) = 0."
+        }
+      },
+      
+      {
+        "Number": 12,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "量子もつれ状態とは、二つの量子ビットが次の様な状態のことを指します。",
+          "en": "A quantum entangled state is a state in which two qubits are"
+        },
+        "Choices": {
+          "jp": [
+            "|00⟩",
+            "|0⟩+|1⟩",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩+|11⟩)/√2"
+          ],
+          "en": [
+            "|00⟩",
+            "|0⟩+|1⟩",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩+|11⟩)/√2"
+          ]
+        },
+        "Answer": {
+          "jp": "(|00⟩+|11⟩)/√2",
+          "en": "(|00⟩+|11⟩)/√2"
+        },
+        "Explanation": {
+          "jp": "もつれ状態は、二つの量子ビットがお互いに依存する状態を指します。一方の量子ビットの測定結果が他方に即座に影響を及ぼします。もつれの代表的な例は (|00⟩+|11⟩)/√2 です。",
+          "en": "Entanglement is a state in which two qubits are dependent on each other. The measurement result of one qubit immediately affects the other. A typical example of entanglement is (|00⟩+|11⟩)/√2."
+        }
+      },
+      
+      {
+        "Number": 13,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "CNOTゲートが|01⟩に適用されたときの出力は何ですか？",
+          "en": "What is the output when the CNOT gate is applied to |01⟩?"
+        },
+        "Choices": {
+          "jp": [
+            "|01⟩",
+            "|10⟩",
+            "|00⟩",
+            "|11⟩"
+          ],
+          "en": [
+            "|01⟩",
+            "|10⟩",
+            "|00⟩",
+            "|11⟩"
+          ]
+        },
+        "Answer": {
+          "jp": "|01⟩",
+          "en": "|01⟩"
+        },
+        "Explanation": {
+          "jp": "CNOTゲートは2量子ビット間での操作です。最初の量子ビットが「制御ビット」と呼ばれ、2番目の量子ビットが「ターゲットビット」です。制御ビットが|1⟩の時だけターゲットビットの状態が切り替わります。|01⟩の場合、制御ビットは|0⟩なのでターゲットビットは変わりません。",
+          "en": "The CNOT gate is an operation between two qubits. The first qubit is called the 'control bit' and the second qubit is the 'target bit. The state of the target bit is switched only when the control bit is|1⟩. When|01⟩, the control bit is|0⟩, so the target bit remains unchanged."
+        }
+      },
+      
+      {
+        "Number": 14,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "Tゲートはπ/4の位相を追加することで量子ビットの状態を変化させます。Tゲートを適用した後の|+⟩の状態は何ですか？",
+          "en": "A T-gate changes the state of a qubit by adding a phase of π/4. What is the state of |+⟩ after applying a T-gate?"
+        },
+        "Choices": {
+          "jp": [
+            "(|0⟩+|1⟩)/√2",
+            "(|0⟩+e^(iπ/4)|1⟩)/√2",
+            "(e^(iπ/4)|0⟩+|1⟩)/√2",
+            "(|0⟩+i|1⟩)/√2"
+          ],
+          "en": [
+            "(|0⟩+|1⟩)/√2",
+            "(|0⟩+e^(iπ/4)|1⟩)/√2",
+            "(e^(iπ/4)|0⟩+|1⟩)/√2",
+            "(|0⟩+i|1⟩)/√2"
+          ]
+        },
+        "Answer": {
+          "jp": "(|0⟩+e^(iπ/4)|1⟩)/√2",
+          "en": "(|0⟩+e^(iπ/4)|1⟩)/√2"
+        },
+        "Explanation": {
+          "jp": "Tゲートは|1⟩の位相にe^(iπ/4)を追加しますが、|0⟩の位相には影響を与えません。その結果、|+⟩状態にTゲートを適用すると、状態は(|0⟩+e^(iπ/4)|1⟩)/√2になります。",
+          "en": "The T-gate adds e^(iπ/4) to the phase of |1⟩ but does not affect the phase of |0⟩. As a result, applying the T-gate to the |+⟩ state results in a state of (|0⟩+e^(iπ/4)|1⟩)/√2."
+        }
+      },
+      {
+        "Number": 15,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "次の量子状態のうち、量子フーリエ変換の状態に該当するものはどれですか？",
+          "en": "Which of the following quantum states corresponds to a quantum Fourier transform state?"
+        },
+        "Choices": {
+          "jp": [
+            "(|0⟩+|1⟩+|2⟩+|3⟩)/2",
+            "(|0⟩+i|1⟩-|2⟩-i|3⟩)/2",
+            "(|0⟩+|1⟩)/√2",
+            "(|0⟩-|2⟩)/√2"
+          ],
+          "en": [
+            "(|0⟩+|1⟩+|2⟩+|3⟩)/2",
+            "(|0⟩+i|1⟩-|2⟩-i|3⟩)/2",
+            "(|0⟩+|1⟩)/√2",
+            "(|0⟩-|2⟩)/√2"
+          ]
+        },
+        "Answer": {
+          "jp": "(|0⟩+i|1⟩-|2⟩-i|3⟩)/2",
+          "en": "(|0⟩+i|1⟩-|2⟩-i|3⟩)/2"
+        },
+        "Explanation": {
+          "jp": "量子フーリエ変換は量子状態において位相を周期的に変化させる変換です。選択肢の中で、(2)の形は|0⟩から|3⟩までの基底状態にそれぞれの状態に異なる位相因子が掛けられており、このようなパターンは量子フーリエ変換に類似しています。",
+          "en": "The quantum Fourier transform is a transform that periodically changes the phase in a quantum state. Among the choices, the form (2) has ground states from |0⟩ to |3⟩ each multiplied by a different phase factor, and such a pattern is similar to the quantum Fourier transform."
+        }
+      },
+      
+      {
+        "Number": 16,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "2量子ビットが以下のもつれ状態にあるとき、一方の量子ビットを測定した結果が必ずもう一方の結果と同じになるもつれ状態はどれですか？",
+          "en": "If two qubits are in the following entangled states, which entangled state is the result of measuring one qubit always the same as the result of the other?"
+        },
+        "Choices": {
+          "jp": [
+            "(|00⟩+|11⟩)/√2",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩-|11⟩)/√2",
+            "すべての選択肢"
+          ],
+          "en": [
+            "(|00⟩+|11⟩)/√2",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩-|11⟩)/√2",
+            "All options"
+          ]
+        },
+        "Answer": {
+          "jp": "すべての選択肢",
+          "en": "All options"
+        },
+        "Explanation": {
+          "jp": "1つの量子ビットを測定し、その結果がもう1つの量子ビットの状態にも影響を与えるのはエンタングルメントの特徴です。このエンタングルメントは（1）、（2）、および（3）のいずれの場合も存在し、したがってすべての選択肢が正しいです。",
+          "en": "It is a feature of entanglement that one qubit is measured and the result also affects the state of another qubit. This entanglement is present in all cases (1), (2), and (3), and therefore all alternatives are correct."
+        }
+      },
+      {
+        "Number": 17,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "2量子ビットが以下のもつれ状態にあるとき、一方の量子ビットを測定した結果が必ずもう一方の結果と同じになるもつれ状態はどれですか？",
+          "en": "If two qubits are in the following entangled states, which entangled state is the result of measuring one qubit always the same as the result of the other?"
+        },
+        "Choices": {
+          "jp": [
+            "(|00⟩+|11⟩)/√2",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩-|11⟩)/√2",
+            "すべての選択肢"
+          ],
+          "en": [
+            "(|00⟩+|11⟩)/√2",
+            "(|01⟩+|10⟩)/√2",
+            "(|00⟩-|11⟩)/√2",
+            "All options"
+          ]
+        },
+        "Answer": {
+          "jp": "すべての選択肢",
+          "en": "All options"
+        },
+        "Explanation": {
+          "jp": "1つの量子ビットを測定し、その結果がもう1つの量子ビットの状態にも影響を与えるのはエンタングルメントの特徴です。このエンタングルメントは（1）、（2）、および（3）のいずれの場合も存在し、したがってすべての選択肢が正しいです。",
+          "en": "It is a feature of entanglement that one qubit is measured and the result also affects the state of another qubit. This entanglement is present in all cases (1), (2), and (3), and therefore all alternatives are correct."
+        }
+      },
+      {
+        "Number": 18,
+        "Difficulty": 8,
+        "Question": {
+          "jp": "QKD(量子鍵配送)は何に基づいていますか？",
+          "en": "What is QKD (Quantum Key Delivery) based on?"
+        },
+        "Choices": {
+          "jp": [
+            "エラー訂正",
+            "量子テレポーテーション",
+            "量子もつれ",
+            "ヘイゼンベルクの不確定性原理"
+          ],
+          "en": [
+            "Error Correction",
+            "Quantum Teleportation",
+            "Quantum Entanglement",
+            "Heisenberg's Uncertainty Principle"
+          ]
+        },
+        "Answer": {
+          "jp": "ヘイゼンベルクの不確定性原理",
+          "en": "Heisenberg's Uncertainty Principle"
+        },
+        "Explanation": {
+          "jp": "QKDはヘイゼンベルクの不確定性原理に基づいています。これにより、どんな試みでも量子状態を観測すると状態が乱されるため、通信が盗聴されているかどうかを検出できます。",
+          "en": "QKD is based on Heisenberg's Uncertainty Principle. This allows us to detect if a communication is being eavesdropped on because any attempt to observe the quantum state will disrupt the state."
+        }
+      },
+      {
+        "Number": 4,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "量子コンピューターにおける「デコヒーレンス」とは何を指しますか？",
+          "en": "What is meant by 'decoherence' in a quantum computer?"
+        },
+        "Choices": {
+          "jp": [
+            "量子ビットのエラー訂正",
+            "量子情報の経時的な喪失",
+            "量子ビット間のもつれの生成",
+            "量子ビットを冷却するプロセス"
+          ],
+          "en": [
+            "Error correction of qubits",
+            "Loss of quantum information over time",
+            "Generation of entanglement between qubits",
+            "Process for cooling qubits"
+          ]
+        },
+        "Answer": {
+          "jp": "量子情報の経時的な喪失",
+          "en": "Loss of quantum information over time"
+        },
+        "Explanation": {
+          "jp": "デコヒーレンスは、量子情報が周囲の環境と相互作用するために経時的に喪失する現象を指します。これは量子コンピューティングにおける大きな課題の一つです。",
+          "en": "Decoherence refers to the phenomenon of loss of quantum information over time as it interacts with the surrounding environment. This is one of the major challenges in quantum computing."
+        }
+      },
+      {
+        "Number": 7,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "整数因数分解において量子コンピュータが古典コンピュータよりも有利である理由は何ですか？",
+          "en": "Why is a quantum computer advantageous over a classical computer in integer factorization?"
+        },
+        "Choices": {
+          "jp": [
+            "量子もつれのおかげで高速に計算できるため",
+            "Shorのアルゴリズムが指数的に高速だから",
+            "量子ディスエントグルメントが古典計算より速いため",
+            "量子エラー訂正が完璧だから"
+          ],
+          "en": [
+            "Because quantum entanglement allows for fast computation",
+            "Shor's algorithm is exponentially faster.",
+            "Because quantum disentanglement is faster than classical computation",
+            "Quantum error correction is perfect."
+          ]
+        },
+        "Answer": {
+          "jp": "Shorのアルゴリズムが指数的に高速だから",
+          "en": "Shor's algorithm is exponentially faster."
+        },
+        "Explanation": {
+          "jp": "Shorのアルゴリズムは量子もつれと重ね合わせを活用し、整数因数分解を古典アルゴリズムよりも指数関数的に速い速度で解くことができます。",
+          "en": "Shor's algorithm takes advantage of quantum entanglement and superposition to solve integer factorization exponentially faster than classical algorithms."
+        }
+      },
+      {
+        "Number": 9,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "エンタングルメントスワップとは次の内どれに該当するプロセスですか？",
+          "en": "Entanglement swap is a process that involves which of the following?"
+        },
+        "Choices": {
+          "jp": [
+            "もつれた状態の量子ビットのペアを交換する",
+            "スピン状態を反転させる",
+            "測定によって情報を破壊する",
+            "もつれを介して非局所的な情報交換をする"
+          ],
+          "en": [
+            "Exchange pairs of qubits in entangled states",
+            "Reversing the spin state",
+            "Destroying information through measurement",
+            "Non-local information exchange through entanglement."
+          ]
+        },
+        "Answer": {
+          "jp": "もつれを介して非局所的な情報交換をする",
+          "en": "Non-local information exchange through entanglement."
+        },
+        "Explanation": {
+          "jp": "エンタングルメントスワップは、もつれたペアの一部を別のもつれたペアと入れ替えることで非局所的な情報交換を行うプロセスです。",
+          "en": "Entanglement swapping is the process of exchanging non-local information by swapping one entangled pair for another entangled pair."
+        }
+      },
+      {
+        "Number": 12,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "Vゲートはどのような作用を量子ビットに及ぼしますか？",
+          "en": "What action does the V-gate exert on the qubit?"
+        },
+        "Choices": {
+          "jp": [
+            "状態の反転",
+            "位相の1/4回転",
+            "位相の1/8回転",
+            "全くの無作用"
+          ],
+          "en": [
+            "State inversion",
+            "Quarter-turn of phase",
+            "1/8 turn of phase",
+            "No action at all"
+          ]
+        },
+        "Answer": {
+          "jp": "位相の1/4回転",
+          "en": "Quarter-turn of phase"
+        },
+        "Explanation": {
+          "jp": "Vゲート（またはπ/2位相ゲート）は、量子ビットの状態に位相をπ/2だけ回転させる作用を及ぼします。このゲートは、特定の量子アルゴリズムで位相の細かい調整を必要とする場合に使用されます。",
+          "en": "The V-gate (or π/2 phase gate) acts to rotate the phase of a qubit state by π/2. This gate is used when a particular quantum algorithm requires fine tuning of the phase."
+        }
+      },      
+      {
+        "Number": 13,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "量子エラー訂正における最も一般的な符号の1つであるShorの9量子ビット符号は、何ビットの量子情報を保護しますか？",
+          "en": "How many bits of quantum information does Shor's 9-qubit code, one of the most common codes in quantum error correction, protect?"
+        },
+        "Choices": {
+          "jp": [
+            "1ビット",
+            "2ビット",
+            "3ビット",
+            "9ビット"
+          ],
+          "en": [
+            "1 bit",
+            "2 bits",
+            "3 bits",
+            "9 bits"
+          ]
+        },
+        "Answer": {
+          "jp": "1ビット",
+          "en": "1 bit"
+        },
+        "Explanation": {
+          "jp": "Shorの9量子ビット符号は9つの量子ビットを使って1つの量子ビットの情報を保護する量子エラー訂正符号です。この符号はアルビトラリな単一量子ビットエラーに対して保護を提供します。",
+          "en": "Shor's 9-qubit code is a quantum error-correcting code that uses nine qubits to protect a single qubit of information. This code provides protection against arbitrary single-qubit errors."
+        }
+      },
+      {
+        "Number": 14,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "量子ビットの状態を記述するブロッホ球上の点で、XゲートとZゲートの両方が同等に作用するのはどの点ですか？",
+          "en": "At which point on the Bloch sphere describing the state of a qubit do both the X and Z gates act equally?"
+        },
+        "Choices": {
+          "jp": [
+            "北極点",
+            "南極点",
+            "赤道上の任意の点",
+            "ブロッホ球上のどの点でもない"
+          ],
+          "en": [
+            "North Pole",
+            "South Pole",
+            "Any point on the equator",
+            "Not any point on the Bloch sphere."
+          ]
+        },
+        "Answer": {
+          "jp": "赤道上の任意の点",
+          "en": "Any point on the equator"
+        },
+        "Explanation": {
+          "jp": "ブロッホ球上の赤道上の点は重ね合わせ状態を表し、XゲートとZゲートの両方に等しく影響されます。それらのゲートが行った変換はブロッホ球上で赤道を中心にした回転と考えられます。",
+          "en": "Equatorial points on the Bloch sphere represent superposition states and are affected equally by both the X and Z gates. The transformation performed by those gates can be thought of as a rotation about the equator on the Bloch sphere."
+        }
+    },
+    {
+        "Number": 15,
+        "Difficulty": 9,
+        "Question": {
+            "jp": "|ψ⟩がエンタングルメント状態である場合、次のうち、エンタングルメントを解除する操作は何ですか？",
+            "en": "If |ψ⟩ is in the entanglement state, what of the following operations will de-entangle it?"
+        },
+        "Choices": {
+            "jp": [
+            "ハダマード変換を適用する",
+            "ビット反転を行う",
+            "相対位相のキックバックを使用する",
+            "測定を行う"
+            ],
+            "en": [
+            "Apply the Hadamard transformation",
+            "Perform bit inversion.",
+            "Use relative phase kickback",
+            "Perform the measurement"
+            ]
+        },
+        "Answer": {
+            "jp": "測定を行う",
+            "en": "Perform the measurement"
+        },
+        "Explanation": {
+            "jp": "エンタングルメント状態を解除する方法の一つは、量子ビットの一方または両方を測定することです。測定によりシステムの波動関数が崩壊し、エンタングルメントがなくなるため、量子状態が明確な状態に収束します。",
+            "en": "One way to break the entanglement state is to measure one or both of the quantum bits. The measurement collapses the wavefunction of the system and eliminates the entanglement, so the quantum state converges to a definite state."
+        }
+    },
+    {
+        "Number": 16,
+        "Difficulty": 9,
+        "Question": {
+        "jp": "ベル状態|Φ⁺⟩=(|00⟩+|11⟩)/√2にZゲートを第二量子ビットに適用するとどうなりますか？",
+        "en": "What happens if we apply the Z-gate to the second qubit in the bell state|Φ⁺⟩=(|00⟩+|11⟩)/√2?"
+        },
+        "Choices": {
+        "jp": [
+            "|Φ⁺⟩=(|00⟩+|11⟩)/√2",
+            "|Φ⁻⟩=(|00⟩-|11⟩)/√2",
+            "|Ψ⁺⟩=(|01⟩+|10⟩)/√2",
+            "|Ψ⁻⟩=(|01⟩-|10⟩)/√2"
+        ],
+        "en": [
+            "|Φ⁺⟩=(|00⟩+|11⟩)/√2",
+            "|Φ⁻⟩=(|00⟩-|11⟩)/√2",
+            "|Ψ⁺⟩=(|01⟩+|10⟩)/√2",
+            "|Ψ⁻⟩=(|01⟩-|10⟩)/√2"
+        ]
+        },
+        "Answer": {
+        "jp": "|Φ⁻⟩=(|00⟩-|11⟩)/√2",
+        "en": "|Φ⁻⟩=(|00⟩-|11⟩)/√2"
+        },
+        "Explanation": {
+        "jp": "Zゲートは、|0⟩状態には何も影響を与えず、|1⟩状態には-1の位相を追加します。第二量子ビットにZゲートを適用すると、|11⟩状態の位相だけが反転されるので、結果としてベル状態|Φ⁻⟩=(|00⟩-|11 ⟩)/√2が得られます。",
+        "en": "The Z-gate has no effect on the|0⟩ state and adds a phase of -1 to the|1⟩ state. Applying the Z-gate to the second qubit, only the phase of the|11⟩ state is inverted, resulting in the bell state|Φ⁻⟩=(|00⟩-|11 ⟩)/√2 is obtained."
+        }
+    },
+    {
+        "Number": 17,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "GHZ状態|GHZ⟩=(|000⟩+|111⟩)/√2を作成する量子ゲートのシーケンスはどれですか？",
+          "en": "Which sequence of quantum gates creates the GHZ state|GHZ⟩=(|000⟩+|111⟩)/√2?"
+        },
+        "Choices": {
+          "jp": [
+            "Hゲート→CNOTゲート→Tゲート",
+            "Hゲート→CNOTゲート→CNOTゲート",
+            "Sゲート→CNOTゲート→Hゲート",
+            "Tゲート→Hゲート→Sゲート"
+          ],
+          "en": [
+            "H gate → CNOT gate → T gate",
+            "H gate → CNOT gate → CNOT gate",
+            "S gate → CNOT gate → H gate",
+            "T gate → H gate → S gate"
+          ]
+        },
+        "Answer": {
+          "jp": "Hゲート→CNOTゲート→CNOTゲート",
+          "en": "H gate → CNOT gate → CNOT gate"
+        },
+        "Explanation": {
+          "jp": "GHZ状態を生成するためには、最初の量子ビットにハダマード変換(H)を適用して重ね合わせ状態を作り、その後2つのCNOTゲートを用いて最初の量子ビットをコントロールビットとして他の2ビットにエンタングルメントを作成する必要があります。",
+          "en": "To generate a GHZ state, a Hadamard transform (H) must be applied to the first qubit to create a superposition state, and then two CNOT gates must be used to create entanglement in the other two bits with the first qubit as the control bit."
+        }
+    },
+    {
+        "Number": 18,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "量子ビット|ψ⟩=a|0⟩+b|1⟩のユークリッドノルムはいくつですか？",
+          "en": "How many is the Euclidean norm of a qubit|ψ⟩=a|0⟩+b|1⟩?"
+        },
+        "Choices": {
+          "jp": [
+            "a²+b²",
+            "|a|+|b|",
+            "√(a²+b²)",
+            "|a|²+|b|²"
+          ],
+          "en": [
+            "a²+b²",
+            "|a|+|b|",
+            "√(a²+b²)",
+            "|a|²+|b|²"
+          ]
+        },
+        "Answer": {
+          "jp": "√(a²+b²)",
+          "en": "√(a²+b²)"
+        },
+        "Explanation": {
+          "jp": "量子ビットのユークリッドノルムは、各振幅の絶対値の2乗の合計の平方根になります。したがって正しい答えは√(a²+b²)です。これは量子ビットの状態が正規化（合計すると1）されていることを示します。",
+          "en": "The Euclidean norm of a quantum bit is the square root of the sum of the squares of the absolute values of each amplitude. Therefore, the correct answer is √(a²+b²). This indicates that the states of the qubits are normalized (sum to 1)."
+        }
+      },
+      {
+        "Number": 19,
+        "Difficulty": 9,
+        "Question": {
+          "jp": "回転ゲートRz(θ)を|1⟩に適用したときの最終状態は何ですか？",
+          "en": "What is the final state when the rotational gate Rz(θ) is applied to|1⟩?"
+        },
+        "Choices": {
+          "jp": [
+            "e^(iθ/2)|0⟩",
+            "e^(-iθ/2)|1⟩",
+            "e^(iθ)|1⟩",
+            "e^(iθ/2)|1⟩"
+          ],
+          "en": [
+            "e^(iθ/2)|0⟩",
+            "e^(-iθ/2)|1⟩",
+            "e^(iθ)|1⟩",
+            "e^(iθ/2)|1⟩"
+          ]
+        },
+        "Answer": {
+          "jp": "e^(-iθ/2)|1⟩",
+          "en": "e^(-iθ/2)|1⟩"
+        },
+        "Explanation": {
+          "jp": "回転ゲートRz(θ)は、|1⟩状態には-θ/2の位相を追加します。したがって、最終状態はe^(-iθ/2)|1⟩です。|0⟩状態には影響を与えません。",
+          "en": "The rotational gate Rz(θ) adds a phase of -θ/2 to the |1⟩ state. Therefore, the final state is e^(-iθ/2)|1⟩. The |0⟩ state is not affected."
+        }
+      },
+      {
+        "Number": 4,
+        "Difficulty": 10,
+        "Question": {
+          "jp": "量子コンピューティングに関する以下の事実のうち、誤っているものはどれですか？",
+          "en": "Which of the following facts about quantum computing is false?"
+        },
+        "Choices": {
+          "jp": [
+            "量子もつれは2つ以上の量子系が互いに影響を及ぼす現象である",
+            "量子ビットは、-1と1の任意の線形結合で表すことができる",
+            "量子アルゴリズムは古典アルゴリズムと比較して常に高速である",
+            "エラー訂正符号は量子情報の信頼性を高めるために使用される"
+          ],
+          "en": [
+            "Quantum entanglement is a phenomenon in which two or more quantum systems affect each other",
+            "A qubit can be represented by any linear combination of -1 and 1",
+            "Quantum algorithms are always faster than classical algorithms",
+            "Error-correcting codes are used to increase the reliability of quantum information"
+          ]
+        },
+        "Answer": {
+          "jp": "量子アルゴリズムは古典アルゴリズムと比較して常に高速である",
+          "en": "Quantum algorithms are always faster than classical algorithms"
+        },
+        "Explanation": {
+          "jp": "量子アルゴリズムが古典アルゴリズムよりも常に高速であるわけではありません。特定のタイプの問題に対して、量子アルゴリズムは古典アルゴリズムよりも優れたパフォーマンスを発揮する可能性がありますが、すべての問題に対して有効ではないことに注意する必要があります。他の3つの選択肢は量子コンピューティングの正しい概念を表しています。",
+          "en": "Quantum algorithms are not always faster than classical algorithms. It should be noted that for certain types of problems, quantum algorithms may perform better than classical algorithms, but they are not effective for all problems. The other three options represent the correct conception of quantum computing."
+        }
+      },      
+      {
+        "Number": 7,
+        "Difficulty": 10,
+        "Question": {
+          "jp": "量子通信におけるBB84プロトコルの安全性はどの原理に基づいていますか？",
+          "en": "On which principle is the BB84 protocol secure in quantum communications?"
+        },
+        "Choices": {
+          "jp": [
+            "エンタングルメント",
+            "ノーローカル性",
+            "不確定性原理",
+            "古典的通信"
+          ],
+          "en": [
+            "Entanglement.",
+            "No locality",
+            "Uncertainty Principle",
+            "Classical Communication"
+          ]
+        },
+        "Answer": {
+          "jp": "不確定性原理",
+          "en": "Uncertainty Principle"
+        },
+        "Explanation": {
+          "jp": "BB84プロトコルの安全性は量子の不確定性原理に基づいており、この原理により、盗聴者が情報を取得することができないようにしています。",
+          "en": "The security of the BB84 protocol is based on the quantum uncertainty principle, which prevents an eavesdropper from obtaining information."
+        }
+      }
 ]
     
 
