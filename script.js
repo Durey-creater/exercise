@@ -69,21 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         function chooseAnswer(choice, question) {
-            const explanation = document.getElementById('answer-explanation'); // この行は1回だけ宣言
+            const explanation = document.getElementById('answer-explanation');
             explanation.style.display = 'block';
         
-            if (choice === question.answer) {
+            if (choice === question.answer.jp) {
                 recentResults.push(true);
-                explanation.innerHTML = "正解！ " + question.explanation.replace(/\n/g, '<br>'); // 正解の解説も改行を <br> に置換
+                explanation.innerHTML = "正解！ " + question.explanation.jp + "<br>" + question.explanation.en;
             } else {
                 recentResults.push(false);
-                explanation.innerHTML = "不正解。 " + question.explanation.replace(/\n/g, '<br>'); // 不正解の解説も改行を <br> に置換
+                explanation.innerHTML = "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
                 incorrectQuestions.push(question);
             }
         
+            // 次の問題へのボタンを表示
             const nextQuestionButton = document.getElementById('next-question-button');
             nextQuestionButton.style.display = 'block';
         }
+        
         
     
     const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
