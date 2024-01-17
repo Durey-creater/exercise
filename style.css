@@ -148,7 +148,6 @@ footer blockquote {
     color: #6c757d; /* 引用部分の色 */
 }
 
-
 @media (max-width: 768px) {
     body {
         padding: 20px; /* 追加 */
