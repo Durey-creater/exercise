@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 0;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 90vh; 
-    overflow-y: auto;
+    overflow: auto;
     height: 100%; 
 
 }
@@ -28,7 +28,7 @@ body {
     margin: 20px auto;
     position: relative; /* 模様を追加するための設定 */
     position: relative;
-    overflow-y: auto;
+    overflow-y: visible;
 }
 
 h1 {
