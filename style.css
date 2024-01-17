@@ -6,16 +6,12 @@ body {
     padding: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* centerから変更 */
+    height: auto; /* 100vhから変更 */
     color: #333;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    max-height: 90vh; 
-    overflow-y: scroll;
-    height: 120%; 
-
 }
 
 #quiz-container {
@@ -26,16 +22,9 @@ body {
     max-width: 800px;
     width: 100%;
     margin: 20px auto;
-    position: relative; 
-    position: relative;
-    overflow-y: visible;
-
     position: sticky;
-    top: 0; /* 画面の上部に固定 */
-    z-index: 10; /* 他の要素より前面に表示 */
-    background: white; /* スクロール時に背後のコンテンツが見えないように */
-    padding: 20px; /* 内容との間隔 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 箱影をつけて区別しやすくする */
+    top: 0;
+    z-index: 10;
 }
 
 h1 {
@@ -123,16 +112,21 @@ h1 {
 
 #incorrect-questions-container {
     max-height: 50vh; 
-    overflow-y: scroll; 
+    overflow-y: auto; /* scrollから変更 */
     width: 100%; 
     box-sizing: border-box; 
     padding: 20px; 
+    margin-top: 20px; /* 上の要素から間隔を開ける */
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 20px; /* 追加 */
+    }
     #quiz-container {
+        margin-top: 0; /* 追加 */
         padding: 20px;
-        width: 95%;
+        width: 100%; /* 95%から変更 */
     }
     #question-text {
         font-size: 1.5em;
@@ -140,5 +134,8 @@ h1 {
     #choices-list button {
         padding: 15px 20px;
         font-size: 1em;
+    }
+    #incorrect-questions-container {
+        max-height: 30vh; /* 高さを小さく調整 */
     }
 }
