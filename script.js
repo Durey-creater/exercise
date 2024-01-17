@@ -51,17 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // ユーザーの選択に応じて処理を行う
     function chooseAnswer(question, choice) {
         const explanation = document.getElementById('answer-explanation');
-        const nextQuestionButton = document.getElementById('next-question-button');
-        nextQuestionButton.style.display = 'block';
         explanation.style.display = 'block';
         explanation.innerHTML = choice === question.answer.jp ? 
-                                "正解！ " + question.explanation.jp + "<br>" + question.explanation.en :
-                                "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
+                            "正解！ " + question.explanation.jp + "<br>" + question.explanation.en :
+                            "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
 
         recentResults.push(choice === question.answer.jp);
         if (!recentResults[recentResults.length - 1]) {
             incorrectQuestions.push(question);
         }
+
+        // 次の質問ボタンのイベントハンドラを設定
+        const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.onclick = function() {
             if (recentResults.length === 5) {
                 updateDifficulty();
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayNextQuestion();
             }
         };
-        
+        nextQuestionButton.style.display = 'block';
     }
 
     // 次の質問を表示する
