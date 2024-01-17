@@ -5,28 +5,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const recentResults = []; // 直近の結果を保存する配列
     const incorrectQuestions = [];
 
-    // 問題を取得し、画面に表示する
+    // 質問を取得し、画面に表示する
     function displayQuestion(question) {
-        updateQuestionDisplay(question);
-        updateChoicesList(question);
-        resetExplanationAndNextButton();
-    }
-
-    // 問題の表示を更新する
-    function updateQuestionDisplay(question) {
         const questionNumber = document.getElementById('question-number');
         const difficulty = document.getElementById('difficulty');
         const questionText = document.getElementById('question-text');
+        const choicesList = document.getElementById('choices-list');
+        const explanation = document.getElementById('answer-explanation');
+        const nextQuestionButton = document.getElementById('next-question-button');
 
         totalQuestionsAnswered++;
         questionNumber.textContent = '問題 #' + totalQuestionsAnswered;
         difficulty.textContent = '難易度: ' + question.difficulty;
         questionText.innerHTML = `${question.text.jp}<br>${question.text.en}`;
-    }
-
-    // 選択肢リストを更新する
-    function updateChoicesList(question) {
-        const choicesList = document.getElementById('choices-list');
+        explanation.style.display = 'none';
+        nextQuestionButton.style.display = 'none';
         choicesList.innerHTML = '';
 
         question.choices.jp.forEach((choiceJp, index) => {
@@ -38,31 +31,44 @@ document.addEventListener('DOMContentLoaded', function() {
             li.appendChild(button);
             choicesList.appendChild(li);
         });
-    }
 
-    // 解説と次の質問ボタンの表示をリセットする
-    function resetExplanationAndNextButton() {
-        const explanation = document.getElementById('answer-explanation');
-        const nextQuestionButton = document.getElementById('next-question-button');
-        explanation.style.display = 'none';
-        nextQuestionButton.style.display = 'none';
+        explanation.innerHTML = `${question.explanation.jp}<br>${question.explanation.en}`;
     }
 
     // ユーザーの選択に応じて処理を行う
     function chooseAnswer(question, choice) {
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
-        explanation.innerHTML = choice === question.answer.jp ? 
-                                "正解！ " + question.explanation.jp + "<br>" + question.explanation.en :
-                                "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
 
-        recentResults.push(choice === question.answer.jp);
-        if (!recentResults[recentResults.length - 1]) {
+        if (choice === question.answer.jp) {
+            recentResults.push(true);
+            explanation.innerHTML = "正解！ " + question.explanation.jp + "<br>" + question.explanation.en;
+        } else {
+            recentResults.push(false);
+            explanation.innerHTML = "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
             incorrectQuestions.push(question);
         }
 
         const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.style.display = 'block';
+    }
+
+    // 難易度を更新する
+    function updateDifficulty() {
+        if (recentResults.length === 5) {
+            const correctCount = recentResults.filter(Boolean).length;
+            if (correctCount === 5) {
+                currentLevel = Math.min(currentLevel + 1, 10);
+                alert('難易度が上がります！');
+            } else if ((correctCount === 0 || correctCount === 1) && currentLevel > 1) {
+                currentLevel = Math.max(currentLevel - 1, 1);
+                alert('難易度が下がります！');
+            } else {
+                alert('同じ難易度で続けます。');
+            }
+            recentResults.length = 0;
+            displayNextQuestion();
+        }
     }
 
     // 次の質問を表示する
@@ -77,45 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return questionsOfLevel[Math.floor(Math.random() * questionsOfLevel.length)];
     }
 
-    // 難易度を更新し、次の質問を表示する
-    function updateDifficulty() {
-        const correctCount = recentResults.filter(Boolean).length;
-        updateLevel(correctCount);
-        recentResults.length = 0;
-        displayNextQuestion();
-    }
-
-    // レベルを更新する
-    function updateLevel(correctCount) {
-        if (correctCount === 5) {
-            currentLevel = Math.min(currentLevel + 1, 10);
-            alert('難易度が上がります！');
-        } else if (correctCount <= 1 && currentLevel > 1) {
-            currentLevel = Math.max(currentLevel - 1, 1);
-            alert('難易度が下がります！');
-        } else {
-            alert('同じ難易度で続けます。');
-        }
-    }
-
-    // 問題を取得し、最初の質問を表示する
-    fetch(location.href + 'questions.json')
-        .then(response => response.json())
-        .then(data => {
-            questions = data;
-            displayNextQuestion();
-        })
-        .catch(error => console.error('通信に失敗しました', error));
-
-    // 不正解の質問一覧を表示・非表示する
-    const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
-    showIncorrectButton.addEventListener('click', () => {
-        const incorrectContainer = document.getElementById('incorrect-questions-container');
-        incorrectContainer.style.display = incorrectContainer.style.display === 'none' ? 'block' : 'none';
-        displayIncorrectQuestions();
-    });
-
-    // 不正解の質問一覧を表示する
+    // 不正解の質問を表示する
     function displayIncorrectQuestions() {
         const incorrectContainer = document.getElementById('incorrect-questions-container');
         incorrectContainer.innerHTML = '';
@@ -133,4 +101,21 @@ document.addEventListener('DOMContentLoaded', function() {
             incorrectContainer.appendChild(div);
         });
     }
+
+    // 問題を取得する
+    fetch(location.href + 'questions.json')
+        .then(response => response.json())
+        .then(data => {
+            questions = data;
+            displayNextQuestion();
+        })
+        .catch(error => console.error('通信に失敗しました', error));
+
+    // 不正解の質問を表示するボタンのイベント
+    const showIncorrectButton = document.getElementById('show-incorrect-questions-button');
+    showIncorrectButton.addEventListener('click', () => {
+        const incorrectContainer = document.getElementById('incorrect-questions-container');
+        incorrectContainer.style.display = incorrectContainer.style.display === 'none' ? 'block' : 'none';
+        displayIncorrectQuestions();
+    });
 });
