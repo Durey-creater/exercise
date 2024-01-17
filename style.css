@@ -13,8 +13,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 90vh; 
-    overflow: auto;
-    height: 100%; 
+    overflow-y: scroll;
+    height: 120%; 
 
 }
 
