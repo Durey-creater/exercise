@@ -12,7 +12,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-height: 90vh; 
+    overflow-y: scroll;
+    height: 100%; 
+
 }
+
 #quiz-container {
     background: #ffffff;
     padding: 40px;

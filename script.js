@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             incorrectQuestions.push(question);
         }
 
-        // 次の質問ボタンのイベントハンドラを設定
+        // 次の質問ボタン
         const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.onclick = function() {
             if (recentResults.length === 5) {
