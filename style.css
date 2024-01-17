@@ -13,8 +13,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     max-height: 90vh; 
-    overflow-y: scroll;
-    height: auto; 
+    overflow-y: auto;
+    height: 100%; 
 
 }
 
@@ -25,9 +25,10 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     position: relative; /* 模様を追加するための設定 */
     position: relative;
+    overflow-y: auto;
 }
 
 h1 {
@@ -114,8 +115,9 @@ h1 {
 }
 
 #incorrect-questions-container {
-    max-height: 300px; 
-    overflow-y: auto; 
+    max-height: 50vh; 
+    overflow-y: auto;
+    margin-bottom: 20px; 
 }
 
 @media (max-width: 768px) {
