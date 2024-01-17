@@ -128,20 +128,27 @@ footer {
     text-align: center; /* テキストを中央揃えに */
 }
 
-footer p,
-footer a,
-footer blockquote {
-    margin: 10px 0; /* 上下のマージン */
-}
-
-footer a {
-    color: #007bff; /* リンクの色 */
+.site-footer {
+    background-color: #f0f2f5; /* フッターの背景色 */
+    color: #333; /* テキストの色 */
+    text-align: center; /* テキストを中央揃えにする */
+    padding: 20px 0; /* 上下のパディング */
+    position: fixed; /* フッターを画面下部に固定する */
+    bottom: 0; /* 下部から0の位置に */
+    left: 0; /* 左から0の位置に */
+    width: 100%; /* 幅を100%にする */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* 上部に影をつける */
+    z-index: 100; /* 必要に応じてz-indexを調整する */
+  }
+  
+  .site-footer a {
+    color: #0066cc; /* リンクの色 */
     text-decoration: none; /* 下線を消す */
-}
-
-footer a:hover {
+  }
+  
+  .site-footer a:hover {
     text-decoration: underline; /* ホバー時に下線を表示 */
-}
+  }
 
 footer blockquote {
     font-style: italic; /* 引用部分をイタリックに */
