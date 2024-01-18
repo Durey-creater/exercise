@@ -121,15 +121,12 @@ h1 {
 
 footer {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0; /* 上下のパディングを指定 */
+    background-color: #f8f9fa; /* 背景色 */
+    border-top: 1px solid #e4e4e4; /* 上部の境界線 */
+    text-align: center; /* テキストを中央揃えに */
     box-sizing: border-box;
-    background-color: #f8f9fa;
-    border-top: 1px solid #e4e4e4;
-    text-align: center;
-    position: absolute; /* フッターを画面下部に固定 */
-    bottom: 0; /* フッターの位置を画面下部に設定 */
-    left: 0; /* 左寄せに設定 */
-    z-index: 10; /* コンテンツよりも前面に */
+    position: relative; /* 画面の最下部に固定しない */
 }
 
 body {
@@ -155,5 +152,9 @@ body {
     }
     #incorrect-questions-container {
         max-height: 30vh; /* 高さを小さく調整 */
+    }
+    footer {
+        padding: 10px 0; /* 上下のパディングを小さくする */
+        font-size: 0.9em; /* フォントサイズを小さくする */
     }
 }
