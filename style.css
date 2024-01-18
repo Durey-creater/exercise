@@ -166,9 +166,10 @@ body {
         margin: 10px auto; 
     }
     #next-question-button, #show-incorrect-questions-button { 
+        font-size: 3.0em; 
         width: auto; 
         display: block; 
-        margin: 25px auto;
+        margin: 35px auto;
 
     }
     #difficulty, #answer-explanation {
