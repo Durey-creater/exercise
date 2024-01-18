@@ -126,7 +126,7 @@ footer {
     background-color: #f8f9fa;
     border-top: 1px solid #e4e4e4;
     text-align: center;
-    position: relative; /* フッターを画面下部に固定 */
+    position: absolute; /* フッターを画面下部に固定 */
     bottom: 0; /* フッターの位置を画面下部に設定 */
     left: 0; /* 左寄せに設定 */
     z-index: 10; /* コンテンツよりも前面に */
