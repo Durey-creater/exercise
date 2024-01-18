@@ -139,28 +139,37 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding: 20px; /* 追加 */
+        padding: 20px;
     }
     body::after {
         height: 60px; /* フッターの高さに合わせて調整 */
     }
     #quiz-container {
-        margin-top: 0; /* 追加 */
+        margin-top: 0;
         padding: 20px;
-        width: 100%; /* 95%から変更 */
+        width: 100%;
     }
     #question-text {
-        font-size: 1.5em;
+        font-size: 1.7em; /* 大きさを適切に調整 */
     }
     #choices-list button {
         padding: 15px 20px;
-        font-size: 1em;
+        font-size: 1.5em; /* ボタンのテキストサイズを大きくする */
     }
     #incorrect-questions-container {
-        max-height: 30vh; /* 高さを小さく調整 */
+        max-height: 30vh;
+        font-size: 1.5em; /* 不正解の問題一覧のテキストサイズを大きくする */
+    }
+    .button {
+        padding: 20px 40px;
+        font-size: 1.5em; /* ボタンのテキストサイズを大きくする */
+    }
+    #difficulty, #answer-explanation {
+        font-size: 1.5em; /* 難易度と解説のテキストサイズを大きくする */
     }
     footer {
-        padding: 10px 0; /* 上下のパディングを減らす */
-        font-size: 0.9em; /* フォントサイズを小さくする */
+        padding: 10px 0; /* フッターの上下のパディングを増やす */
+        font-size: 1.0em; /* フッターのテキストサイズを大きくする */
     }
+    /* 他の要素も必要に応じて調整 */
 }
