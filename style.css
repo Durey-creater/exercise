@@ -3,16 +3,14 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* centerから変更 */
-    height: auto; /* 100vhから変更 */
+    padding: 0 40px 80px; /* フッターの高さ分の padding-bottom を追加 */
     color: #333;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative; 
 }
+
 body::after {
     content: '';
     display: block;
@@ -27,7 +25,6 @@ body::after {
     max-width: 800px;
     width: 100%;
     margin: 20px auto;
-    /*position: sticky;*/
     top: 0;
     z-index: 10;
 }
@@ -130,8 +127,9 @@ footer {
     background-color: #f8f9fa;
     border-top: 1px solid #e4e4e4;
     text-align: center;
-    position: relative; /* フッターを常にコンテンツの最後に */
+    position: relative; /* フッターをページの最後に配置 */
     z-index: 10;
+    clear: both;
 }
 
 body {
