@@ -150,25 +150,25 @@ body {
         width: 100%;
     }
     #question-text {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     #choices-list button {
-        padding: 15px 20px;
-        font-size: 1.2em;
+        padding: 10px 15px;
+        font-size: 1.0em;
     }
     #incorrect-questions-container {
         max-height: 30vh;
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     .button {
-        font-size: 2.0em;  
+        font-size: 1.0em;  
         padding: 25px 40px; 
         margin: 20px auto;
         width: auto;
         display: block;
     }
     #difficulty, #answer-explanation {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     footer {
         padding: 10px 0;
