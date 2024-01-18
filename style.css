@@ -13,6 +13,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+body::after {
+    content: '';
+    display: block;
+    height: 80px; /* フッターの高さと同等か、それ以上の値を設定 */
+}
 
 #quiz-container {
     background: #ffffff;
@@ -121,12 +126,12 @@ h1 {
 
 footer {
     width: 100%;
-    padding: 20px 0; /* 上下のパディングを指定 */
-    background-color: #f8f9fa; /* 背景色 */
-    border-top: 1px solid #e4e4e4; /* 上部の境界線 */
-    text-align: center; /* テキストを中央揃えに */
-    box-sizing: border-box;
-    position: relative; /* 画面の最下部に固定しない */
+    padding: 20px 0; /* 上下のパディング */
+    background-color: #f8f9fa;
+    border-top: 1px solid #e4e4e4;
+    text-align: center;
+    position: relative; /* フッターを常にコンテンツの最後に */
+    z-index: 10;
 }
 
 body {
@@ -137,6 +142,9 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 20px; /* 追加 */
+    }
+    body::after {
+        height: 60px; /* フッターの高さに合わせて調整 */
     }
     #quiz-container {
         margin-top: 0; /* 追加 */
@@ -154,7 +162,7 @@ body {
         max-height: 30vh; /* 高さを小さく調整 */
     }
     footer {
-        padding: 10px 0; /* 上下のパディングを小さくする */
+        padding: 10px 0; /* 上下のパディングを減らす */
         font-size: 0.9em; /* フォントサイズを小さくする */
     }
 }
