@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 displayNextQuestion();
             }
-            // 次の問題へ移動したら、不正解の問題リストを更新するためのフラグをリセットする
-            incorrectQuestions.length = 0;
             nextQuestionButton.style.display = 'none';
             // 不正解の問題一覧を非表示にする
             document.getElementById('incorrect-questions-container').style.display = 'none';
