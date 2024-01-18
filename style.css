@@ -150,15 +150,15 @@ body {
         width: 100%;
     }
     #question-text {
-        font-size: 1.7em;
+        font-size: 1.2em;
     }
     #choices-list button {
         padding: 15px 20px;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     #incorrect-questions-container {
         max-height: 30vh;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     .button {
         font-size: 2.0em;  
@@ -168,11 +168,11 @@ body {
         display: block;
     }
     #difficulty, #answer-explanation {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     footer {
         padding: 10px 0;
-        font-size: 1.0em;
+        font-size: 0.7em;
     }
 }
 
