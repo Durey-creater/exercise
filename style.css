@@ -22,7 +22,7 @@ body {
     max-width: 800px;
     width: 100%;
     margin: 20px auto;
-    position: sticky;
+    /*position: sticky;*/
     top: 0;
     z-index: 10;
 }
@@ -123,37 +123,19 @@ footer {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f8f9fa; /* 背景色 */
-    border-top: 1px solid #e4e4e4; /* 上部の境界線 */
-    text-align: center; /* テキストを中央揃えに */
+    background-color: #f8f9fa;
+    border-top: 1px solid #e4e4e4;
+    text-align: center;
+    position: fixed; /* フッターを画面下部に固定 */
+    bottom: 0; /* フッターの位置を画面下部に設定 */
+    left: 0; /* 左寄せに設定 */
+    z-index: 10; /* コンテンツよりも前面に */
 }
 
-.site-footer {
-    background-color: #f0f2f5; /* フッターの背景色 */
-    color: #333; /* テキストの色 */
-    text-align: center; /* テキストを中央揃えにする */
-    padding: 20px 0; /* 上下のパディング */
-    position: fixed; /* フッターを画面下部に固定する */
-    bottom: 0; /* 下部から0の位置に */
-    left: 0; /* 左から0の位置に */
-    width: 100%; /* 幅を100%にする */
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* 上部に影をつける */
-    z-index: 100; /* 必要に応じてz-indexを調整する */
-  }
-  
-  .site-footer a {
-    color: #0066cc; /* リンクの色 */
-    text-decoration: none; /* 下線を消す */
-  }
-  
-  .site-footer a:hover {
-    text-decoration: underline; /* ホバー時に下線を表示 */
-  }
-
-footer blockquote {
-    font-style: italic; /* 引用部分をイタリックに */
-    color: #6c757d; /* 引用部分の色 */
+body {
+    padding-bottom: 80px; /* フッターの高さ以上の値に設定 */
 }
+
 
 @media (max-width: 768px) {
     body {
