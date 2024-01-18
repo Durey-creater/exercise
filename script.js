@@ -52,16 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
     function chooseAnswer(question, choice) {
         const explanation = document.getElementById('answer-explanation');
         explanation.style.display = 'block';
-        explanation.innerHTML = choice === question.answer.jp ? 
+        const isCorrect = choice === question.answer.jp;
+        explanation.innerHTML = isCorrect ? 
                             "正解！ " + question.explanation.jp + "<br>" + question.explanation.en :
                             "不正解。 " + question.explanation.jp + "<br>" + question.explanation.en;
-
-        recentResults.push(choice === question.answer.jp);
-        if (!recentResults[recentResults.length - 1]) {
-            incorrectQuestions.push(question);
+    
+        if (!isCorrect) {
+            // 重複を避けるために、まだ不正解の問題リストに追加されていないかチェックする
+            if (!incorrectQuestions.includes(question)) {
+                incorrectQuestions.push(question);
+            }
         }
-
-        // 次の質問ボタン
+    
+        // 次の質問ボタンをクリックしたときの動作を定義
         const nextQuestionButton = document.getElementById('next-question-button');
         nextQuestionButton.onclick = function() {
             if (recentResults.length === 5) {
@@ -69,7 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 displayNextQuestion();
             }
+            // 次の問題へ移動したら、不正解の問題リストを更新するためのフラグをリセットする
+            incorrectQuestions.length = 0;
+            nextQuestionButton.style.display = 'none';
+            // 不正解の問題一覧を非表示にする
+            document.getElementById('incorrect-questions-container').style.display = 'none';
         };
+    
+        // 正解/不正解を配列に追加
+        recentResults.push(isCorrect);
         nextQuestionButton.style.display = 'block';
     }
 
