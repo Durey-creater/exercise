@@ -164,11 +164,8 @@ body {
         font-size: 2.5em;  
         padding: 25px 40px; 
         margin: 20px auto;
-    }
-    #next-question-button, #show-incorrect-questions-button {
         width: auto;
         display: block;
-        margin: 20px auto;
     }
     #difficulty, #answer-explanation {
         font-size: 1.5em;
